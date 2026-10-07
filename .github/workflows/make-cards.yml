@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
     inputs:
       urls:
-        description: 'Rightmove 链接，每行一个'
+        description: 'Rightmove 链接，每行一个；可在链接后空一格加邮编，如 https://www.rightmove.co.uk/properties/94028853 E14'
         required: true
         type: string
       save:

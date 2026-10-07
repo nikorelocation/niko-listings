@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 """
 Niko Relocation — Rightmove 链接 → 房源卡片 JPG → （可选）写入房源池 Supabase
-纯云端版本：不需要 Heroku 爬虫 PDF，不需要 Mac。
+云端版本，不需要 Mac。数据来源两条路：
+  1）Niko 的 Heroku 爬虫（和手动流程完全一样：链接 → PDF → generate_cards 解析）——默认
+  2）直接打开 Rightmove 页面读 PAGE_MODEL——备用（GitHub 机器常被 Rightmove 拦）
 
 用法：
   python3 make_cards.py --urls urls.txt --out out/ [--save]
@@ -24,7 +26,51 @@ ASSETS = os.path.join(HERE, 'assets')
 UA = ('Mozilla/5.0 (Macintosh; Intel Mac OS X 14_5) AppleWebKit/537.36 '
       '(KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36')
 
-# ── 1. 抓 Rightmove ──────────────────────────────────────────
+
+# ── 0. Heroku 爬虫：链接 → PDF（和 Niko 手动流程一模一样） ──
+HEROKU = os.environ.get('HEROKU_SCRAPER', 'https://rightmove-webapp-fcc61ef51410.herokuapp.com/')
+
+def fetch_via_heroku(urls, workdir):
+    """POST 链接到 Niko 的 Django 爬虫，拿回 zip，解出 PDF；返回 [pdf_path]。"""
+    import requests, zipfile
+    s = requests.Session()
+    s.headers['User-Agent'] = UA
+    r = s.get(HEROKU, timeout=60); r.raise_for_status()
+    m = re.search(r'name="csrfmiddlewaretoken"\s+value="([^"]+)"', r.text)
+    token = m.group(1) if m else s.cookies.get('csrftoken', '')
+    r = s.post(HEROKU, data={'csrfmiddlewaretoken': token, 'urlInput': '\n'.join(urls)},
+               headers={'Referer': HEROKU}, timeout=900, stream=True)
+    r.raise_for_status()
+    body = r.content
+    if not body[:2] == b'PK':
+        raise RuntimeError(f'爬虫没有返回 zip（{r.headers.get("Content-Type")}，{len(body)} bytes）')
+    zpath = os.path.join(workdir, 'scraper.zip')
+    open(zpath, 'wb').write(body)
+    pdfs = []
+    with zipfile.ZipFile(zpath) as z:
+        for n in z.namelist():
+            if n.lower().endswith('.pdf') and '/' not in n.strip('/'):
+                z.extract(n, workdir); pdfs.append(os.path.join(workdir, n))
+    if not pdfs:
+        raise RuntimeError('zip 里没有 PDF')
+    return pdfs
+
+def entry_from_pdf(pdf_path, tmp_dir):
+    """用 Niko 原版 generate_cards 解析 PDF + 抽图，得到 (d, images, fname)。"""
+    d = gc.parse_pdf(pdf_path)
+    images = gc.extract_images(pdf_path, tmp_dir, d.get('format', 'niko'))
+    fname = os.path.basename(pdf_path).replace('.pdf', '')
+    # 文件名没带邮编时（爬虫偶尔这样），补上 PDF 里解析到的邮编，房源池靠文件名兜底识别区域
+    pc = (d.get('postcode') or '').split()[0].lower()
+    if pc and pc != 'london' and not fname.lower().endswith('-' + pc):
+        fname = f'{fname}-{pc}'
+    d['rm_id'] = ''
+    d['beds'] = 0 if d.get('bed_label', '').lower().startswith('studio') else int(re.match(r'(\d)', d.get('bed_label', '0') or '0').group(1) or 0)
+    d['link'] = ''
+    d['agent'] = ''
+    return d, images, fname
+
+# ── 1. 备用：直接抓 Rightmove ──────────────────────────────
 async def fetch_rightmove(pw, url):
     """用真实 Chromium 打开详情页，读 window.PAGE_MODEL.propertyData，下载前 4 张图。"""
     browser = await pw.chromium.launch()
@@ -242,23 +288,63 @@ async def main():
     urls = list(a.url)
     if a.urls:
         urls += [l.strip() for l in open(a.urls) if l.strip()]
-    urls = [re.sub(r'#.*$', '', u.split('?')[0]) for u in urls]
-    urls = [u for u in urls if '/properties/' in u]
-    urls = list(dict.fromkeys(urls))
+    # 每行可以是「链接」或「链接 邮编」（邮编用于 PDF 里没写邮编的情况，例如 Maine Tower, Canary Wharf）
+    outcode_of = {}
+    clean = []
+    for line in urls:
+        parts = line.split()
+        u = re.sub(r'#.*$', '', parts[0].split('?')[0])
+        if '/properties/' not in u:
+            continue
+        if len(parts) > 1 and re.fullmatch(r'[A-Za-z]{1,2}\d[\dA-Za-z]?', parts[1]):
+            outcode_of[u] = parts[1].upper()
+        clean.append(u)
+    urls = list(dict.fromkeys(clean))
     if not urls:
         print('没有有效的 Rightmove 链接'); sys.exit(1)
     os.makedirs(a.out, exist_ok=True)
 
     from playwright.async_api import async_playwright
+    import tempfile
     results = []
+    entries = []
+    work = tempfile.mkdtemp(prefix='nikocards-')
+    # 路线 1：Heroku 爬虫 → PDF → generate_cards 解析（和手动流程一致）
+    try:
+        pdfs = fetch_via_heroku(urls, work)
+        print(f'Heroku 爬虫返回 {len(pdfs)} 个 PDF')
+        for p in pdfs:
+            try:
+                d, imgs, fname = entry_from_pdf(p, tempfile.mkdtemp(dir=work))
+                # 把链接对回去：按 PDF 里的房源 ID
+                txt = __import__('subprocess').run(['pdftotext', '-l', '1', p, '-'], capture_output=True, text=True).stdout
+                for u in urls:
+                    rid = re.search(r'/properties/(\d+)', u)
+                    if rid and rid.group(1) in txt:
+                        d['link'] = u; d['rm_id'] = rid.group(1); break
+                oc = outcode_of.get(d.get('link'))
+                if oc and (not d.get('postcode') or d['postcode'].lower() == 'london'):
+                    d['postcode'] = oc
+                    if not fname.lower().endswith('-' + oc.lower()):
+                        fname = f'{fname}-{oc.lower()}'
+                entries.append((d, imgs, fname))
+                print(f'✓ [pdf] {fname} | {d["bed_label"]} | £{d["weekly"]}/周 | 起租 {d["avail"]} | {len(imgs)}图')
+            except Exception as e:
+                print(f'✗ {p}: {e}')
+                results.append({'pdf': os.path.basename(p), 'error': str(e)})
+    except Exception as e:
+        print(f'Heroku 爬虫不可用：{e}，改为直接抓 Rightmove')
+    done_links = {d['link'] for d, _, _ in entries if d.get('link')}
+    missing = [] if len(entries) >= len(urls) else [u for u in urls if u not in done_links]
+
     async with async_playwright() as pw:
-        entries = []
-        for u in urls:
+        # 路线 2：剩下没拿到的直接抓 Rightmove
+        for u in missing:
             try:
                 pd, imgs = await fetch_rightmove(pw, u)
                 d, fname = build_record(pd, u)
                 entries.append((d, imgs, fname))
-                print(f'✓ {d["address"]} | {d["bed_label"]} | £{d["weekly"]}/周 | 起租 {d["avail"]} | {len(imgs)}图')
+                print(f'✓ [rm] {d["address"]} | {d["bed_label"]} | £{d["weekly"]}/周 | 起租 {d["avail"]} | {len(imgs)}图')
             except Exception as e:
                 print(f'✗ {u}: {e}')
                 results.append({'link': u, 'error': str(e)})

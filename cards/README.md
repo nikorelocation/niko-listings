@@ -1,11 +1,11 @@
 # 做卡片 → 房源池（全自动版）
 
-把 Rightmove 链接变成 Niko 风格房源卡片，并直接写进房源池（Supabase），不再需要 Heroku 爬虫 PDF 和 Mac 上的 NikoCards。
+把 Rightmove 链接变成 Niko 风格房源卡片，并直接写进房源池（Supabase）。数据默认走 Niko 的 Heroku 爬虫（链接 → PDF → 原版 generate_cards 解析，和手动流程一致），Heroku 不可用时直接抓 Rightmove 页面。不再需要 Mac 上的 NikoCards 和手动登录房源池。
 
 ## 怎么跑
 
 **方式一：GitHub 页面手动跑**
-Actions → 「做卡片 → 房源池」 → Run workflow → 粘贴链接（每行一个）→ Run。
+Actions → 「做卡片 → 房源池」 → Run workflow → 粘贴链接（每行一个；PDF 里没邮编的楼盘可在链接后空一格加邮编，如 `…/94028853 E14`）→ Run。
 跑完：卡片在 `cards/out/<日期-时间>/`，房源池里自动多出这几套；Summary 里有每套的结果。
 
 **方式二：回复监控邮件（由 Claude 定时任务触发）**
