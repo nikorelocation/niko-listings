@@ -317,7 +317,7 @@ async def main():
             try:
                 d, imgs, fname = entry_from_pdf(p, tempfile.mkdtemp(dir=work))
                 # 把链接对回去：按 PDF 里的房源 ID
-                txt = __import__('subprocess').run(['pdftotext', '-l', '1', p, '-'], capture_output=True, text=True).stdout
+                txt = __import__('subprocess').run(['pdftotext', p, '-'], capture_output=True, text=True).stdout
                 for u in urls:
                     rid = re.search(r'/properties/(\d+)', u)
                     if rid and rid.group(1) in txt:
