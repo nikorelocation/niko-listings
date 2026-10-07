@@ -1,0 +1,90 @@
+name: 做卡片 → 房源池
+
+# 手动触发（Actions 页面点 Run workflow），或由 Claude 定时任务用 `gh workflow run` 触发。
+# 输入 Rightmove 链接（每行一个），自动：抓数据和照片 → 出卡片 JPG → 写入房源池 Supabase → 卡片存回仓库 cards/out/<日期>/
+on:
+  workflow_dispatch:
+    inputs:
+      urls:
+        description: 'Rightmove 链接，每行一个'
+        required: true
+        type: string
+      save:
+        description: '写入房源池（Supabase）'
+        required: true
+        type: boolean
+        default: true
+      month_format:
+        description: '入住月字段格式：legacy = 现在/7/8/9/10+（线上旧版）；ym = 现在/YYYY-MM（新版 pool.html）'
+        required: false
+        type: choice
+        options: [legacy, ym]
+        default: legacy
+
+permissions:
+  contents: write
+
+concurrency:
+  group: make-cards
+  cancel-in-progress: false
+
+jobs:
+  cards:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: 安装依赖
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq fonts-noto-cjk poppler-utils > /dev/null
+          pip install -q playwright requests pillow
+          python -m playwright install --with-deps chromium
+
+      - name: 写入链接文件
+        run: |
+          printf '%s\n' "${{ inputs.urls }}" > urls.txt
+          echo "共 $(grep -c properties urls.txt) 个链接"
+
+      - name: 出卡片 + 写入房源池
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
+          MONTH_FORMAT: ${{ inputs.month_format }}
+        run: |
+          OUT="cards/out/$(TZ=Europe/London date +%Y%m%d-%H%M)"
+          echo "OUT=$OUT" >> "$GITHUB_ENV"
+          SAVE=""
+          if [ "${{ inputs.save }}" = "true" ]; then SAVE="--save"; fi
+          python cards/make_cards.py --urls urls.txt --out "$OUT" $SAVE
+
+      - name: 卡片存回仓库
+        run: |
+          git config user.name "niko-cards-bot"
+          git config user.email "cards@nikorelocation.co.uk"
+          git add "$OUT"
+          git commit -m "cards: $(basename "$OUT") ($(ls "$OUT"/*.jpg | wc -l) 张)" || echo "无新文件"
+          git pull --rebase -q origin main || true
+          git push
+
+      - name: 结果摘要
+        run: |
+          echo "## 本次卡片" >> "$GITHUB_STEP_SUMMARY"
+          python - <<'EOF' >> "$GITHUB_STEP_SUMMARY"
+          import json, os
+          for r in json.load(open(os.path.join(os.environ['OUT'], 'cards.json'))):
+              if 'error' in r:
+                  print(f"- ✗ {r['link']} — {r['error']}"); continue
+              s = '已入池' if r.get('saved') else ('未写库' if not r.get('save_error') else '写库失败: ' + r['save_error'])
+              print(f"- {r['address']} · {r['bed_label']} · £{r['weekly']}/周 · 起租 {r['avail']} · {s}")
+          EOF
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: cards
+          path: ${{ env.OUT }}

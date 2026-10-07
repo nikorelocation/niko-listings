@@ -1,0 +1,290 @@
+#!/usr/bin/env python3
+"""
+Niko Relocation — Rightmove 链接 → 房源卡片 JPG → （可选）写入房源池 Supabase
+纯云端版本：不需要 Heroku 爬虫 PDF，不需要 Mac。
+
+用法：
+  python3 make_cards.py --urls urls.txt --out out/ [--save]
+  python3 make_cards.py --url https://www.rightmove.co.uk/properties/94020657 --out out/
+
+  --save      同时写入 Supabase（需要环境变量 SUPABASE_URL / SUPABASE_KEY）
+  --month-format legacy|ym   房源池 month 字段格式：legacy = now/7/8/9/10+（当前线上 pool.html）
+                                                    ym = now/YYYY-MM（新版 pool.html，带月份筛选）
+输出：out/niko-<slug>-<postcode>.jpg + out/cards.json（每套的数据和写库结果）
+"""
+import argparse, asyncio, base64, datetime as dt, json, os, re, sys, time, random, mimetypes
+from io import BytesIO
+from urllib.parse import urlparse
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, HERE)
+import generate_cards as gc  # Niko 自己的卡片模板 / 翻译表 / 文件名解析
+
+ASSETS = os.path.join(HERE, 'assets')
+UA = ('Mozilla/5.0 (Macintosh; Intel Mac OS X 14_5) AppleWebKit/537.36 '
+      '(KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36')
+
+# ── 1. 抓 Rightmove ──────────────────────────────────────────
+async def fetch_rightmove(pw, url):
+    """用真实 Chromium 打开详情页，读 window.PAGE_MODEL.propertyData，下载前 4 张图。"""
+    browser = await pw.chromium.launch()
+    ctx = await browser.new_context(user_agent=UA, locale='en-GB')
+    page = await ctx.new_page()
+    try:
+        await page.goto(url, wait_until='domcontentloaded', timeout=60000)
+        await page.wait_for_timeout(1500)
+        pd = await page.evaluate('() => (window.PAGE_MODEL && window.PAGE_MODEL.propertyData) || null')
+        if not pd:
+            html = await page.content()
+            m = re.search(r'window\.PAGE_MODEL\s*=\s*(\{.*?\})\s*</script>', html, re.S)
+            if m:
+                pd = json.loads(m.group(1)).get('propertyData')
+        if not pd:
+            raise RuntimeError('页面里没有 PAGE_MODEL（可能被反爬拦了）')
+        imgs = []
+        for im in (pd.get('images') or [])[:4]:
+            src = im.get('url') or im.get('srcUrl')
+            if not src:
+                continue
+            try:
+                r = await ctx.request.get(src, headers={'Referer': url}, timeout=30000)
+                if r.ok:
+                    b = await r.body()
+                    imgs.append('data:image/jpeg;base64,' + base64.b64encode(b).decode())
+            except Exception:
+                pass
+        return pd, imgs
+    finally:
+        await browser.close()
+
+
+def parse_price(s):
+    m = re.search(r'£\s*([\d,]+)', s or '')
+    return int(m.group(1).replace(',', '')) if m else None
+
+
+def build_record(pd, url):
+    """把 PAGE_MODEL.propertyData 整理成 generate_cards.build_card 需要的 dict。"""
+    addr = (pd.get('address') or {}).get('displayAddress', '') or ''
+    outcode = ((pd.get('address') or {}).get('outcode') or '').upper()
+    if not outcode:
+        m = re.search(r'\b([A-Z]{1,2}\d[\dA-Z]?)\b', addr.upper().split(',')[-1])
+        outcode = m.group(1) if m else 'LONDON'
+    prices = pd.get('prices') or {}
+    primary = parse_price(prices.get('primaryPrice'))
+    secondary = parse_price(prices.get('secondaryPrice'))
+    ptxt = (prices.get('primaryPrice') or '').lower()
+    if 'pw' in ptxt or 'week' in ptxt:
+        weekly, monthly = primary, secondary
+    else:
+        monthly, weekly = primary, secondary
+    if not weekly and monthly:
+        weekly = round(monthly * 12 / 52)
+    if not monthly and weekly:
+        monthly = round(weekly * 52 / 12)
+    beds = pd.get('bedrooms')
+    baths = pd.get('bathrooms')
+    if not beds:
+        bed_label = 'Studio'
+    else:
+        bed_label = f'{beds} Bed {baths} Bath' if baths else f'{beds} Bed'
+    let = pd.get('lettings') or {}
+    avail_raw = (let.get('letAvailableDate') or 'Ask agent').strip()
+    # Rightmove 给的是 dd/mm/yyyy 或 Now / Ask agent
+    furnish = '不带家具' if 'unfurnished' in (let.get('furnishType') or '').lower() else '带家具'
+    dep = let.get('deposit')
+    deposit = str(int(dep)) if isinstance(dep, (int, float)) and dep else ''
+    feats = [gc.translate(f) for f in (pd.get('keyFeatures') or [])[:8]]
+    agent = ((pd.get('customer') or {}).get('branchDisplayName')
+             or (pd.get('customer') or {}).get('companyName') or '')
+    # slug：和 Heroku 爬虫的文件名风格一致，邮编放最后（房源池靠这个兜底识别区域）
+    slug_src = addr
+    if outcode and outcode.lower() in slug_src.lower():
+        slug_src = re.sub(re.escape(outcode), '', slug_src, flags=re.I)
+    slug = re.sub(r'[^a-z0-9]+', '-', slug_src.lower()).strip('-')
+    slug = re.sub(r'-(london|uk)$', '', slug)
+    fname = f'{slug}-{outcode.lower()}'
+    fn_title, fn_pc = gc.parse_address_from_filename(fname)
+    d = {
+        'address': addr, 'postcode': outcode, 'weekly': str(weekly or 0),
+        'monthly': str(monthly or ''), 'avail': avail_raw, 'deposit': deposit,
+        'furnish': furnish, 'bed_label': bed_label, 'beds': beds or 0,
+        'features': feats, 'format': 'niko', 'fn_title': fn_title,
+        'agent': agent, 'link': url, 'rm_id': str(pd.get('id') or ''),
+    }
+    return d, fname
+
+
+# ── 2. 渲染卡片（苹果 emoji 内嵌，和 Mac Chrome 出的卡片一致） ──
+def _b64file(p):
+    return base64.b64encode(open(p, 'rb').read()).decode()
+
+def _emoji_img(name, h):
+    return (f'<img src="data:image/png;base64,{_b64file(os.path.join(ASSETS, "emoji", f"emoji_{name}.png"))}" '
+            f'style="height:{h}px;width:auto;vertical-align:middle;display:inline-block">')
+
+def apple_emoji(html):
+    rep = {
+        '<div class="si">&#128719;</div>': f'<div class="si">{_emoji_img("bed", 10)}</div>',
+        '<div class="si">&#128197;</div>': f'<div class="si">{_emoji_img("cal", 12)}</div>',
+        '<div class="si">&#127968;</div>': f'<div class="si">{_emoji_img("house", 12.5)}</div>',
+        '<div class="si">&#127963;</div>': f'<div class="si">{_emoji_img("bank", 13)}</div>',
+        '<div class="avail">&#128197; ': f'<div class="avail">{_emoji_img("badgecal", 9.5)} ',
+    }
+    for k, v in rep.items():
+        html = html.replace(k, v)
+    return html
+
+def page_html(card_blocks):
+    src = open(os.path.join(HERE, 'generate_cards.py'), encoding='utf-8').read()
+    css = re.search(r'    css = """(.*?)"""', src, re.S).group(1)
+    css = css.replace('.si{font-size:.82rem}', '.si{font-size:.82rem;height:16px;line-height:16px}')
+    ff = ''
+    for w in (300, 400, 600):
+        ff += (f"@font-face{{font-family:'Cormorant Garamond';font-weight:{w};"
+               f"src:url('file://{ASSETS}/fonts/cormorant-garamond-latin-{w}-normal.woff2') format('woff2')}}\n")
+    for w in (300, 400, 500):
+        ff += (f"@font-face{{font-family:'DM Sans';font-weight:{w};"
+               f"src:url('file://{ASSETS}/fonts/dm-sans-latin-{w}-normal.woff2') format('woff2')}}\n")
+    return (f'<!DOCTYPE html><html lang="zh"><head><meta charset="UTF-8">'
+            f'<style>{ff}{css}</style></head><body><div class="grid">{card_blocks}</div></body></html>')
+
+async def render_cards(pw, entries, out_dir):
+    blocks = ''.join(apple_emoji(gc.build_card(d, imgs, i, fname))
+                     for i, (d, imgs, fname) in enumerate(entries))
+    os.makedirs(out_dir, exist_ok=True)
+    tmp = os.path.join(out_dir, "_page.html")
+    open(tmp, 'w', encoding='utf-8').write(page_html(blocks))
+    browser = await pw.chromium.launch()
+    page = await browser.new_page(viewport={'width': 1400, 'height': 1000}, device_scale_factor=3)
+    await page.goto('file://' + os.path.abspath(tmp))
+    await page.wait_for_timeout(1200)
+    await page.evaluate('document.fonts.ready')
+    cards = await page.query_selector_all('.card')
+    paths = []
+    for c, (d, imgs, fname) in zip(cards, entries):
+        p = os.path.join(out_dir, f'niko-{fname}.jpg')
+        await c.scroll_into_view_if_needed()
+        await c.screenshot(path=p, type='jpeg', quality=95)
+        paths.append(p)
+    await browser.close()
+    os.remove(tmp)
+    return paths
+
+
+# ── 3. 房源池标签（照 pool.html 的 pc2area / priceRange / availMonth） ──
+def pc2area(pc):
+    pc = (pc or '').upper()
+    if re.match(r'^(EC|WC)', pc): return 'city'
+    if re.match(r'^W1[A-Z]', pc): return 'city'
+    if re.match(r'^SW1[A-Z]', pc): return 'city'
+    if re.match(r'^SE1($|[A-Z])', pc): return 'city'
+    if re.match(r'^(N|NW)', pc): return 'north'
+    if re.match(r'^E', pc): return 'east'
+    if re.match(r'^(SW|SE)', pc): return 'south'
+    return 'west'
+
+def price_range(w):
+    if not w: return 'mid'
+    return 'low' if w <= 700 else ('mid' if w <= 1000 else 'high')
+
+def avail_month(avail, fmt):
+    if not avail or re.search(r'now|ask', avail, re.I):
+        return 'now'
+    m = re.match(r'(\d{1,2})/(\d{1,2})/(\d{4})', avail)
+    if not m:
+        return 'now'
+    d = dt.date(int(m.group(3)), int(m.group(2)), int(m.group(1)))
+    if d <= dt.date.today():
+        return 'now'
+    if fmt == 'ym':
+        return f'{d.year}-{d.month:02d}'
+    # legacy: 7/8/9/10+（线上旧版只有这几档）
+    if d.month in (7, 8, 9) and d.year == dt.date.today().year:
+        return str(d.month)
+    return '10+'
+
+
+# ── 4. 写 Supabase（照 pool.html 的 uploadImage + sbSave） ──
+def supabase_save(jpg_path, tags):
+    import requests
+    url = os.environ.get('SUPABASE_URL', 'https://imhlozdlohtjkdvrsylu.supabase.co').rstrip('/')
+    key = os.environ.get('SUPABASE_KEY', '')
+    if not key:
+        raise RuntimeError('没有 SUPABASE_KEY，跳过写库')
+    h = {'apikey': key, 'Authorization': 'Bearer ' + key}
+    fn = f'{int(time.time()*1000)}-{random.randbytes(2).hex()}.jpg'
+    r = requests.post(f'{url}/storage/v1/object/property-images/{fn}',
+                      headers={**h, 'Content-Type': 'image/jpeg', 'x-upsert': 'false'},
+                      data=open(jpg_path, 'rb').read(), timeout=60)
+    r.raise_for_status()
+    image_url = f'{url}/storage/v1/object/public/property-images/{fn}'
+    rec_id = f'card-{int(time.time()*1000)}-{random.randbytes(2).hex()[:3]}'
+    body = {'id': rec_id, 'area': tags['area'], 'beds': tags['beds'], 'price': tags['price'],
+            'month': tags['month'], 'image_url': image_url,
+            'created_at': dt.datetime.now(dt.timezone.utc).isoformat()}
+    r = requests.post(f'{url}/rest/v1/properties',
+                      headers={**h, 'Content-Type': 'application/json', 'Prefer': 'return=representation'},
+                      json=body, timeout=60)
+    r.raise_for_status()
+    return rec_id, image_url
+
+
+# ── main ─────────────────────────────────────────────────────
+async def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument('--urls', help='文件，每行一个 Rightmove 链接')
+    ap.add_argument('--url', action='append', default=[])
+    ap.add_argument('--out', default='out')
+    ap.add_argument('--save', action='store_true', help='写入 Supabase 房源池')
+    ap.add_argument('--month-format', default=os.environ.get('MONTH_FORMAT', 'legacy'))
+    a = ap.parse_args()
+    urls = list(a.url)
+    if a.urls:
+        urls += [l.strip() for l in open(a.urls) if l.strip()]
+    urls = [re.sub(r'#.*$', '', u.split('?')[0]) for u in urls]
+    urls = [u for u in urls if '/properties/' in u]
+    urls = list(dict.fromkeys(urls))
+    if not urls:
+        print('没有有效的 Rightmove 链接'); sys.exit(1)
+    os.makedirs(a.out, exist_ok=True)
+
+    from playwright.async_api import async_playwright
+    results = []
+    async with async_playwright() as pw:
+        entries = []
+        for u in urls:
+            try:
+                pd, imgs = await fetch_rightmove(pw, u)
+                d, fname = build_record(pd, u)
+                entries.append((d, imgs, fname))
+                print(f'✓ {d["address"]} | {d["bed_label"]} | £{d["weekly"]}/周 | 起租 {d["avail"]} | {len(imgs)}图')
+            except Exception as e:
+                print(f'✗ {u}: {e}')
+                results.append({'link': u, 'error': str(e)})
+        if not entries:
+            sys.exit(2)
+        paths = await render_cards(pw, entries, a.out)
+
+    for (d, imgs, fname), p in zip(entries, paths):
+        tags = {'area': pc2area(d['postcode']), 'beds': int(d['beds']),
+                'price': price_range(int(d['weekly'] or 0)), 'month': avail_month(d['avail'], a.month_format)}
+        row = {'link': d['link'], 'rm_id': d['rm_id'], 'address': d['address'], 'postcode': d['postcode'],
+               'bed_label': d['bed_label'], 'weekly': int(d['weekly'] or 0), 'monthly': d['monthly'],
+               'avail': d['avail'], 'furnish': d['furnish'], 'agent': d['agent'],
+               'card': os.path.basename(p), 'tags': tags}
+        if a.save:
+            try:
+                rec_id, image_url = supabase_save(p, tags)
+                row.update(saved=True, supabase_id=rec_id, image_url=image_url)
+                print(f'  ↑ 已写入房源池 {rec_id}')
+            except Exception as e:
+                row.update(saved=False, save_error=str(e))
+                print(f'  ✗ 写库失败: {e}')
+        results.append(row)
+    json.dump(results, open(os.path.join(a.out, 'cards.json'), 'w', encoding='utf-8'),
+              ensure_ascii=False, indent=2)
+    print(f'\n完成：{len(paths)} 张卡片 → {a.out}/')
+
+if __name__ == '__main__':
+    asyncio.run(main())
