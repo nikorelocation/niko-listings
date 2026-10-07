@@ -31,7 +31,7 @@ concurrency:
 jobs:
   cards:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 25
     steps:
       - uses: actions/checkout@v4
 
@@ -41,10 +41,13 @@ jobs:
 
       - name: 安装依赖
         run: |
-          sudo apt-get update -qq
-          sudo apt-get install -y -qq fonts-noto-cjk poppler-utils > /dev/null
+          export DEBIAN_FRONTEND=noninteractive
+          APT="sudo apt-get -o Acquire::Retries=3 -o Acquire::http::Timeout=30 -o Acquire::https::Timeout=30"
+          timeout 240 $APT update -qq || timeout 240 $APT update -qq || true
+          timeout 300 $APT install -y -qq --no-install-recommends fonts-noto-cjk poppler-utils > /dev/null
           pip install -q playwright requests pillow
-          python -m playwright install --with-deps chromium
+          timeout 600 python -m playwright install --with-deps chromium
+          which pdftotext pdfimages && fc-list | grep -c "CJK" 
 
       - name: 写入链接文件
         run: |
