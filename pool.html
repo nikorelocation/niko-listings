@@ -82,6 +82,17 @@ header{background:#1a1a1a;padding:14px 20px;display:flex;align-items:center;just
 .utag{border:1.5px solid #ddd;background:#fff;padding:5px 12px;border-radius:20px;font-size:12px;cursor:pointer;color:#666;transition:all .12s;white-space:nowrap}
 .utag.on{background:#1a1a1a;color:#fff;border-color:#1a1a1a}
 .utag.price-tag.on{background:#c8a96e;border-color:#c8a96e;color:#fff}
+.utag.auto{background:#c8a96e;border-color:#c8a96e;color:#fff}
+.ucard-ocr{font-size:11.5px;color:#8a8175;padding:7px 0 3px;display:flex;align-items:center;gap:7px;flex-wrap:wrap}
+.nb-flag{display:inline-block;border-radius:20px;padding:1px 9px;font-size:11px;font-weight:600;background:#f0ece4;color:#8a8175}
+.nb-flag.ok{background:#e4f4ea;color:#1e7a45}
+.nb-flag.run{background:#e8eef6;color:#3a5a86}
+.nb-flag.dup{background:#fdf1d8;color:#b08d3f}
+.nb-flag.need{background:#fbe6e3;color:#c0392b}
+.nb-strip{display:block;width:100%;border:1px solid #e8e2d6;border-radius:8px;margin:6px 0 2px;background:#fff}
+.undo-btn{margin-top:9px;background:transparent;border:1px solid #ddd;color:#666;padding:11px;border-radius:12px;font-size:13px;cursor:pointer;width:100%;display:none}
+.undo-btn.on{display:block}
+#ocr-stat{font-size:12px;color:#8a8175;margin:2px 0 8px;text-align:center}
 .ulabel{font-size:10px;color:#bbb;font-weight:600;letter-spacing:.4px;margin-bottom:5px;text-transform:uppercase}
 .ucard-save{margin:12px 14px 14px;background:#1a1a1a;color:#fff;border:none;padding:12px;border-radius:10px;font-size:14px;font-weight:500;cursor:pointer;width:calc(100% - 28px);display:block}
 .ucard-save:hover{background:#333}
@@ -143,14 +154,7 @@ header{background:#1a1a1a;padding:14px 20px;display:flex;align-items:center;just
   </div>
   <div class="sep"></div>
   <span class="fl">入住</span>
-  <div style="display:flex;gap:5px">
-    <button class="pill on" onclick="filt('month','all',this)">全部</button>
-    <button class="pill" onclick="filt('month','now',this)">现在</button>
-    <button class="pill" onclick="filt('month','7',this)">7月</button>
-    <button class="pill" onclick="filt('month','8',this)">8月</button>
-    <button class="pill" onclick="filt('month','9',this)">9月</button>
-    <button class="pill" onclick="filt('month','10+',this)">10月+</button>
-  </div>
+  <div style="display:flex;gap:5px" id="month-pills"></div>
 </div>
 
 <div id="pool">
@@ -172,7 +176,8 @@ header{background:#1a1a1a;padding:14px 20px;display:flex;align-items:center;just
   <div class="sheet">
     <button class="close-x" onclick="closeUpload()">×</button>
     <div class="sheet-title">上传房源卡片</div>
-    <div class="sheet-sub">选择图片，点选区域/户型/价格后保存</div>
+    <div class="sheet-sub">拖入图片即可，户型/价格/入住/区域自动识别</div>
+    <div id="ocr-stat"></div>
     <div class="dz" id="dz" onclick="document.getElementById('fi').click()">
       <div style="font-size:32px">📷</div>
       <p>点击选择图片（可多选）</p>
@@ -181,6 +186,7 @@ header{background:#1a1a1a;padding:14px 20px;display:flex;align-items:center;just
     </div>
     <div class="queue" id="queue"></div>
     <button class="batch-save" id="batch-save" onclick="saveAll()">全部保存到房源池</button>
+    <button class="undo-btn" id="undo-btn" onclick="undoAuto()">撤销本次自动上传</button>
   </div>
 </div>
 
@@ -303,17 +309,80 @@ function priceRange(w) {
   return 'high';
 }
 
-// Derive move-in month key from avail string like "24/07/2026" or "Now"
+// ── 入住时间 ───────────────────────────────────────────
+// 筛选条以「当前月份」为基准自动向后滚动:现在 / 本月 / +1 / +2 / +3 / +4及以后
+// 数据库里存绝对值 'YYYY-MM'(或 'now'),所以不会随时间失真;
+// 旧数据里的 '7' '8' '9' '10+' 会被当作 2026 年对应月份读入。
+function mKey(y, m) { return y + '-' + String(m).padStart(2, '0'); }
+
+function monthSlots() {
+  const n = new Date(), y = n.getFullYear(), m = n.getMonth() + 1;
+  const at = i => {
+    const mm = ((m - 1 + i) % 12) + 1, yy = y + Math.floor((m - 1 + i) / 12);
+    return { m: mm, y: yy, k: mKey(yy, mm), label: (yy > y ? '明年' : '') + mm + '月' };
+  };
+  const out = [{ k: 'now', label: '现在' }];
+  for (let i = 0; i < 4; i++) out.push(at(i));
+  const last = at(4);
+  out.push({ k: last.k + '+', from: last.k, label: last.label + '+' });
+  return out;
+}
+const MONTH_SLOTS = monthSlots();
+
+function normMonth(v) {
+  if (v == null || v === '') return null;
+  v = String(v);
+  if (/^now$/i.test(v)) return 'now';
+  if (/^\d{4}-\d{2}/.test(v)) return v.slice(0, 7);
+  const n = parseInt(v, 10);               // 旧数据 '7' '8' '9' '10+'
+  if (!n) return 'now';
+  return mKey(2026, n);
+}
+
+function monthLabelOf(v) {
+  const k = normMonth(v);
+  if (!k) return '';
+  if (k === 'now') return '现在';
+  for (const s of MONTH_SLOTS) {
+    if (s.k === 'now') continue;
+    if (s.from ? k >= s.from : s.k === k) return s.label;
+  }
+  const yy = parseInt(k.slice(0, 4), 10), mm = parseInt(k.slice(5), 10);
+  return (yy > new Date().getFullYear() ? '明年' : '') + mm + '月';
+}
+
+function monthMatch(v, slotKey) {
+  if (slotKey === 'all') return true;
+  const k = normMonth(v);
+  if (!k) return false;
+  if (slotKey === 'now' || k === 'now') return k === slotKey;
+  const s = MONTH_SLOTS.find(x => x.k === slotKey);
+  if (!s) return false;
+  return s.from ? k >= s.from : k === s.k;
+}
+
+// "24/07/2026" / "Now" -> 月份键。按「日」比较:今天或更早才算「现在」,
+// 所以本月稍后才能入住的房子会正确落到本月那一格,而不是被吞进「现在」。
 function availMonth(avail) {
   if (!avail || /now/i.test(avail)) return 'now';
-  const m = avail.match(/(\d{1,2})[\/\-](\d{2})[\/\-]\d{2,4}/);
+  const m = avail.match(/(\d{1,2})[\/\-](\d{1,2})[\/\-](\d{2,4})/);
   if (!m) return 'now';
-  const mo = parseInt(m[2]);
-  if (mo <= 6) return 'now';
-  if (mo === 7) return '7';
-  if (mo === 8) return '8';
-  if (mo === 9) return '9';
-  return '10+';
+  let y = parseInt(m[3], 10); if (y < 100) y += 2000;
+  const mo = parseInt(m[2], 10), day = parseInt(m[1], 10);
+  const t = new Date(); t.setHours(0, 0, 0, 0);
+  const d = new Date(y, mo - 1, day);
+  if (isNaN(d.getTime())) return 'now';
+  return d <= t ? 'now' : mKey(y, mo);
+}
+
+function renderMonthPills() {
+  const box = document.getElementById('month-pills');
+  if (!box) return;
+  box.innerHTML = '<button class="pill on" data-mk="all">全部</button>' +
+    MONTH_SLOTS.map(s => '<button class="pill" data-mk="' + s.k + '">' + s.label + '</button>').join('');
+  box.querySelectorAll('.pill').forEach(b => {
+    b.onclick = () => filt('month', b.dataset.mk, b);
+  });
 }
 
 // Map postcode prefix to area
@@ -373,7 +442,7 @@ function getFiltered() {
       if (b < 3 && p.beds !== b) return false;
     }
     if (F.price !== 'all' && p.price !== F.price) return false;
-    if (F.month !== 'all' && p.month !== F.month) return false;
+    if (!monthMatch(p.month, F.month)) return false;
     return true;
   });
 }
@@ -391,7 +460,7 @@ function render() {
     const areaLabel = AREA_LABEL[p.area] || '';
     const bedsLabel = p.beds === 0 ? 'Studio' : (p.beds || 2) + '室';
     const priceLabel = p.weekly ? `£${p.weekly}/周` : (p.price === 'low' ? '≤£700' : p.price === 'high' ? '≥£1000' : '£700-1000');
-    const monthLabel = p.month === 'now' ? '现在' : p.month ? p.month + '月' : '';
+    const monthLabel = monthLabelOf(p.month);
     return `<div class="tile" onclick="showDetail('${p.id}')">
       <div class="tile-img">
         ${img ? `<img src="${img}" loading="lazy" onerror="this.parentNode.style.minHeight='120px'">` : '<div style="min-height:140px;background:#ece9e4"></div>'}
@@ -479,6 +548,7 @@ function toast(msg) {
 // ── UPLOAD ───────────────────────────────────────────────
 function openUpload() {
   document.getElementById('overlay').classList.add('on');
+  buildHashIndex();
 }
 function closeUpload() {
   document.getElementById('overlay').classList.remove('on');
@@ -518,6 +588,7 @@ function handleFiles(files) {
     });
   });
   if (batchQ.length > 1) document.getElementById('batch-save').classList.add('on');
+  if (arr.length) autoTagAll(batchQ.slice(-arr.length));
 }
 
 function compressForSave(file) {
@@ -545,6 +616,29 @@ function compressForSave(file) {
   });
 }
 
+function utagRow(id, key, opts, extra) {
+  return opts.map(o =>
+    '<button class="utag ' + (extra || '') + '" data-k="' + key + '" data-v="' + o[0] +
+    '" onclick="tagSelect(\'' + id + '\',\'' + key + '\',\'' + o[0] + '\',this)">' + o[1] + '</button>'
+  ).join('');
+}
+
+// 由自动识别填进去的值,标成金色;用户一点就变回黑色(表示人工确认过)
+function markTag(entry, key, val, auto) {
+  entry[key] = (key === 'beds') ? parseInt(val, 10) : val;
+  const card = document.getElementById(entry.id);
+  if (!card) return;
+  let b = card.querySelector('.utag[data-k="' + key + '"][data-v="' + val + '"]');
+  if (!b && key === 'month') {                       // 例如 '2027-03' 落进「明年2月+」
+    const slot = MONTH_SLOTS.find(s => monthMatch(val, s.k));
+    if (slot) b = card.querySelector('.utag[data-k="month"][data-v="' + slot.k + '"]');
+  }
+  if (!b) return;
+  b.closest('.ucard-tags-row').querySelectorAll('.utag')
+    .forEach(x => { x.classList.remove('on'); x.classList.remove('auto'); });
+  b.classList.add(auto ? 'auto' : 'on');
+}
+
 function appendCard(entry) {
   const qEl = document.getElementById('queue');
   const div = document.createElement('div');
@@ -556,35 +650,24 @@ function appendCard(entry) {
       <img class="ucard-img" id="img-${entry.id}" src="" style="display:none">
       <button class="ucard-del" onclick="removeCard('${entry.id}')">×</button>
     </div>
+    <div class="ucard-ocr" id="ocr-${entry.id}"><span class="nb-flag run">识别中…</span></div>
+    <img class="nb-strip" id="strip-${entry.id}" style="display:none">
     <div class="ucard-tags">
       <div class="ulabel">位置</div>
       <div class="ucard-tags-row">
-        <button class="utag" onclick="tagSelect('${entry.id}','area','city',this)">市中心</button>
-        <button class="utag" onclick="tagSelect('${entry.id}','area','north',this)">北伦敦</button>
-        <button class="utag" onclick="tagSelect('${entry.id}','area','east',this)">东伦敦</button>
-        <button class="utag" onclick="tagSelect('${entry.id}','area','west',this)">西伦敦</button>
-        <button class="utag" onclick="tagSelect('${entry.id}','area','south',this)">南伦敦</button>
+        ${utagRow(entry.id,'area',[['city','市中心'],['north','北伦敦'],['east','东伦敦'],['west','西伦敦'],['south','南伦敦']])}
       </div>
       <div class="ulabel">户型</div>
       <div class="ucard-tags-row">
-        <button class="utag" onclick="tagSelect('${entry.id}','beds','0',this)">Studio</button>
-        <button class="utag" onclick="tagSelect('${entry.id}','beds','1',this)">1室</button>
-        <button class="utag" onclick="tagSelect('${entry.id}','beds','2',this)">2室</button>
-        <button class="utag" onclick="tagSelect('${entry.id}','beds','3',this)">3室+</button>
+        ${utagRow(entry.id,'beds',[['0','Studio'],['1','1室'],['2','2室'],['3','3室+']])}
       </div>
       <div class="ulabel">价格范围</div>
       <div class="ucard-tags-row">
-        <button class="utag price-tag" onclick="tagSelect('${entry.id}','price','low',this)">≤£700/周</button>
-        <button class="utag price-tag" onclick="tagSelect('${entry.id}','price','mid',this)">£700-1000</button>
-        <button class="utag price-tag" onclick="tagSelect('${entry.id}','price','high',this)">≥£1000/周</button>
+        ${utagRow(entry.id,'price',[['low','≤£700/周'],['mid','£700-1000'],['high','≥£1000/周']],'price-tag')}
       </div>
       <div class="ulabel">入住时间</div>
       <div class="ucard-tags-row">
-        <button class="utag" onclick="tagSelect('${entry.id}','month','now',this)">现在</button>
-        <button class="utag" onclick="tagSelect('${entry.id}','month','7',this)">7月</button>
-        <button class="utag" onclick="tagSelect('${entry.id}','month','8',this)">8月</button>
-        <button class="utag" onclick="tagSelect('${entry.id}','month','9',this)">9月</button>
-        <button class="utag" onclick="tagSelect('${entry.id}','month','10+',this)">10月+</button>
+        ${utagRow(entry.id,'month',MONTH_SLOTS.map(s=>[s.k,s.label]))}
       </div>
     </div>
     <button class="ucard-save" onclick="saveSingle('${entry.id}')">保存到房源池</button>
@@ -598,8 +681,10 @@ function tagSelect(id, key, val, el) {
     // beds must be stored as integer (0 = Studio), other fields stay as string
     entry[key] = (key === 'beds') ? parseInt(val, 10) : val;
   }
-  el.closest('.ucard-tags-row').querySelectorAll('.utag').forEach(b => b.classList.remove('on'));
+  el.closest('.ucard-tags-row').querySelectorAll('.utag')
+    .forEach(b => { b.classList.remove('on'); b.classList.remove('auto'); });
   el.classList.add('on');
+  if (entry) refreshOcrLine(entry);
 }
 
 function removeCard(id) {
@@ -608,6 +693,211 @@ function removeCard(id) {
   batchQ = batchQ.filter(x => x.id !== id);
   document.getElementById(id)?.remove();
   if (batchQ.length <= 1) document.getElementById('batch-save').classList.remove('on');
+}
+
+
+// ── 自动识别(OCR) + 去重 ────────────────────────────────
+// 海报是固定模板:顶部有日期条,中间有「户型/入住/家具/邮编」四个格和周租。
+// 裁出这两块分别 OCR,再解析成 area / beds / price / month 四个字段。
+let AUTO_RUNNING = false, AUTO_SAVED = [], OCR_WORKER = null;
+let POOL_HASH = new Map(), HASH_BUILDING = null;
+
+const NB_KW = {
+  east:  ['stratford','towerhamlets','wardian','canarywharf','isleofdogs','hackney','shoreditch','whitechapel','aldgate','wapping','poplar','bethnalgreen','limehouse'],
+  city:  ['cityroad','aldwych','strand','holborn','bloomsbury','clerkenwell','farringdon','barbican','moorgate','soho','mayfair','marylebone','fitzrovia','coventgarden'],
+  north: ['islington','camden','angel','highbury','kentishtown','finsburypark','archway','hampstead'],
+  west:  ['kensington','chelsea','fulham','nottinghill','paddington','hammersmith','earlscourt','maidavale'],
+  south: ['battersea','vauxhall','clapham','brixton','peckham','bermondsey','southwark','waterloo','elephant','nineelms','kennington']
+};
+
+function ocrStat(t) { const e = document.getElementById('ocr-stat'); if (e) e.textContent = t || ''; }
+
+function nbLoadImg(src) {
+  return new Promise((res, rej) => {
+    const i = new Image(); i.crossOrigin = 'anonymous';
+    i.onload = () => res(i); i.onerror = () => rej(new Error('图片读取失败')); i.src = src;
+  });
+}
+
+function nbCrop(img, a, b, sc) {
+  const y0 = Math.round(img.naturalHeight * a), y1 = Math.round(img.naturalHeight * b);
+  const c = document.createElement('canvas');
+  c.width = img.naturalWidth * sc; c.height = (y1 - y0) * sc;
+  const x = c.getContext('2d'); x.imageSmoothingQuality = 'high';
+  x.drawImage(img, 0, y0, img.naturalWidth, y1 - y0, 0, 0, c.width, c.height);
+  return c;
+}
+
+function nbDhash(img) {
+  const c = document.createElement('canvas'); c.width = 9; c.height = 8;
+  const x = c.getContext('2d', { willReadFrequently: true }); x.drawImage(img, 0, 0, 9, 8);
+  const d = x.getImageData(0, 0, 9, 8).data; let bits = '';
+  for (let r = 0; r < 8; r++) for (let k = 0; k < 8; k++) {
+    const i = (r * 9 + k) * 4, j = (r * 9 + k + 1) * 4;
+    const A = d[i]*.299 + d[i+1]*.587 + d[i+2]*.114;
+    const B = d[j]*.299 + d[j+1]*.587 + d[j+2]*.114;
+    bits += A > B ? '1' : '0';
+  }
+  return bits.match(/.{8}/g).map(v => parseInt(v, 2).toString(16).padStart(2, '0')).join('');
+}
+
+function buildHashIndex() {
+  if (HASH_BUILDING) return HASH_BUILDING;
+  const rows = allProps.filter(p => p.isUploaded && p.displayImg);
+  let i = 0, done = 0;
+  const run = async () => {
+    while (i < rows.length) {
+      const r = rows[i++];
+      try { const im = await nbLoadImg(r.displayImg); const h = nbDhash(im); if (!POOL_HASH.has(h)) POOL_HASH.set(h, r.id); } catch (e) {}
+      done++; if (done % 30 === 0) ocrStat('正在建立去重索引 ' + done + '/' + rows.length);
+    }
+  };
+  HASH_BUILDING = Promise.all(Array.from({ length: 8 }, run)).then(() => ocrStat(''));
+  return HASH_BUILDING;
+}
+
+function nbPcArea(p) {
+  p = p.toUpperCase().replace(/I/g, '1').replace(/O/g, '0');
+  if (/^EC\d/.test(p) || /^WC\d/.test(p)) return 'city';
+  if (/^W1$/.test(p) || /^SW1$/.test(p)) return 'city';
+  if (/^NW/.test(p) || /^N\d/.test(p)) return 'north';
+  if (/^E\d/.test(p)) return 'east';
+  if (/^SE/.test(p)) return 'south';
+  if (/^SW(3|5|6|7|10)$/.test(p)) return 'west';
+  if (/^SW/.test(p)) return 'south';
+  if (/^W\d/.test(p)) return 'west';
+  return null;
+}
+
+function nbAreaFromName(n) {
+  const b = n.replace(/\.[a-z0-9]+$/i, '').toLowerCase().replace(/[^a-z0-9]/g, '');
+  const m = b.match(/(ec\d[a-z]?|wc\d[a-z]?|nw\d{1,2}|sw\d{1,2}|se\d{1,2}|[new]\d{1,2})$/);
+  if (m) { const a = nbPcArea(m[1]); if (a) return a; }
+  for (const k in NB_KW) for (const w of NB_KW[k]) if (b.indexOf(w) >= 0) return k;
+  return null;
+}
+
+// 周租常被 OCR 漏读,只剩月租;月租 ≈ 周租 × 4.33,据此还原
+function nbWeekly(ns) {
+  ns = ns.filter(n => n >= 80 && n <= 20000).sort((a, b) => a - b);
+  if (!ns.length) return null;
+  for (const a of ns) for (const b of ns) if (b > a && b / a >= 4.0 && b / a <= 4.7) return a;
+  return ns[0] > 1800 ? Math.round(ns[0] * 12 / 52) : ns[0];
+}
+
+function nbParse(tTop, tLow) {
+  const out = {};
+  const lines = tLow.split('\n').filter(l => l.trim());
+  let spec = null;
+  for (const l of lines) if (/\d{1,2}\/\d{1,2}\//.test(l) || /(^|\s)Now(\s|$)/i.test(l)) { spec = l; break; }
+  // 户型只从规格那一行读,否则「Fitness Studio」之类的配套标签会被误判成 Studio
+  const s = spec || tLow;
+  if (/studio/i.test(s)) out.beds = 0;
+  else { const m = s.match(/(\d)\s*Bed/i); if (m) out.beds = parseInt(m[1], 10); }
+  const all = tTop + '\n' + tLow;
+  if (/(^|\s)Now(\s|$)/i.test(all)) out.month = 'now';
+  else {
+    const d = tTop.match(/\b\d{1,2}\/\d{1,2}\/\d{4}\b/) || tLow.match(/\b\d{1,2}\/\d{1,2}\/\d{4}\b/);
+    if (d) out.month = availMonth(d[0]);
+  }
+  const ns = []; const re = /£\s?([\d,]{3,7})/g; let x;
+  while ((x = re.exec(tLow)) !== null) ns.push(parseInt(x[1].replace(/,/g, ''), 10));
+  const wk = nbWeekly(ns);
+  if (wk) { out.price = priceRange(wk); out.weekly = wk; }
+  if (spec) { const pm = spec.match(/\b([A-Z]{1,2}[0-9I][0-9A-Z]?)\s*$/); if (pm) out.pc = pm[1]; }
+  return out;
+}
+
+function nbWorker() {
+  if (OCR_WORKER) return Promise.resolve(OCR_WORKER);
+  const load = window.Tesseract ? Promise.resolve() : new Promise((res, rej) => {
+    const s = document.createElement('script');
+    s.src = 'https://cdn.jsdelivr.net/npm/tesseract.js@5.1.1/dist/tesseract.min.js';
+    s.onload = res; s.onerror = () => rej(new Error('OCR 库加载失败'));
+    document.head.appendChild(s);
+  });
+  return load.then(() => Tesseract.createWorker('eng')).then(w => { OCR_WORKER = w; return w; });
+}
+
+function refreshOcrLine(e) {
+  const el = document.getElementById('ocr-' + e.id);
+  if (!el) return;
+  if (!e.ocrDone) { el.innerHTML = '<span class="nb-flag run">识别中…</span>'; return; }
+  const full = e.area != null && e.beds != null && e.price != null && e.month != null;
+  const bits = [];
+  if (e.dupe) bits.push('<span class="nb-flag dup">池中已有</span>');
+  else if (full) bits.push('<span class="nb-flag ok">已识别</span>');
+  else bits.push('<span class="nb-flag need">需补选</span>');
+  if (e.weekly) bits.push('£' + e.weekly + '/周');
+  if (e.month) bits.push(monthLabelOf(e.month) + '入住');
+  el.innerHTML = bits.join('&nbsp; ');
+}
+
+async function autoTagAll(entries) {
+  AUTO_RUNNING = true;
+  let saved = 0, need = 0, dup = 0, n = 0;
+  try {
+    ocrStat('准备自动识别…');
+    await buildHashIndex();
+    const wk = await nbWorker();
+    for (const e of entries) {
+      if (!batchQ.find(x => x.id === e.id)) continue;   // 已被删掉
+      n++; ocrStat('识别中 ' + n + '/' + entries.length);
+      try {
+        const img = await nbLoadImg(e.objectUrl);
+        const h = nbDhash(img); e.hash = h;
+        if (POOL_HASH.has(h)) e.dupe = true; else POOL_HASH.set(h, e.id);
+        try {
+          const st = document.getElementById('strip-' + e.id);
+          if (st) { st.src = nbCrop(img, .505, .79, 1).toDataURL('image/jpeg', .82); st.style.display = 'block'; }
+        } catch (err) {}
+        const a = nbAreaFromName(e.file.name);
+        if (a && e.area == null) markTag(e, 'area', a, true);
+        const t1 = await wk.recognize(nbCrop(img, 0, .09, 2));
+        const t2 = await wk.recognize(nbCrop(img, .50, .85, 2));
+        const r = nbParse(t1.data.text, t2.data.text);
+        if (r.beds != null && e.beds == null) markTag(e, 'beds', String(r.beds), true);
+        if (r.price && e.price == null) markTag(e, 'price', r.price, true);
+        if (r.month && e.month == null) markTag(e, 'month', r.month, true);
+        if (e.area == null && r.pc) { const a2 = nbPcArea(r.pc); if (a2) markTag(e, 'area', a2, true); }
+        e.weekly = r.weekly || null;
+      } catch (err) {}
+      e.ocrDone = true;
+      refreshOcrLine(e);
+      const full = e.area != null && e.beds != null && e.price != null && e.month != null;
+      if (e.dupe) { dup++; }
+      else if (full) { await saveSingle(e.id); saved++; }
+      else { need++; }
+    }
+    const msg = [];
+    if (saved) msg.push('已自动上传 ' + saved + ' 套');
+    if (dup) msg.push('重复跳过 ' + dup + ' 套');
+    if (need) msg.push(need + ' 套待补选后保存');
+    ocrStat(msg.join(' · ') || '');
+    if (saved) {
+      const ub = document.getElementById('undo-btn');
+      if (ub) { ub.classList.add('on'); ub.textContent = '撤销本次自动上传（' + AUTO_SAVED.length + ' 套）'; }
+      toast('已自动上传 ' + saved + ' 套 ✓');
+    }
+  } catch (err) {
+    ocrStat('自动识别不可用：' + err.message + '，可手动点选后保存');
+  }
+  AUTO_RUNNING = false;
+  if (!batchQ.length && !AUTO_SAVED.length) closeUpload();
+}
+
+async function undoAuto() {
+  if (!AUTO_SAVED.length) return;
+  if (!confirm('撤销本次自动上传的 ' + AUTO_SAVED.length + ' 套房源？撤销后需要重新上传。')) return;
+  const btn = document.getElementById('undo-btn');
+  btn.disabled = true; btn.textContent = '撤销中…';
+  let n = 0;
+  for (const id of AUTO_SAVED.slice()) {
+    try { await sbDelete(id); allProps = allProps.filter(p => p.id !== id); n++; } catch (e) {}
+  }
+  AUTO_SAVED = [];
+  btn.disabled = false; btn.classList.remove('on'); btn.textContent = '撤销本次自动上传';
+  render(); toast('已撤销 ' + n + ' 套');
 }
 
 async function saveSingle(id) {
@@ -656,8 +946,9 @@ async function saveSingle(id) {
     allProps.unshift(p);
     render();
     removeCard(id);
-    if (!batchQ.length) closeUpload();
-    toast('已保存 ✓');
+    if (!batchQ.length && !AUTO_RUNNING) closeUpload();
+    if (!AUTO_RUNNING) toast('已保存 ✓');
+    else AUTO_SAVED.push(recId);        // 只有自动上传的才进撤销名单
   } catch(e) {
     toast('保存失败，请重试');
     if (btn) { btn.disabled = false; btn.textContent = '保存到房源池'; }
@@ -676,6 +967,7 @@ window.addEventListener('popstate', () => {
 });
 
 (async () => {
+  renderMonthPills();
   await loadAll();
   applyAdminUI();
   if (location.hash.startsWith('#/p/')) showDetail(location.hash.slice(4));

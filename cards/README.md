@@ -35,7 +35,7 @@ python cards/make_cards.py --url https://www.rightmove.co.uk/properties/94020657
 照 pool.html 的规则：
 - 位置：EC/WC/W1x/SW1x/SE1 = 市中心；N/NW = 北伦敦；E = 东伦敦；SW/SE = 南伦敦；其余 W = 西伦敦
 - 价格：周租 ≤700 低 / 700–1000 中 / ≥1000 高
-- 入住：`legacy`（默认）= 现在/7/8/9/10+，对应线上旧版页面；换成新版 pool.html 后把 workflow 的 month_format 选 `ym`
+- 入住：`ym`（默认）= 现在/YYYY-MM，对应现在线上的 pool.html（带按月筛选）；`legacy` = 现在/7/8/9/10+ 是旧版页面用的，已不需要
 
 ## 文件
 - `make_cards.py` — 主脚本

@@ -19,7 +19,7 @@ on:
         required: false
         type: choice
         options: [legacy, ym]
-        default: legacy
+        default: ym
 
 permissions:
   contents: write

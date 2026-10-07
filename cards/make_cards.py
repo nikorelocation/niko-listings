@@ -283,7 +283,7 @@ async def main():
     ap.add_argument('--url', action='append', default=[])
     ap.add_argument('--out', default='out')
     ap.add_argument('--save', action='store_true', help='写入 Supabase 房源池')
-    ap.add_argument('--month-format', default=os.environ.get('MONTH_FORMAT', 'legacy'))
+    ap.add_argument('--month-format', default=os.environ.get('MONTH_FORMAT', 'ym'))
     a = ap.parse_args()
     urls = list(a.url)
     if a.urls:
