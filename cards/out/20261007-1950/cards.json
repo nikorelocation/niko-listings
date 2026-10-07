@@ -1,0 +1,44 @@
+[
+  {
+    "link": "",
+    "rm_id": "",
+    "address": "Maine Tower, Canary Wharf",
+    "postcode": "London",
+    "bed_label": "Studio",
+    "weekly": 485,
+    "monthly": "2102",
+    "avail": "Ask agent",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-maine-tower-canary-wharf.jpg",
+    "tags": {
+      "area": "west",
+      "beds": 0,
+      "price": "low",
+      "month": "now"
+    },
+    "saved": false,
+    "save_error": "没有 SUPABASE_KEY，跳过写库"
+  },
+  {
+    "link": "",
+    "rm_id": "",
+    "address": "Hampton Tower, London, E14",
+    "postcode": "E14",
+    "bed_label": "1 Bed 1 Bath",
+    "weekly": 727,
+    "monthly": "3150",
+    "avail": "13/11/2026",
+    "furnish": "不带家具",
+    "agent": "",
+    "card": "niko-hampton-tower-london-e14.jpg",
+    "tags": {
+      "area": "east",
+      "beds": 1,
+      "price": "mid",
+      "month": "10+"
+    },
+    "saved": false,
+    "save_error": "没有 SUPABASE_KEY，跳过写库"
+  }
+]
