@@ -234,13 +234,33 @@ def price_range(w):
     if not w: return 'mid'
     return 'low' if w <= 700 else ('mid' if w <= 1000 else 'high')
 
-def avail_month(avail, fmt):
-    if not avail or re.search(r'now|ask', avail, re.I):
-        return 'now'
-    m = re.match(r'(\d{1,2})/(\d{1,2})/(\d{4})', avail)
+MONTHS = {m: i + 1 for i, m in enumerate(['january', 'february', 'march', 'april', 'may', 'june', 'july',
+                                            'august', 'september', 'october', 'november', 'december'])}
+MONTHS.update({k[:3]: v for k, v in list(MONTHS.items())})
+
+
+def month_from_text(text):
+    """「Available early November」「from mid-Nov」这类写在描述/特点里的入住月 → date（当月 1 号）"""
+    m = re.search(r'\bavailable\b[^.\n]{0,40}?\b(jan|feb|mar|apr|may|jun|jul|aug|sep|sept|oct|nov|dec)[a-z]*\b',
+                  text or '', re.I)
     if not m:
+        return None
+    mon = MONTHS.get(m.group(1).lower()[:3])
+    today = dt.date.today()
+    y = today.year if mon >= today.month else today.year + 1
+    return dt.date(y, mon, 1)
+
+
+def avail_month(avail, fmt, text=''):
+    d = None
+    m = re.match(r'(\d{1,2})/(\d{1,2})/(\d{4})', avail or '')
+    if m:
+        d = dt.date(int(m.group(3)), int(m.group(2)), int(m.group(1)))
+    else:
+        # Rightmove 写「Ask agent」时，常在 Key features/描述里写「Available early November」
+        d = month_from_text(text)
+    if not d:
         return 'now'
-    d = dt.date(int(m.group(3)), int(m.group(2)), int(m.group(1)))
     if d <= dt.date.today():
         return 'now'
     if fmt == 'ym':
@@ -354,7 +374,7 @@ async def main():
 
     for (d, imgs, fname), p in zip(entries, paths):
         tags = {'area': pc2area(d.get('postcode')), 'beds': int(d.get('beds') or 0),
-                'price': price_range(int(d.get('weekly') or 0)), 'month': avail_month(d.get('avail'), a.month_format)}
+                'price': price_range(int(d.get('weekly') or 0)), 'month': avail_month(d.get('avail'), a.month_format, ' '.join(d.get('features') or []))}
         row = {'link': d.get('link', ''), 'rm_id': d.get('rm_id', ''),
                'address': d.get('address') or d.get('fn_title') or fname, 'postcode': d.get('postcode', ''),
                'bed_label': d.get('bed_label', ''), 'weekly': int(d.get('weekly') or 0), 'monthly': d.get('monthly', ''),
