@@ -353,11 +353,12 @@ async def main():
         paths = await render_cards(pw, entries, a.out)
 
     for (d, imgs, fname), p in zip(entries, paths):
-        tags = {'area': pc2area(d['postcode']), 'beds': int(d['beds']),
-                'price': price_range(int(d['weekly'] or 0)), 'month': avail_month(d['avail'], a.month_format)}
-        row = {'link': d['link'], 'rm_id': d['rm_id'], 'address': d['address'], 'postcode': d['postcode'],
-               'bed_label': d['bed_label'], 'weekly': int(d['weekly'] or 0), 'monthly': d['monthly'],
-               'avail': d['avail'], 'furnish': d['furnish'], 'agent': d['agent'],
+        tags = {'area': pc2area(d.get('postcode')), 'beds': int(d.get('beds') or 0),
+                'price': price_range(int(d.get('weekly') or 0)), 'month': avail_month(d.get('avail'), a.month_format)}
+        row = {'link': d.get('link', ''), 'rm_id': d.get('rm_id', ''),
+               'address': d.get('address') or d.get('fn_title') or fname, 'postcode': d.get('postcode', ''),
+               'bed_label': d.get('bed_label', ''), 'weekly': int(d.get('weekly') or 0), 'monthly': d.get('monthly', ''),
+               'avail': d.get('avail', '—'), 'furnish': d.get('furnish', ''), 'agent': d.get('agent', ''),
                'card': os.path.basename(p), 'tags': tags}
         if a.save:
             try:
