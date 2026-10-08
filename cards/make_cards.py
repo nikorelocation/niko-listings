@@ -253,6 +253,8 @@ def month_from_text(text):
 
 def avail_month(avail, fmt, text=''):
     d = None
+    if re.search(r'\bnow\b|immediate', avail or '', re.I):
+        return 'now'
     m = re.match(r'(\d{1,2})/(\d{1,2})/(\d{4})', avail or '')
     if m:
         d = dt.date(int(m.group(3)), int(m.group(2)), int(m.group(1)))
