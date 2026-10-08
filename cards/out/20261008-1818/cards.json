@@ -1,0 +1,192 @@
+[
+  {
+    "link": "https://www.rightmove.co.uk/properties/94081776",
+    "rm_id": "94081776",
+    "address": "Valencia Tower, 250 City Road, London Ec1V",
+    "postcode": "EC1V",
+    "bed_label": "1 Bed 1 Bath",
+    "weekly": 865,
+    "monthly": "3748",
+    "avail": "11/12/2026",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-valencia-tower-250-city-road-london-ec1v.jpg",
+    "tags": {
+      "area": "city",
+      "beds": 1,
+      "price": "mid",
+      "month": "2026-12"
+    }
+  },
+  {
+    "link": "https://www.rightmove.co.uk/properties/93985248",
+    "rm_id": "93985248",
+    "address": "Goodchild Road, Finsbury Park, London",
+    "postcode": "N4",
+    "bed_label": "1 Bed 1 Bath",
+    "weekly": 542,
+    "monthly": "2349",
+    "avail": "Ask agent",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-goodchild-road-finsbury-park-london-n4.jpg",
+    "tags": {
+      "area": "north",
+      "beds": 1,
+      "price": "low",
+      "month": "now"
+    }
+  },
+  {
+    "link": "https://www.rightmove.co.uk/properties/94030143",
+    "rm_id": "94030143",
+    "address": "Alie Street, Aldgate",
+    "postcode": "E1",
+    "bed_label": "3 Bed 2 Bath",
+    "weekly": 969,
+    "monthly": "4199",
+    "avail": "Ask agent",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-alie-street-aldgate-e1.jpg",
+    "tags": {
+      "area": "east",
+      "beds": 3,
+      "price": "mid",
+      "month": "now"
+    }
+  },
+  {
+    "link": "https://www.rightmove.co.uk/properties/94081023",
+    "rm_id": "94081023",
+    "address": "1 Bollinder Place, London, Ec1V 2Ag",
+    "postcode": "EC1V",
+    "bed_label": "2 Bed 2 Bath",
+    "weekly": 1361,
+    "monthly": "5898",
+    "avail": "Now",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-1-bollinder-place-london-ec1v-2ag-ec1v.jpg",
+    "tags": {
+      "area": "city",
+      "beds": 2,
+      "price": "high",
+      "month": "now"
+    }
+  },
+  {
+    "link": "https://www.rightmove.co.uk/properties/93993375",
+    "rm_id": "93993375",
+    "address": "Nine Elms Lane London Sw8",
+    "postcode": "SW8",
+    "bed_label": "2 Bed 2 Bath",
+    "weekly": 1846,
+    "monthly": "7999",
+    "avail": "30/10/2026",
+    "furnish": "不带家具",
+    "agent": "",
+    "card": "niko-nine-elms-lane-london-sw8.jpg",
+    "tags": {
+      "area": "south",
+      "beds": 2,
+      "price": "high",
+      "month": "2026-10"
+    }
+  },
+  {
+    "link": "https://www.rightmove.co.uk/properties/94025799",
+    "rm_id": "94025799",
+    "address": "Goodchild Road London N4",
+    "postcode": "N4",
+    "bed_label": "1 Bed 1 Bath",
+    "weekly": 508,
+    "monthly": "2201",
+    "avail": "05/11/2026",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-goodchild-road-london-n4.jpg",
+    "tags": {
+      "area": "north",
+      "beds": 1,
+      "price": "low",
+      "month": "2026-11"
+    }
+  },
+  {
+    "link": "https://www.rightmove.co.uk/properties/94029285",
+    "rm_id": "94029285",
+    "address": "Goodchild Road London N4",
+    "postcode": "N4",
+    "bed_label": "2 Bed 2 Bath",
+    "weekly": 623,
+    "monthly": "2700",
+    "avail": "Now",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-goodchild-road-london-n4(2)-n4.jpg",
+    "tags": {
+      "area": "north",
+      "beds": 2,
+      "price": "low",
+      "month": "now"
+    }
+  },
+  {
+    "link": "https://www.rightmove.co.uk/properties/94024200",
+    "rm_id": "94024200",
+    "address": "Roof Garden & Resident Spaces",
+    "postcode": "SE1",
+    "bed_label": "1 Bed 1 Bath",
+    "weekly": 807,
+    "monthly": "3497",
+    "avail": "16/12/2026",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-albert-embankment-london-se1.jpg",
+    "tags": {
+      "area": "city",
+      "beds": 1,
+      "price": "mid",
+      "month": "2026-12"
+    }
+  },
+  {
+    "link": "https://www.rightmove.co.uk/properties/93993093",
+    "rm_id": "93993093",
+    "address": "Prospect Way London Sw11",
+    "postcode": "SW11",
+    "bed_label": "3 Bed 3 Bath",
+    "weekly": 1800,
+    "monthly": "7800",
+    "avail": "Now",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-prospect-way-london-sw11.jpg",
+    "tags": {
+      "area": "south",
+      "beds": 3,
+      "price": "high",
+      "month": "now"
+    }
+  },
+  {
+    "link": "https://www.rightmove.co.uk/properties/94037535",
+    "rm_id": "94037535",
+    "address": "Newnton Close, Skylark Point, N4",
+    "postcode": "N4",
+    "bed_label": "1 Bed 1 Bath",
+    "weekly": 519,
+    "monthly": "2249",
+    "avail": "02/12/2026",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-newnton-close-skylark-point-n4.jpg",
+    "tags": {
+      "area": "north",
+      "beds": 1,
+      "price": "low",
+      "month": "2026-12"
+    }
+  }
+]
