@@ -14,7 +14,7 @@ Niko Relocation — Rightmove 链接 → 房源卡片 JPG → （可选）写入
                                                     ym = now/YYYY-MM（新版 pool.html，带月份筛选）
 输出：out/niko-<slug>-<postcode>.jpg + out/cards.json（每套的数据和写库结果）
 """
-import argparse, asyncio, base64, datetime as dt, json, os, re, sys, time, random, mimetypes
+import argparse, glob, asyncio, base64, datetime as dt, json, os, re, sys, time, random, mimetypes
 from io import BytesIO
 from urllib.parse import urlparse
 
@@ -298,6 +298,41 @@ def supabase_save(jpg_path, tags):
     return rec_id, image_url
 
 
+def supabase_delete(rec_id):
+    """按 properties.id 删除一条记录及其图片（用于清理重复）"""
+    import requests
+    url = os.environ.get('SUPABASE_URL', 'https://imhlozdlohtjkdvrsylu.supabase.co').rstrip('/')
+    key = os.environ.get('SUPABASE_KEY', '')
+    if not key:
+        raise RuntimeError('没有 SUPABASE_KEY')
+    h = {'apikey': key, 'Authorization': 'Bearer ' + key}
+    r = requests.get(f'{url}/rest/v1/properties?id=eq.{rec_id}&select=id,image_url', headers=h, timeout=30)
+    r.raise_for_status()
+    rows = r.json()
+    if not rows:
+        return False
+    r = requests.delete(f'{url}/rest/v1/properties?id=eq.{rec_id}', headers=h, timeout=30)
+    r.raise_for_status()
+    img = rows[0].get('image_url') or ''
+    m = re.search(r'/property-images/([^/?]+)$', img)
+    if m:
+        requests.delete(f'{url}/storage/v1/object/property-images/{m.group(1)}', headers=h, timeout=30)
+    return True
+
+
+def already_in_pool(repo_root):
+    """扫描仓库里所有 cards/out/*/cards.json，返回 {rm_id: (supabase_id, 文件夹)}：已经入池的房源不再重复上传"""
+    seen = {}
+    for cj in sorted(glob.glob(os.path.join(repo_root, 'cards', 'out', '*', 'cards.json'))):
+        try:
+            for r in json.load(open(cj, encoding='utf-8')):
+                if r.get('saved') and r.get('rm_id'):
+                    seen.setdefault(str(r['rm_id']), (r.get('supabase_id'), os.path.basename(os.path.dirname(cj))))
+        except Exception:
+            pass
+    return seen
+
+
 # ── main ─────────────────────────────────────────────────────
 async def main():
     ap = argparse.ArgumentParser()
@@ -306,7 +341,15 @@ async def main():
     ap.add_argument('--out', default='out')
     ap.add_argument('--save', action='store_true', help='写入 Supabase 房源池')
     ap.add_argument('--month-format', default=os.environ.get('MONTH_FORMAT', 'ym'))
+    ap.add_argument('--delete', default='', help='要从房源池删除的 properties.id（空格分隔），用于清理重复')
+    ap.add_argument('--force', action='store_true', help='已入池的也重新上传（默认跳过重复）')
     a = ap.parse_args()
+    if a.delete.strip():
+        for rid in a.delete.split():
+            try:
+                print(f'  🗑 {rid}: ' + ('已删除' if supabase_delete(rid) else '不存在'))
+            except Exception as e:
+                print(f'  ✗ 删除 {rid} 失败: {e}')
     urls = list(a.url)
     if a.urls:
         urls += [l.strip() for l in open(a.urls) if l.strip()]
@@ -323,12 +366,25 @@ async def main():
         clean.append(u)
     urls = list(dict.fromkeys(clean))
     if not urls:
+        if a.delete.strip():
+            sys.exit(0)
         print('没有有效的 Rightmove 链接'); sys.exit(1)
     os.makedirs(a.out, exist_ok=True)
+    pool = {} if a.force else already_in_pool(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+    dup = [u for u in urls if re.search(r'/properties/(\d+)', u).group(1) in pool]
+    for u in dup:
+        rid = re.search(r'/properties/(\d+)', u).group(1)
+        print(f'  ⟳ {u} 已在房源池（{pool[rid][1]}），跳过')
+    urls = [u for u in urls if u not in dup]
+    results = [{'link': u, 'rm_id': re.search(r'/properties/(\d+)', u).group(1), 'duplicate': True,
+                'supabase_id': pool[re.search(r'/properties/(\d+)', u).group(1)][0],
+                'first_folder': pool[re.search(r'/properties/(\d+)', u).group(1)][1]} for u in dup]
+    if not urls:
+        json.dump(results, open(os.path.join(a.out, 'cards.json'), 'w', encoding='utf-8'), ensure_ascii=False, indent=2)
+        print('全部已在房源池，无需上传'); sys.exit(0)
 
     from playwright.async_api import async_playwright
     import tempfile
-    results = []
     entries = []
     work = tempfile.mkdtemp(prefix='nikocards-')
     # 路线 1：Heroku 爬虫 → PDF → generate_cards 解析（和手动流程一致）

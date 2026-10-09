@@ -6,9 +6,15 @@ on:
   workflow_dispatch:
     inputs:
       urls:
-        description: 'Rightmove 链接，每行一个；可在链接后空一格加邮编，如 https://www.rightmove.co.uk/properties/94028853 E14'
-        required: true
+        description: 'Rightmove 链接，每行一个；可在链接后空一格加邮编，如 https://www.rightmove.co.uk/properties/94028853 E14（已入池的会自动跳过）'
+        required: false
         type: string
+        default: ''
+      delete_ids:
+        description: '要从房源池删除的记录 id（card-…，空格分隔），用于清理重复'
+        required: false
+        type: string
+        default: ''
       save:
         description: '写入房源池（Supabase）'
         required: true
@@ -52,7 +58,7 @@ jobs:
       - name: 写入链接文件
         run: |
           printf '%s\n' "${{ inputs.urls }}" > urls.txt
-          echo "共 $(grep -c properties urls.txt) 个链接"
+          echo "共 $(grep -c properties urls.txt || true) 个链接"
 
       - name: 出卡片 + 写入房源池
         env:
@@ -64,14 +70,15 @@ jobs:
           echo "OUT=$OUT" >> "$GITHUB_ENV"
           SAVE=""
           if [ "${{ inputs.save }}" = "true" ]; then SAVE="--save"; fi
-          python cards/make_cards.py --urls urls.txt --out "$OUT" $SAVE
+          python cards/make_cards.py --urls urls.txt --out "$OUT" $SAVE --delete "${{ inputs.delete_ids }}"
+          mkdir -p "$OUT"; [ -f "$OUT/cards.json" ] || echo '[]' > "$OUT/cards.json"
 
       - name: 卡片存回仓库
         run: |
           git config user.name "niko-cards-bot"
           git config user.email "cards@nikorelocation.co.uk"
           git add "$OUT"
-          git commit -m "cards: $(basename "$OUT") ($(ls "$OUT"/*.jpg | wc -l) 张)" || echo "无新文件"
+          git commit -m "cards: $(basename "$OUT") ($(ls "$OUT"/*.jpg 2>/dev/null | wc -l) 张)" || echo "无新文件"
           git pull --rebase -q origin main || true
           git push
 
@@ -83,6 +90,8 @@ jobs:
           for r in json.load(open(os.path.join(os.environ['OUT'], 'cards.json'))):
               if 'error' in r:
                   print(f"- ✗ {r['link']} — {r['error']}"); continue
+              if r.get('duplicate'):
+                  print(f"- ⟳ {r['link']} — 已在房源池（{r.get('first_folder')}），未重复上传"); continue
               s = '已入池' if r.get('saved') else ('未写库' if not r.get('save_error') else '写库失败: ' + r['save_error'])
               print(f"- {r['address']} · {r['bed_label']} · £{r['weekly']}/周 · 起租 {r['avail']} · {s}")
           EOF
