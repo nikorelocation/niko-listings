@@ -1,0 +1,112 @@
+[
+  {
+    "link": "https://www.rightmove.co.uk/properties/90379011",
+    "rm_id": "90379011",
+    "address": "Southbank Tower 55 Upper Ground, SE1",
+    "postcode": "SE1",
+    "bed_label": "2 Bed 2 Bath",
+    "weekly": 1500,
+    "monthly": "6500",
+    "avail": "17/09/2027",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-southbank-tower-55-upper-ground-se1.jpg",
+    "tags": {
+      "area": "city",
+      "beds": 2,
+      "price": "high",
+      "month": "2027-09"
+    },
+    "saved": true,
+    "supabase_id": "card-1791537869775-5c5",
+    "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1791537869126-6a27.jpg"
+  },
+  {
+    "link": "https://www.rightmove.co.uk/properties/94094547",
+    "rm_id": "94094547",
+    "address": "Blackfriars Road, Blackfriars",
+    "postcode": "SE1",
+    "bed_label": "1 Bed 1 Bath",
+    "weekly": 923,
+    "monthly": "4000",
+    "avail": "Ask agent",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-blackfriars-road-blackfriars-se1.jpg",
+    "tags": {
+      "area": "city",
+      "beds": 1,
+      "price": "mid",
+      "month": "2026-11"
+    },
+    "saved": true,
+    "supabase_id": "card-1791537870855-d1e",
+    "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1791537870321-4e99.jpg"
+  },
+  {
+    "link": "https://www.rightmove.co.uk/properties/173561129",
+    "rm_id": "173561129",
+    "address": "Upper Riverside, Cutter Lane, London, SE10",
+    "postcode": "SE10",
+    "bed_label": "Studio",
+    "weekly": 496,
+    "monthly": "2149",
+    "avail": "11/12/2026",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-upper-riverside-cutter-lane-london-se10.jpg",
+    "tags": {
+      "area": "south",
+      "beds": 0,
+      "price": "low",
+      "month": "2026-12"
+    },
+    "saved": true,
+    "supabase_id": "card-1791537872179-aca",
+    "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1791537871400-eb9e.jpg"
+  },
+  {
+    "link": "https://www.rightmove.co.uk/properties/94068717",
+    "rm_id": "94068717",
+    "address": "Canter Way, Catalina House, E1",
+    "postcode": "E1",
+    "bed_label": "1 Bed 1 Bath",
+    "weekly": 692,
+    "monthly": "2999",
+    "avail": "23/12/2026",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-canter-way-catalina-house-e1.jpg",
+    "tags": {
+      "area": "east",
+      "beds": 1,
+      "price": "low",
+      "month": "2026-12"
+    },
+    "saved": true,
+    "supabase_id": "card-1791537873251-e40",
+    "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1791537872643-d258.jpg"
+  },
+  {
+    "link": "https://www.rightmove.co.uk/properties/94101780",
+    "rm_id": "94101780",
+    "address": "Switch House, Circus Road East, London",
+    "postcode": "SW11",
+    "bed_label": "1 Bed 1 Bath",
+    "weekly": 877,
+    "monthly": "3800",
+    "avail": "Ask agent",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-switch-house-circus-road-east-london-sw11.jpg",
+    "tags": {
+      "area": "south",
+      "beds": 1,
+      "price": "mid",
+      "month": "2027-01"
+    },
+    "saved": true,
+    "supabase_id": "card-1791537874490-46c",
+    "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1791537873685-7c4c.jpg"
+  }
+]
