@@ -1,0 +1,24 @@
+[
+  {
+    "link": "https://www.rightmove.co.uk/properties/94089939",
+    "rm_id": "94089939",
+    "address": "Cassia Point, London E20",
+    "postcode": "E20",
+    "bed_label": "1 Bed 1 Bath",
+    "weekly": 531,
+    "monthly": "2301",
+    "avail": "04/12/2026",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-cassia-point-london-e20.jpg",
+    "tags": {
+      "area": "east",
+      "beds": 1,
+      "price": "low",
+      "month": "2026-12"
+    },
+    "saved": true,
+    "supabase_id": "card-1791539419789-68e",
+    "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1791539419098-6eae.jpg"
+  }
+]
