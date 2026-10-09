@@ -1,6 +1,6 @@
 # Niko 房源池自动化 · 总览
 
-一页看懂整套系统：哪些东西在跑、在哪里、出了问题去哪看。最后更新 2026-10-07。
+一页看懂整套系统：哪些东西在跑、在哪里、出了问题去哪看。最后更新 2026-10-09。
 
 ## 日常使用（只需要做两件事）
 
@@ -39,6 +39,7 @@ Gmail 邮件（带编号）  ◄──►  Airtable「Rightmove监控」表（�
 | ③ | 出卡片 + 入池 | 本仓库 `cards/make_cards.py` + `.github/workflows/make-cards.yml` | 改代码推上来；手动跑：Actions → Run workflow |
 | ④ | 房源池页面 | 本仓库 `pool.html` | 改完上传到仓库根目录即生效 |
 | — | 房源池数据库 | Supabase `imhlozdlohtjkdvrsylu`，表 `properties`，桶 `property-images` | Supabase 后台 |
+| — | 房源池清理 | 同一个 Action：`delete_ids`（删指定记录）、`delete_oldest`（删最早 N 条）、`delete_older_than`（删超过 N 天的）；**每月 1 号自动删上传超过 90 天的**，被删记录备份在 `cards/out/<日期>/deleted-*.json` | 改 workflow 里 `OLDER=90` 或 cron |
 | — | 入池用的 key | 本仓库 Settings → Secrets → `SUPABASE_URL` / `SUPABASE_KEY` | 换 key 时在这里改 |
 | — | 爬虫 | Heroku `rightmove-webapp-fcc61ef51410` | 不用动；③ 自动调用它 |
 | — | 库存 / 去重 | Airtable base `appsoihhy4aVnT0Ao`：Inventory、Leads、Rightmove监控 | 免费版上限 1000 条；① 每次自动清 30 天前的监控记录 |
@@ -59,6 +60,7 @@ Gmail 邮件（带编号）  ◄──►  Airtable「Rightmove监控」表（�
 
 ## 已知限制
 
+- 同一个 Rightmove 房源 ID 不会重复入池（脚本和回复任务都会查 `cards/out/*/cards.json`）；2026-10-09 之前手动上传的卡片不在这个记录里，可能和自动入池的重复，看到就用 `delete_ids` 删。
 - Zoopla 房源只能靠 Zoopla 的提醒邮件发现，做卡片暂时只支持 Rightmove 链接。
 - 2026-10-07 之前上传的卡片，入住月是旧格式（如「10+」），在新版页面按月份筛选时可能分到 10 月；点开卡片改一下标签即可。
 - Rightmove 会拦 GitHub 的 IP，所以 ③ 走 Heroku 爬虫取数据；Heroku 不可用时会尝试直接抓，但大概率也被拦。

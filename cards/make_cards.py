@@ -320,19 +320,28 @@ def supabase_delete(rec_id):
     return True
 
 
-def supabase_delete_oldest(n, out_dir):
-    """删除房源池里最早上传的 n 条（按 created_at 升序），先把被删的记录存成 JSON 备份"""
+def supabase_delete_oldest(n, out_dir, older_than_days=0):
+    """删除房源池里最早上传的 n 条（按 created_at 升序）；或 older_than_days>0 时删除上传超过该天数的全部记录。先把被删的记录存成 JSON 备份"""
     import requests
     url = os.environ.get('SUPABASE_URL', 'https://imhlozdlohtjkdvrsylu.supabase.co').rstrip('/')
     key = os.environ.get('SUPABASE_KEY', '')
     if not key:
         raise RuntimeError('没有 SUPABASE_KEY')
     h = {'apikey': key, 'Authorization': 'Bearer ' + key}
-    r = requests.get(f'{url}/rest/v1/properties?select=*&order=created_at.asc.nullsfirst&limit={int(n)}', headers=h, timeout=60)
+    if older_than_days > 0:
+        cutoff = (dt.datetime.now(dt.timezone.utc) - dt.timedelta(days=older_than_days)).isoformat()
+        q = f'{url}/rest/v1/properties?select=*&created_at=lt.{cutoff}&order=created_at.asc&limit=1000'
+        tag = f'older-than-{older_than_days}d'
+    else:
+        q = f'{url}/rest/v1/properties?select=*&order=created_at.asc.nullsfirst&limit={int(n)}'
+        tag = 'oldest'
+    r = requests.get(q, headers=h, timeout=60)
     r.raise_for_status()
     rows = r.json()
+    if not rows:
+        print('  没有需要清理的旧房源'); return 0
     os.makedirs(out_dir, exist_ok=True)
-    json.dump(rows, open(os.path.join(out_dir, f'deleted-oldest-{len(rows)}.json'), 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+    json.dump(rows, open(os.path.join(out_dir, f'deleted-{tag}-{len(rows)}.json'), 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
     done = 0
     for row in rows:
         rid = row['id']
@@ -374,10 +383,11 @@ async def main():
     ap.add_argument('--delete', default='', help='要从房源池删除的 properties.id（空格分隔），用于清理重复')
     ap.add_argument('--force', action='store_true', help='已入池的也重新上传（默认跳过重复）')
     ap.add_argument('--delete-oldest', type=int, default=0, help='删除房源池里最早上传的 N 条（清理旧房源）')
+    ap.add_argument('--delete-older-than', type=int, default=0, help='删除上传超过 N 天的全部记录（定期清理）')
     a = ap.parse_args()
-    if a.delete_oldest > 0:
+    if a.delete_oldest > 0 or a.delete_older_than > 0:
         try:
-            supabase_delete_oldest(a.delete_oldest, a.out)
+            supabase_delete_oldest(a.delete_oldest, a.out, a.delete_older_than)
         except Exception as e:
             print(f'  ✗ 清理旧房源失败: {e}')
     if a.delete.strip():
@@ -402,7 +412,7 @@ async def main():
         clean.append(u)
     urls = list(dict.fromkeys(clean))
     if not urls:
-        if a.delete.strip() or a.delete_oldest > 0:
+        if a.delete.strip() or a.delete_oldest > 0 or a.delete_older_than > 0:
             sys.exit(0)
         print('没有有效的 Rightmove 链接'); sys.exit(1)
     os.makedirs(a.out, exist_ok=True)

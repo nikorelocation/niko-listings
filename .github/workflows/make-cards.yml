@@ -3,6 +3,9 @@ name: 做卡片 → 房源池
 # 手动触发（Actions 页面点 Run workflow），或由 Claude 定时任务用 `gh workflow run` 触发。
 # 输入 Rightmove 链接（每行一个），自动：抓数据和照片 → 出卡片 JPG → 写入房源池 Supabase → 卡片存回仓库 cards/out/<日期>/
 on:
+  # 每月 1 号 03:10 UTC 自动清理：删除上传超过 90 天的房源（见下面 schedule 分支）
+  schedule:
+    - cron: '10 3 1 * *'
   workflow_dispatch:
     inputs:
       urls:
@@ -17,6 +20,11 @@ on:
         default: ''
       delete_oldest:
         description: '删除房源池里最早上传的 N 条（清旧房源；0 = 不删）'
+        required: false
+        type: string
+        default: '0'
+      delete_older_than:
+        description: '删除上传超过 N 天的全部房源（0 = 不删；每月 1 号自动按 90 天跑）'
         required: false
         type: string
         default: '0'
@@ -62,20 +70,22 @@ jobs:
 
       - name: 写入链接文件
         run: |
-          printf '%s\n' "${{ inputs.urls }}" > urls.txt
+          printf '%s\n' "${{ inputs.urls || '' }}" > urls.txt
           echo "共 $(grep -c properties urls.txt || true) 个链接"
 
       - name: 出卡片 + 写入房源池
         env:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
-          MONTH_FORMAT: ${{ inputs.month_format }}
+          MONTH_FORMAT: ${{ inputs.month_format || 'ym' }}
         run: |
           OUT="cards/out/$(TZ=Europe/London date +%Y%m%d-%H%M)"
           echo "OUT=$OUT" >> "$GITHUB_ENV"
           SAVE=""
           if [ "${{ inputs.save }}" = "true" ]; then SAVE="--save"; fi
-          python cards/make_cards.py --urls urls.txt --out "$OUT" $SAVE --delete "${{ inputs.delete_ids }}" --delete-oldest "${{ inputs.delete_oldest || '0' }}"
+          OLDER="${{ inputs.delete_older_than || '0' }}"
+          if [ "${{ github.event_name }}" = "schedule" ]; then OLDER=90; fi
+          python cards/make_cards.py --urls urls.txt --out "$OUT" $SAVE --delete "${{ inputs.delete_ids || '' }}" --delete-oldest "${{ inputs.delete_oldest || '0' }}" --delete-older-than "$OLDER"
           mkdir -p "$OUT"; [ -f "$OUT/cards.json" ] || echo '[]' > "$OUT/cards.json"
 
       - name: 卡片存回仓库
