@@ -484,7 +484,10 @@ async def main():
                'bed_label': d.get('bed_label', ''), 'weekly': int(d.get('weekly') or 0), 'monthly': d.get('monthly', ''),
                'avail': d.get('avail', '—'), 'furnish': d.get('furnish', ''), 'agent': d.get('agent', ''),
                'card': os.path.basename(p), 'tags': tags}
-        if a.save:
+        if a.save and re.search(r'openrent', (d.get('agent') or '') + ' ' + (d.get('fn_title') or ''), re.I):
+            row.update(saved=False, skipped='OpenRent 房源不入池')
+            print('  ⊘ OpenRent 房源，不上传房源池')
+        elif a.save:
             try:
                 rec_id, image_url = supabase_save(p, tags)
                 row.update(saved=True, supabase_id=rec_id, image_url=image_url)
