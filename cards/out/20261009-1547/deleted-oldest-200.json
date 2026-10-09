@@ -1,0 +1,1802 @@
+[
+ {
+  "id": "card-1780594446064-hxw",
+  "beds": 3,
+  "price": "high",
+  "month": "8",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780594445225-7qy2.jpg",
+  "created_at": "2026-06-04T17:34:06.064+00:00",
+  "area": "south"
+ },
+ {
+  "id": "card-1780594595780-c37",
+  "beds": 1,
+  "price": "mid",
+  "month": "9",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780594595274-xakt.jpeg",
+  "created_at": "2026-06-04T17:36:35.781+00:00",
+  "area": "south"
+ },
+ {
+  "id": "card-1780594610049-1p3",
+  "beds": 2,
+  "price": "low",
+  "month": "7",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780594609659-9za3.jpeg",
+  "created_at": "2026-06-04T17:36:50.049+00:00",
+  "area": "east"
+ },
+ {
+  "id": "card-1780594618311-q6f",
+  "beds": 1,
+  "price": "mid",
+  "month": "8",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780594617730-2c6v.jpeg",
+  "created_at": "2026-06-04T17:36:58.311+00:00",
+  "area": "south"
+ },
+ {
+  "id": "card-1780594626373-uw4",
+  "beds": 0,
+  "price": "low",
+  "month": "now",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780594625778-rcb9.jpeg",
+  "created_at": "2026-06-04T17:37:06.373+00:00",
+  "area": "east"
+ },
+ {
+  "id": "card-1780594638382-5wn",
+  "beds": 1,
+  "price": "low",
+  "month": "9",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780594637732-s0sl.jpeg",
+  "created_at": "2026-06-04T17:37:18.382+00:00",
+  "area": "south"
+ },
+ {
+  "id": "card-1780594645620-mu9",
+  "beds": 3,
+  "price": "high",
+  "month": "8",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780594644971-gxuj.jpeg",
+  "created_at": "2026-06-04T17:37:25.62+00:00",
+  "area": "west"
+ },
+ {
+  "id": "card-1780594658618-m39",
+  "beds": 3,
+  "price": "mid",
+  "month": "7",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780594658204-eok8.jpeg",
+  "created_at": "2026-06-04T17:37:38.618+00:00",
+  "area": "south"
+ },
+ {
+  "id": "card-1780594668409-n9q",
+  "beds": 1,
+  "price": "mid",
+  "month": "7",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780594667787-5l1s.jpeg",
+  "created_at": "2026-06-04T17:37:48.409+00:00",
+  "area": "west"
+ },
+ {
+  "id": "card-1780594698766-sdf",
+  "beds": 1,
+  "price": "low",
+  "month": "7",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780594698274-emsy.jpeg",
+  "created_at": "2026-06-04T17:38:18.767+00:00",
+  "area": "west"
+ },
+ {
+  "id": "card-1780594711606-d7s",
+  "beds": 2,
+  "price": "high",
+  "month": "8",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780594711107-qrse.jpeg",
+  "created_at": "2026-06-04T17:38:31.606+00:00",
+  "area": "south"
+ },
+ {
+  "id": "card-1780594737977-tqg",
+  "beds": 2,
+  "price": "mid",
+  "month": "7",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780594737412-fx1a.jpeg",
+  "created_at": "2026-06-04T17:38:57.978+00:00",
+  "area": "east"
+ },
+ {
+  "id": "card-1780594748961-qkp",
+  "beds": 2,
+  "price": "mid",
+  "month": "8",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780594748681-64ip.jpeg",
+  "created_at": "2026-06-04T17:39:08.961+00:00",
+  "area": "south"
+ },
+ {
+  "id": "card-1780594756647-f0f",
+  "beds": 2,
+  "price": "mid",
+  "month": "8",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780594756314-lv4s.jpeg",
+  "created_at": "2026-06-04T17:39:16.647+00:00",
+  "area": "west"
+ },
+ {
+  "id": "card-1780594766994-2d4",
+  "beds": 1,
+  "price": "mid",
+  "month": "7",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780594766266-kv25.jpeg",
+  "created_at": "2026-06-04T17:39:26.994+00:00",
+  "area": "south"
+ },
+ {
+  "id": "card-1780594774474-hqf",
+  "beds": 2,
+  "price": "mid",
+  "month": "8",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780594774217-68o7.jpeg",
+  "created_at": "2026-06-04T17:39:34.474+00:00",
+  "area": "north"
+ },
+ {
+  "id": "card-1780594782681-ggh",
+  "beds": 2,
+  "price": "mid",
+  "month": "7",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780594782305-ska5.jpeg",
+  "created_at": "2026-06-04T17:39:42.681+00:00",
+  "area": "east"
+ },
+ {
+  "id": "card-1780594790169-u3d",
+  "beds": 2,
+  "price": "high",
+  "month": "8",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780594789772-akcx.jpeg",
+  "created_at": "2026-06-04T17:39:50.169+00:00",
+  "area": "east"
+ },
+ {
+  "id": "card-1780594797655-03g",
+  "beds": 0,
+  "price": "low",
+  "month": "8",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780594797192-942h.jpeg",
+  "created_at": "2026-06-04T17:39:57.655+00:00",
+  "area": "east"
+ },
+ {
+  "id": "card-1780594808684-ntk",
+  "beds": 1,
+  "price": "mid",
+  "month": "7",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780594808013-dlkv.jpeg",
+  "created_at": "2026-06-04T17:40:08.684+00:00",
+  "area": "east"
+ },
+ {
+  "id": "card-1780594817279-i9k",
+  "beds": 1,
+  "price": "mid",
+  "month": "8",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780594816847-xap7.jpeg",
+  "created_at": "2026-06-04T17:40:17.279+00:00",
+  "area": "east"
+ },
+ {
+  "id": "card-1780594823151-yqa",
+  "beds": 1,
+  "price": "low",
+  "month": "7",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780594822885-wlvd.jpeg",
+  "created_at": "2026-06-04T17:40:23.151+00:00",
+  "area": "east"
+ },
+ {
+  "id": "card-1780594831726-26i",
+  "beds": 1,
+  "price": "low",
+  "month": "7",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780594831265-kzqs.jpeg",
+  "created_at": "2026-06-04T17:40:31.726+00:00",
+  "area": "north"
+ },
+ {
+  "id": "card-1780594880183-sjj",
+  "beds": 2,
+  "price": "high",
+  "month": "7",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780594879614-qdjf.jpeg",
+  "created_at": "2026-06-04T17:41:20.183+00:00",
+  "area": "east"
+ },
+ {
+  "id": "card-1780594889267-yrv",
+  "beds": 2,
+  "price": "mid",
+  "month": "9",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780594888892-ku46.jpeg",
+  "created_at": "2026-06-04T17:41:29.267+00:00",
+  "area": "east"
+ },
+ {
+  "id": "card-1780594900638-hqd",
+  "beds": 1,
+  "price": "mid",
+  "month": "9",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780594899676-c3ea.jpeg",
+  "created_at": "2026-06-04T17:41:40.638+00:00",
+  "area": "south"
+ },
+ {
+  "id": "card-1780597377802-aj1",
+  "beds": 1,
+  "price": "mid",
+  "month": "8",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780597377057-g9zx.jpeg",
+  "created_at": "2026-06-04T18:22:57.802+00:00",
+  "area": "east"
+ },
+ {
+  "id": "card-1780597386706-i8g",
+  "beds": 0,
+  "price": "low",
+  "month": "8",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780597386366-rv4x.jpeg",
+  "created_at": "2026-06-04T18:23:06.706+00:00",
+  "area": "east"
+ },
+ {
+  "id": "card-1780597395239-two",
+  "beds": 3,
+  "price": "high",
+  "month": "8",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780597394619-ezts.jpeg",
+  "created_at": "2026-06-04T18:23:15.239+00:00",
+  "area": "east"
+ },
+ {
+  "id": "card-1780597558340-eq8",
+  "beds": 0,
+  "price": "mid",
+  "month": "now",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780597557556-ul1x.jpeg",
+  "created_at": "2026-06-04T18:25:58.341+00:00",
+  "area": "east"
+ },
+ {
+  "id": "card-1780597565722-2px",
+  "beds": 1,
+  "price": "low",
+  "month": "8",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780597565208-xfj9.jpeg",
+  "created_at": "2026-06-04T18:26:05.722+00:00",
+  "area": "north"
+ },
+ {
+  "id": "card-1780597575714-n8r",
+  "beds": 1,
+  "price": "mid",
+  "month": "9",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780597575488-vd77.jpeg",
+  "created_at": "2026-06-04T18:26:15.714+00:00",
+  "area": "west"
+ },
+ {
+  "id": "card-1780597592148-7xf",
+  "beds": 1,
+  "price": "mid",
+  "month": "8",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780597591727-2yiq.jpeg",
+  "created_at": "2026-06-04T18:26:32.148+00:00",
+  "area": "east"
+ },
+ {
+  "id": "card-1780597602007-1kp",
+  "beds": 1,
+  "price": "mid",
+  "month": "8",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780597601711-0hx3.jpeg",
+  "created_at": "2026-06-04T18:26:42.007+00:00",
+  "area": "city"
+ },
+ {
+  "id": "card-1780597608780-fq7",
+  "beds": 1,
+  "price": "low",
+  "month": "8",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780597608512-tsx1.jpeg",
+  "created_at": "2026-06-04T18:26:48.78+00:00",
+  "area": "north"
+ },
+ {
+  "id": "card-1780597616430-4k7",
+  "beds": 3,
+  "price": "high",
+  "month": "9",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780597616113-dcf7.jpeg",
+  "created_at": "2026-06-04T18:26:56.43+00:00",
+  "area": "north"
+ },
+ {
+  "id": "card-1780597628540-92m",
+  "beds": 2,
+  "price": "mid",
+  "month": "8",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780597628315-jet4.jpeg",
+  "created_at": "2026-06-04T18:27:08.54+00:00",
+  "area": "south"
+ },
+ {
+  "id": "card-1780597699222-oy4",
+  "beds": 1,
+  "price": "low",
+  "month": "7",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780597698861-djof.jpeg",
+  "created_at": "2026-06-04T18:28:19.222+00:00",
+  "area": "east"
+ },
+ {
+  "id": "card-1780597708150-m93",
+  "beds": 2,
+  "price": "mid",
+  "month": "8",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780597707479-a65r.jpeg",
+  "created_at": "2026-06-04T18:28:28.15+00:00",
+  "area": "east"
+ },
+ {
+  "id": "card-1780597720535-vq4",
+  "beds": 0,
+  "price": "low",
+  "month": "7",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780597719955-i31p.jpeg",
+  "created_at": "2026-06-04T18:28:40.535+00:00",
+  "area": "east"
+ },
+ {
+  "id": "card-1780597780499-obb",
+  "beds": 1,
+  "price": "mid",
+  "month": "9",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780597780021-0pal.jpeg",
+  "created_at": "2026-06-04T18:29:40.499+00:00",
+  "area": "south"
+ },
+ {
+  "id": "card-1780597791446-vep",
+  "beds": 0,
+  "price": "low",
+  "month": "8",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780597791055-4ekw.jpeg",
+  "created_at": "2026-06-04T18:29:51.446+00:00",
+  "area": "east"
+ },
+ {
+  "id": "card-1780597805518-lgr",
+  "beds": 1,
+  "price": "low",
+  "month": "9",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780597805242-dlo7.jpeg",
+  "created_at": "2026-06-04T18:30:05.518+00:00",
+  "area": "south"
+ },
+ {
+  "id": "card-1780597821420-my2",
+  "beds": 2,
+  "price": "mid",
+  "month": "7",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780597821027-cwia.jpeg",
+  "created_at": "2026-06-04T18:30:21.42+00:00",
+  "area": "north"
+ },
+ {
+  "id": "card-1780597831539-q54",
+  "beds": 1,
+  "price": "mid",
+  "month": "now",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780597830897-p6f6.jpeg",
+  "created_at": "2026-06-04T18:30:31.539+00:00",
+  "area": "north"
+ },
+ {
+  "id": "card-1780597841584-wnp",
+  "beds": 2,
+  "price": "low",
+  "month": "7",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780597841147-fgs5.jpeg",
+  "created_at": "2026-06-04T18:30:41.584+00:00",
+  "area": "east"
+ },
+ {
+  "id": "card-1780597865302-toz",
+  "beds": 2,
+  "price": "mid",
+  "month": "8",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780597864720-5l0k.jpeg",
+  "created_at": "2026-06-04T18:31:05.302+00:00",
+  "area": "east"
+ },
+ {
+  "id": "card-1780598153123-f24",
+  "beds": 1,
+  "price": "mid",
+  "month": "now",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780598152125-l2hp.jpeg",
+  "created_at": "2026-06-04T18:35:53.123+00:00",
+  "area": "west"
+ },
+ {
+  "id": "card-1780598181410-xyt",
+  "beds": 0,
+  "price": "mid",
+  "month": "9",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780598181145-gtwo.jpeg",
+  "created_at": "2026-06-04T18:36:21.411+00:00",
+  "area": "east"
+ },
+ {
+  "id": "card-1780598190943-fv6",
+  "beds": 2,
+  "price": "mid",
+  "month": "8",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780598190565-sjxj.jpeg",
+  "created_at": "2026-06-04T18:36:30.943+00:00",
+  "area": "east"
+ },
+ {
+  "id": "card-1780598204095-u9p",
+  "beds": 1,
+  "price": "high",
+  "month": "now",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780598203719-7vzs.jpeg",
+  "created_at": "2026-06-04T18:36:44.095+00:00",
+  "area": "south"
+ },
+ {
+  "id": "card-1780598229984-r7x",
+  "beds": 0,
+  "price": "low",
+  "month": "9",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780598229587-tfit.jpeg",
+  "created_at": "2026-06-04T18:37:09.984+00:00",
+  "area": "east"
+ },
+ {
+  "id": "card-1780598245477-ato",
+  "beds": 2,
+  "price": "high",
+  "month": "8",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780598244856-z12b.jpeg",
+  "created_at": "2026-06-04T18:37:25.477+00:00",
+  "area": "south"
+ },
+ {
+  "id": "card-1780598254553-72j",
+  "beds": 1,
+  "price": "low",
+  "month": "8",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780598254289-kpbc.jpeg",
+  "created_at": "2026-06-04T18:37:34.553+00:00",
+  "area": "east"
+ },
+ {
+  "id": "card-1780598263053-owb",
+  "beds": 2,
+  "price": "mid",
+  "month": "9",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780598262193-rxbs.jpeg",
+  "created_at": "2026-06-04T18:37:43.053+00:00",
+  "area": "east"
+ },
+ {
+  "id": "card-1780598273409-qdn",
+  "beds": 3,
+  "price": "high",
+  "month": "8",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780598272927-y07h.jpeg",
+  "created_at": "2026-06-04T18:37:53.409+00:00",
+  "area": "north"
+ },
+ {
+  "id": "card-1780598308681-uav",
+  "beds": 1,
+  "price": "mid",
+  "month": "8",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780598308267-vhhd.jpeg",
+  "created_at": "2026-06-04T18:38:28.681+00:00",
+  "area": "west"
+ },
+ {
+  "id": "card-1780598318149-lx5",
+  "beds": 2,
+  "price": "mid",
+  "month": "8",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780598317548-loyo.jpeg",
+  "created_at": "2026-06-04T18:38:38.149+00:00",
+  "area": "north"
+ },
+ {
+  "id": "card-1780598324236-ojo",
+  "beds": 1,
+  "price": "low",
+  "month": "8",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780598323986-th0q.jpeg",
+  "created_at": "2026-06-04T18:38:44.236+00:00",
+  "area": "north"
+ },
+ {
+  "id": "card-1780598332998-219",
+  "beds": 1,
+  "price": "mid",
+  "month": "7",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780598332420-53o1.jpeg",
+  "created_at": "2026-06-04T18:38:52.998+00:00",
+  "area": "north"
+ },
+ {
+  "id": "card-1780598387463-enw",
+  "beds": 3,
+  "price": "high",
+  "month": "9",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780598386988-q9q5.jpeg",
+  "created_at": "2026-06-04T18:39:47.463+00:00",
+  "area": "south"
+ },
+ {
+  "id": "card-1780598418914-a4b",
+  "beds": 0,
+  "price": "low",
+  "month": "now",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780598418478-i4ky.jpeg",
+  "created_at": "2026-06-04T18:40:18.914+00:00",
+  "area": "north"
+ },
+ {
+  "id": "card-1780598429473-55y",
+  "beds": 0,
+  "price": "low",
+  "month": "9",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780598429180-liyv.jpeg",
+  "created_at": "2026-06-04T18:40:29.473+00:00",
+  "area": "east"
+ },
+ {
+  "id": "card-1780598437303-3sj",
+  "beds": 3,
+  "price": "high",
+  "month": "now",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780598437015-w6q2.jpeg",
+  "created_at": "2026-06-04T18:40:37.303+00:00",
+  "area": "south"
+ },
+ {
+  "id": "card-1780598446488-9o4",
+  "beds": 0,
+  "price": "low",
+  "month": "now",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780598446152-juqx.jpeg",
+  "created_at": "2026-06-04T18:40:46.488+00:00",
+  "area": "east"
+ },
+ {
+  "id": "card-1780598459537-560",
+  "beds": 1,
+  "price": "high",
+  "month": "7",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780598459201-kjzf.jpeg",
+  "created_at": "2026-06-04T18:40:59.537+00:00",
+  "area": "east"
+ },
+ {
+  "id": "card-1780598487237-gr0",
+  "beds": 1,
+  "price": "low",
+  "month": "9",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780598486707-x98u.jpeg",
+  "created_at": "2026-06-04T18:41:27.237+00:00",
+  "area": "south"
+ },
+ {
+  "id": "card-1780598510523-u9j",
+  "beds": 1,
+  "price": "low",
+  "month": "8",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780598510109-jm1l.jpeg",
+  "created_at": "2026-06-04T18:41:50.523+00:00",
+  "area": "east"
+ },
+ {
+  "id": "card-1780598547176-1em",
+  "beds": 2,
+  "price": "high",
+  "month": "8",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780598546548-mypk.jpeg",
+  "created_at": "2026-06-04T18:42:27.176+00:00",
+  "area": "east"
+ },
+ {
+  "id": "card-1780598559056-38v",
+  "beds": 2,
+  "price": "high",
+  "month": "8",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780598558517-y348.jpeg",
+  "created_at": "2026-06-04T18:42:39.056+00:00",
+  "area": "east"
+ },
+ {
+  "id": "card-1780598567975-t2y",
+  "beds": 0,
+  "price": "low",
+  "month": "8",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780598567767-q0ur.jpeg",
+  "created_at": "2026-06-04T18:42:47.975+00:00",
+  "area": "south"
+ },
+ {
+  "id": "card-1780598584906-83y",
+  "beds": 2,
+  "price": "high",
+  "month": "8",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780598584423-a40w.jpeg",
+  "created_at": "2026-06-04T18:43:04.906+00:00",
+  "area": "south"
+ },
+ {
+  "id": "card-1780598599746-2du",
+  "beds": 2,
+  "price": "high",
+  "month": "8",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780598599492-mx7i.jpeg",
+  "created_at": "2026-06-04T18:43:19.747+00:00",
+  "area": "south"
+ },
+ {
+  "id": "card-1780598614532-hqx",
+  "beds": 2,
+  "price": "mid",
+  "month": "8",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780598613994-ck38.jpeg",
+  "created_at": "2026-06-04T18:43:34.532+00:00",
+  "area": "north"
+ },
+ {
+  "id": "card-1780598620778-c98",
+  "beds": 1,
+  "price": "low",
+  "month": "8",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780598620497-fvab.jpeg",
+  "created_at": "2026-06-04T18:43:40.778+00:00",
+  "area": "south"
+ },
+ {
+  "id": "card-1780598632538-hgg",
+  "beds": 2,
+  "price": "mid",
+  "month": "8",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780598632010-kijg.jpeg",
+  "created_at": "2026-06-04T18:43:52.538+00:00",
+  "area": "north"
+ },
+ {
+  "id": "card-1780598640631-gbd",
+  "beds": 2,
+  "price": "mid",
+  "month": "9",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780598639917-12s3.jpeg",
+  "created_at": "2026-06-04T18:44:00.631+00:00",
+  "area": "east"
+ },
+ {
+  "id": "card-1780598652977-xvy",
+  "beds": 2,
+  "price": "mid",
+  "month": "7",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780598652584-5jbl.jpeg",
+  "created_at": "2026-06-04T18:44:12.977+00:00",
+  "area": "east"
+ },
+ {
+  "id": "card-1780598661368-v4z",
+  "beds": 3,
+  "price": "high",
+  "month": "8",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780598661121-sube.jpeg",
+  "created_at": "2026-06-04T18:44:21.368+00:00",
+  "area": "east"
+ },
+ {
+  "id": "card-1780598670779-hqt",
+  "beds": 1,
+  "price": "mid",
+  "month": "8",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780598670521-2kdc.jpeg",
+  "created_at": "2026-06-04T18:44:30.779+00:00",
+  "area": "east"
+ },
+ {
+  "id": "card-1780602028259-6zg",
+  "beds": 0,
+  "price": "mid",
+  "month": "8",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780602027764-5c7w.jpeg",
+  "created_at": "2026-06-04T19:40:28.259+00:00",
+  "area": "east"
+ },
+ {
+  "id": "card-1780650359218-pxx",
+  "beds": 1,
+  "price": "high",
+  "month": "8",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780650358864-b66p.jpeg",
+  "created_at": "2026-06-05T09:05:59.219+00:00",
+  "area": "south"
+ },
+ {
+  "id": "card-1780650367646-ddo",
+  "beds": 2,
+  "price": "mid",
+  "month": "8",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780650367017-1u4c.jpeg",
+  "created_at": "2026-06-05T09:06:07.647+00:00",
+  "area": "east"
+ },
+ {
+  "id": "card-1780650376879-pgj",
+  "beds": 2,
+  "price": "low",
+  "month": "8",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780650376569-fs98.jpeg",
+  "created_at": "2026-06-05T09:06:16.879+00:00",
+  "area": "east"
+ },
+ {
+  "id": "card-1780650393792-jqy",
+  "beds": 1,
+  "price": "mid",
+  "month": "now",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780650393386-4fbw.jpeg",
+  "created_at": "2026-06-05T09:06:33.792+00:00",
+  "area": "city"
+ },
+ {
+  "id": "card-1780650402059-oso",
+  "beds": 2,
+  "price": "mid",
+  "month": "8",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780650401706-mnv9.jpeg",
+  "created_at": "2026-06-05T09:06:42.059+00:00",
+  "area": "south"
+ },
+ {
+  "id": "card-1780650415863-utf",
+  "beds": 1,
+  "price": "mid",
+  "month": "9",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780650415403-7b6d.jpeg",
+  "created_at": "2026-06-05T09:06:55.863+00:00",
+  "area": "city"
+ },
+ {
+  "id": "card-1780650426502-e73",
+  "beds": 2,
+  "price": "high",
+  "month": "8",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780650426175-q3nu.jpeg",
+  "created_at": "2026-06-05T09:07:06.502+00:00",
+  "area": "city"
+ },
+ {
+  "id": "card-1780650446224-cl0",
+  "beds": 0,
+  "price": "mid",
+  "month": "9",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780650445876-hgpl.jpeg",
+  "created_at": "2026-06-05T09:07:26.224+00:00",
+  "area": "city"
+ },
+ {
+  "id": "card-1780650454521-lr9",
+  "beds": 2,
+  "price": "high",
+  "month": "9",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780650453912-xcbs.jpeg",
+  "created_at": "2026-06-05T09:07:34.521+00:00",
+  "area": "south"
+ },
+ {
+  "id": "card-1780650460299-rf9",
+  "beds": 2,
+  "price": "high",
+  "month": "8",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780650460079-nytx.jpeg",
+  "created_at": "2026-06-05T09:07:40.299+00:00",
+  "area": "south"
+ },
+ {
+  "id": "card-1780650478865-kpj",
+  "beds": 2,
+  "price": "mid",
+  "month": "9",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780650478470-ums1.jpeg",
+  "created_at": "2026-06-05T09:07:58.865+00:00",
+  "area": "east"
+ },
+ {
+  "id": "card-1780650486516-95l",
+  "beds": 2,
+  "price": "mid",
+  "month": "8",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780650486204-s3vx.jpeg",
+  "created_at": "2026-06-05T09:08:06.516+00:00",
+  "area": "north"
+ },
+ {
+  "id": "card-1780650497168-8zn",
+  "beds": 1,
+  "price": "mid",
+  "month": "7",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780650496789-49rd.jpeg",
+  "created_at": "2026-06-05T09:08:17.168+00:00",
+  "area": "north"
+ },
+ {
+  "id": "card-1780650506277-cov",
+  "beds": 2,
+  "price": "high",
+  "month": "8",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780650505972-3ei5.jpeg",
+  "created_at": "2026-06-05T09:08:26.277+00:00",
+  "area": "south"
+ },
+ {
+  "id": "card-1780650522133-tp1",
+  "beds": 0,
+  "price": "low",
+  "month": "9",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780650521761-whxu.jpeg",
+  "created_at": "2026-06-05T09:08:42.133+00:00",
+  "area": "east"
+ },
+ {
+  "id": "card-1780650534085-52z",
+  "beds": 1,
+  "price": "mid",
+  "month": "9",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780650533728-xgm6.jpeg",
+  "created_at": "2026-06-05T09:08:54.085+00:00",
+  "area": "east"
+ },
+ {
+  "id": "card-1780650546731-t9n",
+  "beds": 2,
+  "price": "high",
+  "month": "8",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780650546152-n782.jpeg",
+  "created_at": "2026-06-05T09:09:06.731+00:00",
+  "area": "east"
+ },
+ {
+  "id": "card-1780650566203-z7q",
+  "beds": 2,
+  "price": "high",
+  "month": "8",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780650565971-fnit.jpeg",
+  "created_at": "2026-06-05T09:09:26.203+00:00",
+  "area": "east"
+ },
+ {
+  "id": "card-1780650580826-iut",
+  "beds": 1,
+  "price": "mid",
+  "month": "8",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780650580156-ijuy.jpeg",
+  "created_at": "2026-06-05T09:09:40.827+00:00",
+  "area": "east"
+ },
+ {
+  "id": "card-1780650590494-bdh",
+  "beds": 1,
+  "price": "mid",
+  "month": "8",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780650590042-0u7i.jpeg",
+  "created_at": "2026-06-05T09:09:50.494+00:00",
+  "area": "south"
+ },
+ {
+  "id": "card-1780650599055-09g",
+  "beds": 3,
+  "price": "mid",
+  "month": "8",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780650598526-oyld.jpeg",
+  "created_at": "2026-06-05T09:09:59.055+00:00",
+  "area": "south"
+ },
+ {
+  "id": "card-1780671943442-od2",
+  "beds": 0,
+  "price": "low",
+  "month": "8",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780671941517-04x9.jpg",
+  "created_at": "2026-06-05T15:05:43.442+00:00",
+  "area": "east"
+ },
+ {
+  "id": "card-1780671952490-wbb",
+  "beds": 1,
+  "price": "low",
+  "month": "8",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780671951733-uvj6.jpg",
+  "created_at": "2026-06-05T15:05:52.49+00:00",
+  "area": "north"
+ },
+ {
+  "id": "card-1780672038590-i6y",
+  "beds": 1,
+  "price": "low",
+  "month": "8",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780672037024-joub.jpg",
+  "created_at": "2026-06-05T15:07:18.59+00:00",
+  "area": "north"
+ },
+ {
+  "id": "card-1780672053860-8os",
+  "beds": 1,
+  "price": "mid",
+  "month": "8",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780672053082-r3lm.jpg",
+  "created_at": "2026-06-05T15:07:33.86+00:00",
+  "area": "west"
+ },
+ {
+  "id": "card-1780672076210-pt1",
+  "beds": 0,
+  "price": "low",
+  "month": "9",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780672075069-82t4.jpg",
+  "created_at": "2026-06-05T15:07:56.21+00:00",
+  "area": "east"
+ },
+ {
+  "id": "card-1780672093974-mje",
+  "beds": 3,
+  "price": "high",
+  "month": "8",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780672093166-pq37.jpg",
+  "created_at": "2026-06-05T15:08:13.974+00:00",
+  "area": "east"
+ },
+ {
+  "id": "card-1780672105855-zzp",
+  "beds": 3,
+  "price": "high",
+  "month": "7",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780672104849-1wv5.jpg",
+  "created_at": "2026-06-05T15:08:25.855+00:00",
+  "area": "north"
+ },
+ {
+  "id": "card-1780672122564-47d",
+  "beds": 3,
+  "price": "high",
+  "month": "9",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780672121574-q3we.jpg",
+  "created_at": "2026-06-05T15:08:42.564+00:00",
+  "area": "east"
+ },
+ {
+  "id": "card-1780672142677-o2g",
+  "beds": 1,
+  "price": "mid",
+  "month": "9",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780672141850-nf9a.jpg",
+  "created_at": "2026-06-05T15:09:02.677+00:00",
+  "area": "east"
+ },
+ {
+  "id": "card-1780672163311-ahp",
+  "beds": 2,
+  "price": "high",
+  "month": "8",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780672162649-z81h.jpg",
+  "created_at": "2026-06-05T15:09:23.312+00:00",
+  "area": "west"
+ },
+ {
+  "id": "card-1780672170674-cpe",
+  "beds": 1,
+  "price": "low",
+  "month": "8",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780672170168-9u37.jpg",
+  "created_at": "2026-06-05T15:09:30.674+00:00",
+  "area": "north"
+ },
+ {
+  "id": "card-1780675866340-ohx",
+  "beds": 0,
+  "price": "low",
+  "month": "8",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780675865510-3a7h.jpg",
+  "created_at": "2026-06-05T16:11:06.34+00:00",
+  "area": "east"
+ },
+ {
+  "id": "card-1780675871874-j88",
+  "beds": 0,
+  "price": "low",
+  "month": "8",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780675871354-iaks.jpg",
+  "created_at": "2026-06-05T16:11:11.874+00:00",
+  "area": "east"
+ },
+ {
+  "id": "card-1780675885956-a2d",
+  "beds": 2,
+  "price": "high",
+  "month": "7",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780675885021-pntf.jpg",
+  "created_at": "2026-06-05T16:11:25.956+00:00",
+  "area": "south"
+ },
+ {
+  "id": "card-1780675905288-5ox",
+  "beds": 1,
+  "price": "low",
+  "month": "8",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780675904490-h6ex.jpg",
+  "created_at": "2026-06-05T16:11:45.288+00:00",
+  "area": "south"
+ },
+ {
+  "id": "card-1780745047026-wqp",
+  "beds": 1,
+  "price": "low",
+  "month": "8",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780745046078-rioj.jpg",
+  "created_at": "2026-06-06T11:24:07.026+00:00",
+  "area": "north"
+ },
+ {
+  "id": "card-1780745187520-q1y",
+  "beds": 2,
+  "price": "high",
+  "month": "8",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780745186444-oprs.jpg",
+  "created_at": "2026-06-06T11:26:27.52+00:00",
+  "area": "east"
+ },
+ {
+  "id": "card-1780745229814-hmv",
+  "beds": 1,
+  "price": "low",
+  "month": "8",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780745228844-o40g.jpg",
+  "created_at": "2026-06-06T11:27:09.814+00:00",
+  "area": "east"
+ },
+ {
+  "id": "card-1780745237290-dqg",
+  "beds": 2,
+  "price": "high",
+  "month": "8",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780745236794-p9vk.jpg",
+  "created_at": "2026-06-06T11:27:17.29+00:00",
+  "area": "east"
+ },
+ {
+  "id": "card-1780745265021-yys",
+  "beds": 1,
+  "price": "high",
+  "month": "now",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780745264228-mn4v.jpg",
+  "created_at": "2026-06-06T11:27:45.021+00:00",
+  "area": "east"
+ },
+ {
+  "id": "card-1780745278035-995",
+  "beds": 1,
+  "price": "low",
+  "month": "8",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780745277527-374c.jpg",
+  "created_at": "2026-06-06T11:27:58.035+00:00",
+  "area": "south"
+ },
+ {
+  "id": "card-1780921915815-txh",
+  "beds": 2,
+  "price": "mid",
+  "month": "8",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780921914999-pxrc.jpg",
+  "created_at": "2026-06-08T12:31:55.816+00:00",
+  "area": "south"
+ },
+ {
+  "id": "card-1780921922532-tjf",
+  "beds": 1,
+  "price": "high",
+  "month": "7",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780921921837-gny6.jpg",
+  "created_at": "2026-06-08T12:32:02.532+00:00",
+  "area": "south"
+ },
+ {
+  "id": "card-1780921929333-wek",
+  "beds": 1,
+  "price": "mid",
+  "month": "8",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780921928549-j9v0.jpg",
+  "created_at": "2026-06-08T12:32:09.333+00:00",
+  "area": "south"
+ },
+ {
+  "id": "card-1780921935262-rfe",
+  "beds": 0,
+  "price": "low",
+  "month": "8",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780921934287-flfa.jpg",
+  "created_at": "2026-06-08T12:32:15.262+00:00",
+  "area": "south"
+ },
+ {
+  "id": "card-1780921940230-eo0",
+  "beds": 2,
+  "price": "high",
+  "month": "8",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780921939481-xshl.jpg",
+  "created_at": "2026-06-08T12:32:20.23+00:00",
+  "area": "south"
+ },
+ {
+  "id": "card-1780921947369-jrj",
+  "beds": 1,
+  "price": "mid",
+  "month": "8",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780921946665-d7u9.jpg",
+  "created_at": "2026-06-08T12:32:27.369+00:00",
+  "area": "south"
+ },
+ {
+  "id": "card-1780921956426-tlp",
+  "beds": 1,
+  "price": "mid",
+  "month": "9",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1780921955581-2xmf.jpg",
+  "created_at": "2026-06-08T12:32:36.426+00:00",
+  "area": "south"
+ },
+ {
+  "id": "card-1781004126895-i87",
+  "beds": 3,
+  "price": "high",
+  "month": "8",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1781004125943-qy9o.jpg",
+  "created_at": "2026-06-09T11:22:06.896+00:00",
+  "area": "east"
+ },
+ {
+  "id": "card-1781004137178-roz",
+  "beds": 2,
+  "price": "mid",
+  "month": "8",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1781004136513-y31x.jpg",
+  "created_at": "2026-06-09T11:22:17.178+00:00",
+  "area": "south"
+ },
+ {
+  "id": "card-1781004144394-ofk",
+  "beds": 1,
+  "price": "mid",
+  "month": "8",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1781004143628-nhh6.jpg",
+  "created_at": "2026-06-09T11:22:24.394+00:00",
+  "area": "east"
+ },
+ {
+  "id": "card-1781004149950-729",
+  "beds": 2,
+  "price": "high",
+  "month": "8",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1781004149576-hkld.jpg",
+  "created_at": "2026-06-09T11:22:29.951+00:00",
+  "area": "south"
+ },
+ {
+  "id": "card-1781004158132-0bw",
+  "beds": 1,
+  "price": "mid",
+  "month": "now",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1781004157625-mcdv.jpg",
+  "created_at": "2026-06-09T11:22:38.132+00:00",
+  "area": "south"
+ },
+ {
+  "id": "card-1781004163498-jiy",
+  "beds": 1,
+  "price": "low",
+  "month": "9",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1781004163042-sf9f.jpg",
+  "created_at": "2026-06-09T11:22:43.498+00:00",
+  "area": "west"
+ },
+ {
+  "id": "card-1781004181512-rc5",
+  "beds": 1,
+  "price": "mid",
+  "month": "8",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1781004181178-ple0.jpg",
+  "created_at": "2026-06-09T11:23:01.512+00:00",
+  "area": "north"
+ },
+ {
+  "id": "card-1781004188312-eok",
+  "beds": 1,
+  "price": "mid",
+  "month": "8",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1781004187400-ln8y.jpg",
+  "created_at": "2026-06-09T11:23:08.312+00:00",
+  "area": "south"
+ },
+ {
+  "id": "card-1781004196967-x33",
+  "beds": 1,
+  "price": "mid",
+  "month": "9",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1781004196010-ho80.jpg",
+  "created_at": "2026-06-09T11:23:16.967+00:00",
+  "area": "east"
+ },
+ {
+  "id": "card-1781004204032-dc8",
+  "beds": 1,
+  "price": "mid",
+  "month": "8",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1781004203193-ft6z.jpg",
+  "created_at": "2026-06-09T11:23:24.032+00:00",
+  "area": "city"
+ },
+ {
+  "id": "card-1781004237492-xzj",
+  "beds": 0,
+  "price": "low",
+  "month": "8",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1781004237118-bfbr.jpeg",
+  "created_at": "2026-06-09T11:23:57.493+00:00",
+  "area": "south"
+ },
+ {
+  "id": "card-1781011823822-g9c",
+  "beds": 2,
+  "price": "mid",
+  "month": "9",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1781011822981-7jrx.jpg",
+  "created_at": "2026-06-09T13:30:23.822+00:00",
+  "area": "east"
+ },
+ {
+  "id": "card-1781011832552-65k",
+  "beds": 1,
+  "price": "low",
+  "month": "8",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1781011831605-3jpw.jpg",
+  "created_at": "2026-06-09T13:30:32.552+00:00",
+  "area": "east"
+ },
+ {
+  "id": "card-1781011863227-cx2",
+  "beds": 3,
+  "price": "high",
+  "month": "9",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1781011862098-8ve4.jpg",
+  "created_at": "2026-06-09T13:31:03.227+00:00",
+  "area": "east"
+ },
+ {
+  "id": "card-1781011870583-hos",
+  "beds": 0,
+  "price": "low",
+  "month": "8",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1781011869720-s8eu.jpg",
+  "created_at": "2026-06-09T13:31:10.583+00:00",
+  "area": "east"
+ },
+ {
+  "id": "card-1781011877461-ukc",
+  "beds": 1,
+  "price": "mid",
+  "month": "9",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1781011876787-en40.jpg",
+  "created_at": "2026-06-09T13:31:17.461+00:00",
+  "area": "east"
+ },
+ {
+  "id": "card-1781011886515-cvf",
+  "beds": 1,
+  "price": "low",
+  "month": "7",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1781011885442-89d5.jpg",
+  "created_at": "2026-06-09T13:31:26.515+00:00",
+  "area": "north"
+ },
+ {
+  "id": "card-1781087914174-jmw",
+  "beds": 0,
+  "price": "low",
+  "month": "9",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1781087913360-h9gq.jpg",
+  "created_at": "2026-06-10T10:38:34.174+00:00",
+  "area": "east"
+ },
+ {
+  "id": "card-1781087922066-60t",
+  "beds": 1,
+  "price": "mid",
+  "month": "9",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1781087921440-kkxz.jpg",
+  "created_at": "2026-06-10T10:38:42.066+00:00",
+  "area": "south"
+ },
+ {
+  "id": "card-1781087931090-sld",
+  "beds": 1,
+  "price": "mid",
+  "month": "8",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1781087930144-9wp0.jpg",
+  "created_at": "2026-06-10T10:38:51.09+00:00",
+  "area": "east"
+ },
+ {
+  "id": "card-1781087937731-9f2",
+  "beds": 0,
+  "price": "low",
+  "month": "8",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1781087937191-dfgr.jpg",
+  "created_at": "2026-06-10T10:38:57.731+00:00",
+  "area": "east"
+ },
+ {
+  "id": "card-1781087946417-8yd",
+  "beds": 0,
+  "price": "low",
+  "month": "8",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1781087945558-fzqz.jpg",
+  "created_at": "2026-06-10T10:39:06.417+00:00",
+  "area": "east"
+ },
+ {
+  "id": "card-1781087955505-oyd",
+  "beds": 2,
+  "price": "high",
+  "month": "8",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1781087954991-4r44.jpg",
+  "created_at": "2026-06-10T10:39:15.505+00:00",
+  "area": "south"
+ },
+ {
+  "id": "card-1781087966349-34z",
+  "beds": 2,
+  "price": "mid",
+  "month": "7",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1781087965565-ec4m.jpg",
+  "created_at": "2026-06-10T10:39:26.35+00:00",
+  "area": "east"
+ },
+ {
+  "id": "card-1781112084527-o33",
+  "beds": 0,
+  "price": "low",
+  "month": "8",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1781112083213-xh5a.jpg",
+  "created_at": "2026-06-10T17:21:24.527+00:00",
+  "area": "east"
+ },
+ {
+  "id": "card-1781112095491-bbp",
+  "beds": 1,
+  "price": "low",
+  "month": "8",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1781112094794-5d9s.jpg",
+  "created_at": "2026-06-10T17:21:35.491+00:00",
+  "area": "south"
+ },
+ {
+  "id": "card-1781112102314-pz5",
+  "beds": 3,
+  "price": "high",
+  "month": "8",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1781112101296-oqeb.jpg",
+  "created_at": "2026-06-10T17:21:42.314+00:00",
+  "area": "east"
+ },
+ {
+  "id": "card-1781112111603-3lz",
+  "beds": 2,
+  "price": "mid",
+  "month": "8",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1781112110426-9oqh.jpg",
+  "created_at": "2026-06-10T17:21:51.603+00:00",
+  "area": "east"
+ },
+ {
+  "id": "card-1781112124448-0jn",
+  "beds": 2,
+  "price": "high",
+  "month": "8",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1781112123269-lqkg.jpg",
+  "created_at": "2026-06-10T17:22:04.448+00:00",
+  "area": "city"
+ },
+ {
+  "id": "card-1781112157689-vuo",
+  "beds": 2,
+  "price": "high",
+  "month": "8",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1781112156727-aady.jpg",
+  "created_at": "2026-06-10T17:22:37.689+00:00",
+  "area": "east"
+ },
+ {
+  "id": "card-1781112164238-7x3",
+  "beds": 1,
+  "price": "mid",
+  "month": "8",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1781112163476-eq2j.jpg",
+  "created_at": "2026-06-10T17:22:44.238+00:00",
+  "area": "city"
+ },
+ {
+  "id": "card-1781112176691-2jl",
+  "beds": 2,
+  "price": "mid",
+  "month": "8",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1781112175661-u2a9.jpg",
+  "created_at": "2026-06-10T17:22:56.691+00:00",
+  "area": "east"
+ },
+ {
+  "id": "card-1781194593327-i8i",
+  "beds": 2,
+  "price": "mid",
+  "month": "8",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1781194591920-s49d.jpg",
+  "created_at": "2026-06-11T16:16:33.327+00:00",
+  "area": "south"
+ },
+ {
+  "id": "card-1781194603626-ivl",
+  "beds": 2,
+  "price": "high",
+  "month": "8",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1781194602683-rgkc.jpg",
+  "created_at": "2026-06-11T16:16:43.626+00:00",
+  "area": "east"
+ },
+ {
+  "id": "card-1781194612096-2a2",
+  "beds": 0,
+  "price": "low",
+  "month": "8",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1781194611039-0stp.jpg",
+  "created_at": "2026-06-11T16:16:52.096+00:00",
+  "area": "east"
+ },
+ {
+  "id": "card-1781194620285-kbg",
+  "beds": 2,
+  "price": "mid",
+  "month": "8",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1781194619019-9fz4.jpg",
+  "created_at": "2026-06-11T16:17:00.285+00:00",
+  "area": "south"
+ },
+ {
+  "id": "card-1781194631081-gpc",
+  "beds": 2,
+  "price": "mid",
+  "month": "8",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1781194630305-e8if.jpg",
+  "created_at": "2026-06-11T16:17:11.081+00:00",
+  "area": "south"
+ },
+ {
+  "id": "card-1781194638124-ked",
+  "beds": 2,
+  "price": "mid",
+  "month": "8",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1781194637403-65s3.jpg",
+  "created_at": "2026-06-11T16:17:18.124+00:00",
+  "area": "south"
+ },
+ {
+  "id": "card-1781194653730-ntf",
+  "beds": 1,
+  "price": "mid",
+  "month": "8",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1781194652737-n4jv.jpg",
+  "created_at": "2026-06-11T16:17:33.73+00:00",
+  "area": "south"
+ },
+ {
+  "id": "card-1781194663596-8jr",
+  "beds": 1,
+  "price": "low",
+  "month": "8",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1781194662486-4aby.jpg",
+  "created_at": "2026-06-11T16:17:43.596+00:00",
+  "area": "south"
+ },
+ {
+  "id": "card-1781194709246-eug",
+  "beds": 2,
+  "price": "high",
+  "month": "9",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1781194707273-zc4i.jpg",
+  "created_at": "2026-06-11T16:18:29.246+00:00",
+  "area": "east"
+ },
+ {
+  "id": "card-1781194717478-pw0",
+  "beds": 1,
+  "price": "mid",
+  "month": "9",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1781194716320-whwk.jpg",
+  "created_at": "2026-06-11T16:18:37.478+00:00",
+  "area": "west"
+ },
+ {
+  "id": "card-1781194723537-kj5",
+  "beds": 2,
+  "price": "mid",
+  "month": "9",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1781194722638-vhmy.jpg",
+  "created_at": "2026-06-11T16:18:43.537+00:00",
+  "area": "south"
+ },
+ {
+  "id": "card-1781194748522-e89",
+  "beds": 1,
+  "price": "low",
+  "month": "9",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1781194747437-xog9.jpg",
+  "created_at": "2026-06-11T16:19:08.522+00:00",
+  "area": "east"
+ },
+ {
+  "id": "card-1781194756162-jfl",
+  "beds": 2,
+  "price": "high",
+  "month": "9",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1781194755370-beh9.jpg",
+  "created_at": "2026-06-11T16:19:16.162+00:00",
+  "area": "east"
+ },
+ {
+  "id": "card-1781194779088-dp3",
+  "beds": 2,
+  "price": "high",
+  "month": "8",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1781194775643-01xl.jpg",
+  "created_at": "2026-06-11T16:19:39.088+00:00",
+  "area": "east"
+ },
+ {
+  "id": "card-1781286353424-8s3",
+  "beds": 3,
+  "price": "high",
+  "month": "8",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1781286352472-9mj1.jpg",
+  "created_at": "2026-06-12T17:45:53.424+00:00",
+  "area": "east"
+ },
+ {
+  "id": "card-1781286368627-l6a",
+  "beds": 2,
+  "price": "high",
+  "month": "9",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1781286367970-dbpu.jpg",
+  "created_at": "2026-06-12T17:46:08.627+00:00",
+  "area": "south"
+ },
+ {
+  "id": "card-1781286384193-lqj",
+  "beds": 3,
+  "price": "high",
+  "month": "9",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1781286383303-4wu2.jpg",
+  "created_at": "2026-06-12T17:46:24.193+00:00",
+  "area": "north"
+ },
+ {
+  "id": "card-1781286400155-swt",
+  "beds": 1,
+  "price": "mid",
+  "month": "8",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1781286399420-hwuz.jpg",
+  "created_at": "2026-06-12T17:46:40.155+00:00",
+  "area": "city"
+ },
+ {
+  "id": "card-1781286411593-akn",
+  "beds": 1,
+  "price": "mid",
+  "month": "9",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1781286410886-ckl2.jpg",
+  "created_at": "2026-06-12T17:46:51.593+00:00",
+  "area": "south"
+ },
+ {
+  "id": "card-1781286419393-gtv",
+  "beds": 1,
+  "price": "low",
+  "month": "8",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1781286418636-28wp.jpg",
+  "created_at": "2026-06-12T17:46:59.393+00:00",
+  "area": "east"
+ },
+ {
+  "id": "card-1781286429950-v0t",
+  "beds": 1,
+  "price": "low",
+  "month": "8",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1781286428755-e1y2.jpg",
+  "created_at": "2026-06-12T17:47:09.95+00:00",
+  "area": "east"
+ },
+ {
+  "id": "card-1781288145247-zit",
+  "beds": 2,
+  "price": "high",
+  "month": "8",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1781288144496-w7xo.jpg",
+  "created_at": "2026-06-12T18:15:45.247+00:00",
+  "area": "city"
+ },
+ {
+  "id": "card-1781288155470-86s",
+  "beds": 1,
+  "price": "mid",
+  "month": "8",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1781288154507-ai5g.jpg",
+  "created_at": "2026-06-12T18:15:55.47+00:00",
+  "area": "north"
+ },
+ {
+  "id": "card-1781288189771-tq9",
+  "beds": 1,
+  "price": "mid",
+  "month": "8",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1781288189228-i5px.jpg",
+  "created_at": "2026-06-12T18:16:29.771+00:00",
+  "area": "east"
+ },
+ {
+  "id": "card-1781288196511-zeg",
+  "beds": 1,
+  "price": "low",
+  "month": "7",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1781288195792-1moe.jpg",
+  "created_at": "2026-06-12T18:16:36.511+00:00",
+  "area": "city"
+ },
+ {
+  "id": "card-1781288202689-q89",
+  "beds": 1,
+  "price": "low",
+  "month": "8",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1781288202109-my00.jpg",
+  "created_at": "2026-06-12T18:16:42.689+00:00",
+  "area": "east"
+ },
+ {
+  "id": "card-1781288214703-zob",
+  "beds": 1,
+  "price": "low",
+  "month": "8",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1781288214126-1fuk.jpg",
+  "created_at": "2026-06-12T18:16:54.703+00:00",
+  "area": "east"
+ },
+ {
+  "id": "card-1781288269482-kun",
+  "beds": 1,
+  "price": "mid",
+  "month": "8",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1781288268425-y959.jpg",
+  "created_at": "2026-06-12T18:17:49.482+00:00",
+  "area": "south"
+ },
+ {
+  "id": "card-1781544830692-xyi",
+  "beds": 1,
+  "price": "mid",
+  "month": "9",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1781544829850-g9gb.jpg",
+  "created_at": "2026-06-15T17:33:50.693+00:00",
+  "area": "south"
+ },
+ {
+  "id": "card-1781544841436-0ut",
+  "beds": 0,
+  "price": "low",
+  "month": "9",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1781544841006-ufe4.jpg",
+  "created_at": "2026-06-15T17:34:01.437+00:00",
+  "area": "east"
+ },
+ {
+  "id": "card-1781544849117-43p",
+  "beds": 0,
+  "price": "low",
+  "month": "9",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1781544848449-4sx5.jpg",
+  "created_at": "2026-06-15T17:34:09.117+00:00",
+  "area": "east"
+ },
+ {
+  "id": "card-1781544859785-zl3",
+  "beds": 2,
+  "price": "high",
+  "month": "8",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1781544859104-1mx1.jpg",
+  "created_at": "2026-06-15T17:34:19.785+00:00",
+  "area": "east"
+ },
+ {
+  "id": "card-1781544868565-r63",
+  "beds": 1,
+  "price": "mid",
+  "month": "8",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1781544868066-tnnr.jpg",
+  "created_at": "2026-06-15T17:34:28.565+00:00",
+  "area": "north"
+ },
+ {
+  "id": "card-1781544878187-nks",
+  "beds": 2,
+  "price": "mid",
+  "month": "8",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1781544877417-6ecw.jpg",
+  "created_at": "2026-06-15T17:34:38.187+00:00",
+  "area": "east"
+ },
+ {
+  "id": "card-1781544890122-kcb",
+  "beds": 2,
+  "price": "mid",
+  "month": "8",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1781544889583-cdzh.jpg",
+  "created_at": "2026-06-15T17:34:50.122+00:00",
+  "area": "east"
+ },
+ {
+  "id": "card-1781544901048-0kb",
+  "beds": 1,
+  "price": "low",
+  "month": "8",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1781544900434-uvfo.jpg",
+  "created_at": "2026-06-15T17:35:01.048+00:00",
+  "area": "east"
+ },
+ {
+  "id": "card-1781615182956-qjn",
+  "beds": 1,
+  "price": "low",
+  "month": "9",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1781615182344-4yrv.jpg",
+  "created_at": "2026-06-16T13:06:22.957+00:00",
+  "area": "east"
+ },
+ {
+  "id": "card-1781615192158-gxz",
+  "beds": 2,
+  "price": "mid",
+  "month": "9",
+  "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1781615190449-8fum.jpg",
+  "created_at": "2026-06-16T13:06:32.159+00:00",
+  "area": "north"
+ }
+]
