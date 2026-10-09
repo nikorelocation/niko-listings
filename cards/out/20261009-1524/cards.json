@@ -1,0 +1,68 @@
+[
+  {
+    "link": "https://www.rightmove.co.uk/properties/94121889",
+    "rm_id": "94121889",
+    "address": "Casson Square, Lambeth, London",
+    "postcode": "SE1",
+    "bed_label": "1 Bed 1 Bath",
+    "weekly": 854,
+    "monthly": "3701",
+    "avail": "27/01/2027",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-casson-square-lambeth-london-se1.jpg",
+    "tags": {
+      "area": "city",
+      "beds": 1,
+      "price": "mid",
+      "month": "2027-01"
+    },
+    "saved": true,
+    "supabase_id": "card-1791555856178-a0a",
+    "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1791555855034-ed75.jpg"
+  },
+  {
+    "link": "https://www.rightmove.co.uk/properties/94130328",
+    "rm_id": "94130328",
+    "address": "Westferry Circus",
+    "postcode": "E14",
+    "bed_label": "1 Bed 2 Bath",
+    "weekly": 660,
+    "monthly": "2860",
+    "avail": "26/11/2026",
+    "furnish": "不带家具",
+    "agent": "",
+    "card": "niko-westferry-circus-london-e14-8rw-e14.jpg",
+    "tags": {
+      "area": "east",
+      "beds": 1,
+      "price": "low",
+      "month": "2026-11"
+    },
+    "saved": true,
+    "supabase_id": "card-1791555858214-bda",
+    "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1791555857064-f9f2.jpg"
+  },
+  {
+    "link": "https://www.rightmove.co.uk/properties/94113699",
+    "rm_id": "94113699",
+    "address": "Camley Street, Kings Cross N1C",
+    "postcode": "N1C",
+    "bed_label": "3 Bed 2 Bath",
+    "weekly": 1523,
+    "monthly": "6600",
+    "avail": "Ask agent",
+    "furnish": "不带家具",
+    "agent": "",
+    "card": "niko-camley-street-kings-cross-n1c.jpg",
+    "tags": {
+      "area": "north",
+      "beds": 3,
+      "price": "high",
+      "month": "now"
+    },
+    "saved": true,
+    "supabase_id": "card-1791555859522-b7a",
+    "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1791555858746-94cd.jpg"
+  }
+]
