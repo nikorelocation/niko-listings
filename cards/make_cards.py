@@ -435,7 +435,19 @@ async def main():
     work = tempfile.mkdtemp(prefix='nikocards-')
     # 路线 1：Heroku 爬虫 → PDF → generate_cards 解析（和手动流程一致）
     try:
-        pdfs = fetch_via_heroku(urls, work)
+        try:
+            pdfs = fetch_via_heroku(urls, work)
+        except Exception as e0:
+            # 整批失败时逐条重试，避免一条坏链接拖垮整批
+            print(f'整批抓取失败（{e0}），改为逐条重试')
+            pdfs = []
+            for u in urls:
+                try:
+                    sub = os.path.join(work, 'one-' + re.search(r'/properties/(\d+)', u).group(1))
+                    os.makedirs(sub, exist_ok=True)
+                    pdfs += fetch_via_heroku([u], sub)
+                except Exception as e1:
+                    print(f'✗ 单条失败 {u}: {e1}')
         print(f'Heroku 爬虫返回 {len(pdfs)} 个 PDF')
         for p in pdfs:
             try:
