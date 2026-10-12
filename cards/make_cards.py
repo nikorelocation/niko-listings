@@ -251,6 +251,20 @@ def month_from_text(text):
     return dt.date(y, mon, 1)
 
 
+def short_avail(avail):
+    """卡片上的起租日期统一成短格式，避免被截断：12月4日 / 随时 / 待定"""
+    a = (avail or '').strip()
+    if re.search(r'\bnow\b|immediate', a, re.I): return '随时'
+    m = re.match(r'(\d{1,2})/(\d{1,2})/(\d{2,4})', a)
+    if m: return f'{int(m.group(2))}月{int(m.group(1))}日'
+    mons = ['jan','feb','mar','apr','may','jun','jul','aug','sep','oct','nov','dec']
+    m = re.match(r'(\d{1,2})(?:st|nd|rd|th)?\s+([A-Za-z]{3})', a)
+    if m and m.group(2).lower() in mons: return f'{mons.index(m.group(2).lower())+1}月{int(m.group(1))}日'
+    m = re.match(r'([A-Za-z]{3})[a-z]*\s+(\d{1,2})', a)
+    if m and m.group(1).lower() in mons: return f'{mons.index(m.group(1).lower())+1}月{int(m.group(2))}日'
+    if not a or re.search(r'ask', a, re.I): return '待问'
+    return a[:6]
+
 def avail_month(avail, fmt, text=''):
     d = None
     if re.search(r'\bnow\b|immediate', avail or '', re.I):
@@ -486,11 +500,14 @@ async def main():
                 results.append({'link': u, 'error': str(e)})
         if not entries:
             sys.exit(2)
+        for d, _, _ in entries:
+            d['avail_raw'] = d.get('avail')
+            d['avail'] = short_avail(d.get('avail'))
         paths = await render_cards(pw, entries, a.out)
 
     for (d, imgs, fname), p in zip(entries, paths):
         tags = {'area': pc2area(d.get('postcode')), 'beds': int(d.get('beds') or 0),
-                'price': price_range(int(d.get('weekly') or 0)), 'month': avail_month(d.get('avail'), a.month_format, ' '.join(d.get('features') or []))}
+                'price': price_range(int(d.get('weekly') or 0)), 'month': avail_month(d.get('avail_raw', d.get('avail')), a.month_format, ' '.join(d.get('features') or []))}
         row = {'link': d.get('link', ''), 'rm_id': d.get('rm_id', ''),
                'address': d.get('address') or d.get('fn_title') or fname, 'postcode': d.get('postcode', ''),
                'bed_label': d.get('bed_label', ''), 'weekly': int(d.get('weekly') or 0), 'monthly': d.get('monthly', ''),
