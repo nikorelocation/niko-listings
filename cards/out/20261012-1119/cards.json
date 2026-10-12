@@ -1,0 +1,24 @@
+[
+  {
+    "link": "https://www.rightmove.co.uk/properties/94161555",
+    "rm_id": "94161555",
+    "address": "Riverlight Quay Nine Elms Sw11",
+    "postcode": "SW8",
+    "bed_label": "1 Bed 1 Bath",
+    "weekly": 750,
+    "monthly": "3250",
+    "avail": "18/12/2026",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-riverlight-quay-nine-elms-sw11-sw8.jpg",
+    "tags": {
+      "area": "south",
+      "beds": 1,
+      "price": "mid",
+      "month": "2026-12"
+    },
+    "saved": true,
+    "supabase_id": "card-1791800356980-0c0",
+    "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1791800356113-7244.jpg"
+  }
+]
