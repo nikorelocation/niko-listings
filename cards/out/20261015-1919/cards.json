@@ -1,0 +1,24 @@
+[
+  {
+    "link": "https://www.rightmove.co.uk/properties/94366362",
+    "rm_id": "94366362",
+    "address": "250 City Road, Old Street, Ec1V",
+    "postcode": "EC1V",
+    "bed_label": "1 Bed 1 Bath",
+    "weekly": 800,
+    "monthly": "3467",
+    "avail": "待问",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-250-city-road-old-street-ec1v.jpg",
+    "tags": {
+      "area": "city",
+      "beds": 1,
+      "price": "mid",
+      "month": "now"
+    },
+    "saved": true,
+    "supabase_id": "card-1792088360729-442",
+    "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1792088359330-e2a7.jpg"
+  }
+]
