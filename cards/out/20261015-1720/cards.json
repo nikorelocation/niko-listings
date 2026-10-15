@@ -1,0 +1,46 @@
+[
+  {
+    "link": "https://www.rightmove.co.uk/properties/94285815",
+    "rm_id": "94285815",
+    "address": "One Blackfriars, Blackfriars Road, London, SE1",
+    "postcode": "SE1",
+    "bed_label": "3 Bed 4 Bath",
+    "weekly": 2601,
+    "monthly": "11271",
+    "avail": "随时",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-one-blackfriars-blackfriars-road-london-se1.jpg",
+    "tags": {
+      "area": "city",
+      "beds": 3,
+      "price": "high",
+      "month": "now"
+    },
+    "saved": true,
+    "supabase_id": "card-1792081253010-3c5",
+    "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1792081251877-6d38.jpg"
+  },
+  {
+    "link": "https://www.rightmove.co.uk/properties/94356051",
+    "rm_id": "94356051",
+    "address": "Haydn Tower, Wandsworth Road, Lambeth, London",
+    "postcode": "SW8",
+    "bed_label": "2 Bed 2 Bath",
+    "weekly": 893,
+    "monthly": "3870",
+    "avail": "12月21日",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-haydn-tower-wandsworth-road-lambeth-london-sw8.jpg",
+    "tags": {
+      "area": "south",
+      "beds": 2,
+      "price": "mid",
+      "month": "2026-12"
+    },
+    "saved": true,
+    "supabase_id": "card-1792081254067-695",
+    "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1792081253480-3511.jpg"
+  }
+]
