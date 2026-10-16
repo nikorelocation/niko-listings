@@ -1,0 +1,90 @@
+[
+  {
+    "link": "https://www.rightmove.co.uk/properties/94411989",
+    "rm_id": "94411989",
+    "address": "Goodchild Road London N4",
+    "postcode": "N4",
+    "bed_label": "2 Bed 2 Bath",
+    "weekly": 646,
+    "monthly": "2799",
+    "avail": "12月3日",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-goodchild-road-london-n4.jpg",
+    "tags": {
+      "area": "north",
+      "beds": 2,
+      "price": "low",
+      "month": "2026-12"
+    },
+    "saved": true,
+    "supabase_id": "card-1792178387920-76a",
+    "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1792178386703-43a4.jpg"
+  },
+  {
+    "link": "https://www.rightmove.co.uk/properties/94415691",
+    "rm_id": "94415691",
+    "address": "Walworth Road, London, SE1",
+    "postcode": "SE1",
+    "bed_label": "1 Bed 1 Bath",
+    "weekly": 542,
+    "monthly": "2349",
+    "avail": "11月22日",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-walworth-road-london-se1.jpg",
+    "tags": {
+      "area": "city",
+      "beds": 1,
+      "price": "low",
+      "month": "2026-11"
+    },
+    "saved": true,
+    "supabase_id": "card-1792178389634-7d1",
+    "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1792178388475-c387.jpg"
+  },
+  {
+    "link": "https://www.rightmove.co.uk/properties/94411797",
+    "rm_id": "94411797",
+    "address": "Goodchild Road London N4",
+    "postcode": "N4",
+    "bed_label": "3 Bed 2 Bath",
+    "weekly": 877,
+    "monthly": "3800",
+    "avail": "10月19日",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-goodchild-road-london-n4(2)-n4.jpg",
+    "tags": {
+      "area": "north",
+      "beds": 3,
+      "price": "mid",
+      "month": "2026-10"
+    },
+    "saved": true,
+    "supabase_id": "card-1792178390794-334",
+    "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1792178390206-da4f.jpg"
+  },
+  {
+    "link": "https://www.rightmove.co.uk/properties/94414884",
+    "rm_id": "94414884",
+    "address": "One Park Drive, Canary Wharf, London",
+    "postcode": "E14",
+    "bed_label": "1 Bed 1 Bath",
+    "weekly": 831,
+    "monthly": "3601",
+    "avail": "1月14日",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-one-park-drive-canary-wharf-london-e14.jpg",
+    "tags": {
+      "area": "east",
+      "beds": 1,
+      "price": "mid",
+      "month": "2027-01"
+    },
+    "saved": true,
+    "supabase_id": "card-1792178392431-1a1",
+    "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1792178391332-2890.jpg"
+  }
+]
