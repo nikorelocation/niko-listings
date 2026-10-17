@@ -1,0 +1,46 @@
+[
+  {
+    "link": "https://www.rightmove.co.uk/properties/157289324",
+    "rm_id": "157289324",
+    "address": "Hampton Tower, Marsh Wall, Tower Hamlets, London",
+    "postcode": "E14",
+    "bed_label": "1 Bed 1 Bath",
+    "weekly": 715,
+    "monthly": "3098",
+    "avail": "待问",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-hampton-tower-marsh-wall-tower-hamlets-london-e14.jpg",
+    "tags": {
+      "area": "east",
+      "beds": 1,
+      "price": "mid",
+      "month": "now"
+    },
+    "saved": true,
+    "supabase_id": "card-1792243171303-67c",
+    "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1792243170236-9600.jpg"
+  },
+  {
+    "link": "https://www.rightmove.co.uk/properties/92861844",
+    "rm_id": "92861844",
+    "address": "Floor Two Bedrooms and Two Bathrooms Apartment",
+    "postcode": "E14",
+    "bed_label": "2 Bed 2 Bath",
+    "weekly": 1269,
+    "monthly": "5499",
+    "avail": "1月19日",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-park-drive-london-e14.jpg",
+    "tags": {
+      "area": "east",
+      "beds": 2,
+      "price": "high",
+      "month": "2027-01"
+    },
+    "saved": true,
+    "supabase_id": "card-1792243172816-8f6",
+    "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1792243172251-2da8.jpg"
+  }
+]
