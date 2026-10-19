@@ -1,0 +1,222 @@
+[
+  {
+    "link": "https://www.rightmove.co.uk/properties/94452192",
+    "rm_id": "94452192",
+    "address": "Park Street, London, Sw6",
+    "postcode": "SW6",
+    "bed_label": "3 Bed 4 Bath",
+    "weekly": 1662,
+    "monthly": "7202",
+    "avail": "12月21日",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-park-street-london-sw6.jpg",
+    "tags": {
+      "area": "south",
+      "beds": 3,
+      "price": "high",
+      "month": "2026-12"
+    },
+    "saved": true,
+    "supabase_id": "card-1792409467368-27a",
+    "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1792409466585-0313.jpg"
+  },
+  {
+    "link": "https://www.rightmove.co.uk/properties/94454481",
+    "rm_id": "94454481",
+    "address": "Merino Gardens, London Dock",
+    "postcode": "E1W",
+    "bed_label": "2 Bed 2 Bath",
+    "weekly": 1038,
+    "monthly": "4498",
+    "avail": "待问",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-merino-gardens-london-dock-e1w.jpg",
+    "tags": {
+      "area": "east",
+      "beds": 2,
+      "price": "high",
+      "month": "now"
+    },
+    "saved": true,
+    "supabase_id": "card-1792409468708-e59",
+    "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1792409468177-f50f.jpg"
+  },
+  {
+    "link": "https://www.rightmove.co.uk/properties/94451322",
+    "rm_id": "94451322",
+    "address": "Senate Building, Lexington Gardens",
+    "postcode": "SW11",
+    "bed_label": "1 Bed 1 Bath",
+    "weekly": 675,
+    "monthly": "2925",
+    "avail": "待问",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-senate-building-lexington-gardens-sw11.jpg",
+    "tags": {
+      "area": "south",
+      "beds": 1,
+      "price": "low",
+      "month": "now"
+    },
+    "saved": true,
+    "supabase_id": "card-1792409469888-bdf",
+    "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1792409469079-d2a1.jpg"
+  },
+  {
+    "link": "https://www.rightmove.co.uk/properties/94445784",
+    "rm_id": "94445784",
+    "address": "Cobalt Point, 38 Millharbour, Canary Wharf, London, E14",
+    "postcode": "E14",
+    "bed_label": "1 Bed 1 Bath",
+    "weekly": 500,
+    "monthly": "2167",
+    "avail": "12月19日",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-cobalt-point-38-millharbour-canary-wharf-london-e14.jpg",
+    "tags": {
+      "area": "east",
+      "beds": 1,
+      "price": "low",
+      "month": "2026-12"
+    },
+    "saved": true,
+    "supabase_id": "card-1792409470903-094",
+    "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1792409470250-3711.jpg"
+  },
+  {
+    "link": "https://www.rightmove.co.uk/properties/94445679",
+    "rm_id": "94445679",
+    "address": "Gasholder Place, London, SE11",
+    "postcode": "SE11",
+    "bed_label": "1 Bed 1 Bath",
+    "weekly": 692,
+    "monthly": "2999",
+    "avail": "11月7日",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-gasholder-place-london-se11.jpg",
+    "tags": {
+      "area": "south",
+      "beds": 1,
+      "price": "low",
+      "month": "2026-11"
+    },
+    "saved": true,
+    "supabase_id": "card-1792409471913-438",
+    "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1792409471063-66bf.jpg"
+  },
+  {
+    "link": "https://www.rightmove.co.uk/properties/94447623",
+    "rm_id": "94447623",
+    "address": "Redan Place, Bayswater, W2",
+    "postcode": "W2",
+    "bed_label": "1 Bed 1 Bath",
+    "weekly": 1500,
+    "monthly": "6500",
+    "avail": "待问",
+    "furnish": "不带家具",
+    "agent": "",
+    "card": "niko-redan-place-bayswater-w2.jpg",
+    "tags": {
+      "area": "west",
+      "beds": 1,
+      "price": "high",
+      "month": "now"
+    },
+    "saved": true,
+    "supabase_id": "card-1792409472878-197",
+    "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1792409472263-ded6.jpg"
+  },
+  {
+    "link": "https://www.rightmove.co.uk/properties/94449507",
+    "rm_id": "94449507",
+    "address": "Modern bathroom\n\nContemporary living and dining space\n\nFitted kitchen\n\nComfortable bedroom\n\nLocated within South Bank Tower",
+    "postcode": "SE1",
+    "bed_label": "1 Bed 1 Bath",
+    "weekly": 888,
+    "monthly": "3848",
+    "avail": "12月22日",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-bramble-hub-ltd-albert-embankment-lambeth-london-se1.jpg",
+    "tags": {
+      "area": "city",
+      "beds": 1,
+      "price": "mid",
+      "month": "2026-12"
+    },
+    "saved": true,
+    "supabase_id": "card-1792409473385-bed",
+    "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1792409473025-f3bc.jpg"
+  },
+  {
+    "link": "https://www.rightmove.co.uk/properties/174508913",
+    "rm_id": "174508913",
+    "address": "Carnation Way, Wandsworth, London",
+    "postcode": "SW8",
+    "bed_label": "5 Bed 5 Bath",
+    "weekly": 5538,
+    "monthly": "23998",
+    "avail": "12月4日",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-carnation-way-wandsworth-london-sw8.jpg",
+    "tags": {
+      "area": "south",
+      "beds": 5,
+      "price": "high",
+      "month": "2026-12"
+    },
+    "saved": true,
+    "supabase_id": "card-1792409474310-390",
+    "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1792409473747-a469.jpg"
+  },
+  {
+    "link": "https://www.rightmove.co.uk/properties/94446420",
+    "rm_id": "94446420",
+    "address": "Principal Tower, Principal Place, Ec2A",
+    "postcode": "EC2A",
+    "bed_label": "2 Bed 2 Bath",
+    "weekly": 1846,
+    "monthly": "7999",
+    "avail": "11月16日",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-principal-tower-principal-place-ec2a.jpg",
+    "tags": {
+      "area": "city",
+      "beds": 2,
+      "price": "high",
+      "month": "2026-11"
+    },
+    "saved": true,
+    "supabase_id": "card-1792409475119-5c7",
+    "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1792409474660-88ff.jpg"
+  },
+  {
+    "link": "https://www.rightmove.co.uk/properties/94446078",
+    "rm_id": "94446078",
+    "address": "4 Baltimore Wharf, Canary Wharf, London, E14",
+    "postcode": "E14",
+    "bed_label": "2 Bed 2 Bath",
+    "weekly": 725,
+    "monthly": "3142",
+    "avail": "12月17日",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-north-boulevard-4-baltimore-wharf-canary-wharf-london-e14.jpg",
+    "tags": {
+      "area": "east",
+      "beds": 2,
+      "price": "mid",
+      "month": "2026-12"
+    },
+    "saved": true,
+    "supabase_id": "card-1792409476106-e38",
+    "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1792409475468-29d6.jpg"
+  }
+]
