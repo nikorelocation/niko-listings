@@ -1,0 +1,46 @@
+[
+  {
+    "link": "https://www.rightmove.co.uk/properties/94458366",
+    "rm_id": "94458366",
+    "address": "Neo Bankside, Holland Street, SE1",
+    "postcode": "SE1",
+    "bed_label": "2 Bed 2 Bath",
+    "weekly": 1275,
+    "monthly": "5525",
+    "avail": "12月1日",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-neo-bankside-holland-street-se1.jpg",
+    "tags": {
+      "area": "city",
+      "beds": 2,
+      "price": "high",
+      "month": "2026-12"
+    },
+    "saved": true,
+    "supabase_id": "card-1792416162666-1de",
+    "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1792416161940-a63c.jpg"
+  },
+  {
+    "link": "https://www.rightmove.co.uk/properties/94451319",
+    "rm_id": "94451319",
+    "address": "Two minute walk from Liverpool Street Station",
+    "postcode": "EC3A",
+    "bed_label": "2 Bed 2 Bath",
+    "weekly": 1546,
+    "monthly": "6699",
+    "avail": "待问",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-houndsditch-london-ec3a.jpg",
+    "tags": {
+      "area": "city",
+      "beds": 2,
+      "price": "high",
+      "month": "now"
+    },
+    "saved": true,
+    "supabase_id": "card-1792416164206-4ed",
+    "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1792416163395-9ab4.jpg"
+  }
+]
