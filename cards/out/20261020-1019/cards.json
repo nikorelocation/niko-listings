@@ -1,0 +1,46 @@
+[
+  {
+    "link": "https://www.rightmove.co.uk/properties/94487214",
+    "rm_id": "94487214",
+    "address": "101 Wood Lane, London",
+    "postcode": "W12",
+    "bed_label": "2 Bed 2 Bath",
+    "weekly": 1211,
+    "monthly": "5248",
+    "avail": "11月17日",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-television-centre-101-wood-lane-london-w12.jpg",
+    "tags": {
+      "area": "west",
+      "beds": 2,
+      "price": "high",
+      "month": "2026-11"
+    },
+    "saved": true,
+    "supabase_id": "card-1792487992207-54c",
+    "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1792487990769-bbdf.jpg"
+  },
+  {
+    "link": "https://www.rightmove.co.uk/properties/94484427",
+    "rm_id": "94484427",
+    "address": "Kennington Lane London SE11",
+    "postcode": "SE11",
+    "bed_label": "1 Bed 1 Bath",
+    "weekly": 588,
+    "monthly": "2548",
+    "avail": "12月2日",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-kennington-lane-london-se11.jpg",
+    "tags": {
+      "area": "south",
+      "beds": 1,
+      "price": "low",
+      "month": "2026-12"
+    },
+    "saved": true,
+    "supabase_id": "card-1792487993926-46a",
+    "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1792487993185-6db0.jpg"
+  }
+]
