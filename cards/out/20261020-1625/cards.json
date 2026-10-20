@@ -1,0 +1,90 @@
+[
+  {
+    "link": "https://www.rightmove.co.uk/properties/94518021",
+    "rm_id": "94518021",
+    "address": "Conquest Tower, 130 Blackfriars Road, SE1",
+    "postcode": "SE1",
+    "bed_label": "1 Bed 1 Bath",
+    "weekly": 750,
+    "monthly": "3250",
+    "avail": "随时",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-conquest-tower-130-blackfriars-road-se1.jpg",
+    "tags": {
+      "area": "city",
+      "beds": 1,
+      "price": "mid",
+      "month": "now"
+    },
+    "saved": true,
+    "supabase_id": "card-1792509933601-89b",
+    "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1792509932264-3b40.jpg"
+  },
+  {
+    "link": "https://www.rightmove.co.uk/properties/94520610",
+    "rm_id": "94520610",
+    "address": "Altitude Point, 71 Alie Street, Aldgate, London, E1",
+    "postcode": "E1",
+    "bed_label": "1 Bed 1 Bath",
+    "weekly": 623,
+    "monthly": "2700",
+    "avail": "10月24日",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-altitude-point-71-alie-street-aldgate-london-e1.jpg",
+    "tags": {
+      "area": "east",
+      "beds": 1,
+      "price": "low",
+      "month": "2026-10"
+    },
+    "saved": true,
+    "supabase_id": "card-1792509935306-eb3",
+    "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1792509934221-2b04.jpg"
+  },
+  {
+    "link": "https://www.rightmove.co.uk/properties/94517805",
+    "rm_id": "94517805",
+    "address": "Conquest Tower, Blackfriars Road, SE1",
+    "postcode": "SE1",
+    "bed_label": "2 Bed 2 Bath",
+    "weekly": 900,
+    "monthly": "3900",
+    "avail": "待问",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-conquest-tower-blackfriars-road-se1.jpg",
+    "tags": {
+      "area": "city",
+      "beds": 2,
+      "price": "mid",
+      "month": "now"
+    },
+    "saved": true,
+    "supabase_id": "card-1792509936766-19f",
+    "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1792509935636-614c.jpg"
+  },
+  {
+    "link": "https://www.rightmove.co.uk/properties/94521090",
+    "rm_id": "94521090",
+    "address": "Atlas Building, London, Ec1V",
+    "postcode": "EC1V",
+    "bed_label": "Studio",
+    "weekly": 610,
+    "monthly": "2643",
+    "avail": "12月19日",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-atlas-building-london-ec1v.jpg",
+    "tags": {
+      "area": "city",
+      "beds": 0,
+      "price": "low",
+      "month": "2026-12"
+    },
+    "saved": true,
+    "supabase_id": "card-1792509937994-54f",
+    "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1792509937370-b322.jpg"
+  }
+]
