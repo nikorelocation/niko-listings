@@ -58,12 +58,54 @@ jobs:
         with:
           python-version: '3.11'
 
+      # 中文字体 + poppler 的安装包缓存：第一次在线装成功后存起来，以后直接用，不再连 Ubuntu 软件源
+      - name: 恢复安装包缓存
+        uses: actions/cache@v4
+        with:
+          path: ~/apt-debs
+          key: apt-debs-${{ runner.os }}-v1
+
       - name: 安装依赖
         run: |
           export DEBIAN_FRONTEND=noninteractive
-          APT="sudo apt-get -o Acquire::Retries=3 -o Acquire::http::Timeout=30 -o Acquire::https::Timeout=30"
-          timeout 240 $APT update -qq || timeout 240 $APT update -qq || true
-          timeout 300 $APT install -y -qq --no-install-recommends fonts-noto-cjk poppler-utils > /dev/null
+          DEB="$HOME/apt-debs"; mkdir -p "$DEB/partial"
+          PKGS="fonts-noto-cjk poppler-utils"
+          have_all() { command -v pdftotext >/dev/null && command -v pdfimages >/dev/null && fc-list | grep -q "Noto Sans CJK"; }
+
+          # 1) 有缓存：直接装本地安装包，不联网
+          if ls "$DEB"/*.deb >/dev/null 2>&1; then
+            echo "使用缓存安装包 $(ls "$DEB"/*.deb | wc -l) 个"
+            sudo dpkg -i "$DEB"/*.deb >/dev/null || echo "缓存安装包不完整，改为在线安装"
+          fi
+
+          # 2) 在线安装：每次最多 3 分钟；失败就换软件源再试，共 3 次
+          if ! have_all; then
+            APT="sudo apt-get -o Acquire::Retries=3 -o Acquire::http::Timeout=20 -o Acquire::https::Timeout=20 -o Dir::Cache::archives=$DEB -o APT::Keep-Downloaded-Packages=true"
+            for i in 1 2 3; do
+              if [ "$i" = 2 ]; then MIRROR="http://archive.ubuntu.com/ubuntu"; fi
+              if [ "$i" = 3 ]; then MIRROR="http://mirrors.edge.kernel.org/ubuntu"; fi
+              if [ "$i" != 1 ]; then
+                echo "第 $i 次：换软件源 $MIRROR"
+                sudo sed -i -E "s#http://[a-z0-9.-]*archive\.ubuntu\.com/ubuntu/?#$MIRROR/#g; s#http://mirrors\.edge\.kernel\.org/ubuntu/?#$MIRROR/#g" /etc/apt/sources.list.d/*.sources /etc/apt/sources.list 2>/dev/null || true
+              fi
+              timeout 120 $APT update -qq || true
+              if timeout 180 $APT install -y -f -q --no-install-recommends $PKGS > /dev/null; then echo "第 $i 次安装成功"; break; fi
+              echo "第 $i 次安装失败或超时"
+            done
+            sudo rm -f "$DEB/lock"; sudo chown -R "$(id -u):$(id -g)" "$DEB"
+          fi
+
+          # 3) 中文字体兜底：软件源还是装不上，就从 GitHub 直接下载字体文件
+          if ! fc-list | grep -q "Noto Sans CJK"; then
+            echo "软件源装字体失败，改从 GitHub 下载"
+            mkdir -p "$HOME/.local/share/fonts"
+            for w in Regular Bold; do
+              curl -fsSL --retry 3 --max-time 180 -o "$HOME/.local/share/fonts/NotoSansCJK-$w.ttc" \
+                "https://github.com/notofonts/noto-cjk/raw/main/Sans/OTC/NotoSansCJK-$w.ttc" || echo "下载 $w 失败"
+            done
+            fc-cache -f > /dev/null
+          fi
+
           pip install -q playwright requests pillow
           timeout 600 python -m playwright install --with-deps chromium
           which pdftotext pdfimages && fc-list | grep -c "CJK" 
