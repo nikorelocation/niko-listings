@@ -1,0 +1,68 @@
+[
+  {
+    "link": "https://www.rightmove.co.uk/properties/93518922",
+    "rm_id": "93518922",
+    "address": "Plimsoll Building, Handyside Street, London N1C",
+    "postcode": "N1C",
+    "bed_label": "2 Bed 2 Bath",
+    "weekly": 992,
+    "monthly": "4299",
+    "avail": "11月11日",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-plimsoll-building-handyside-street-london-n1c.jpg",
+    "tags": {
+      "area": "north",
+      "beds": 2,
+      "price": "mid",
+      "month": "2026-11"
+    },
+    "saved": true,
+    "supabase_id": "card-1792685990638-cdb",
+    "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1792685989907-9f25.jpg"
+  },
+  {
+    "link": "https://www.rightmove.co.uk/properties/94619877",
+    "rm_id": "94619877",
+    "address": "Lincoln Square, Portugal Street, London, Wc2A",
+    "postcode": "WC2A",
+    "bed_label": "1 Bed 1 Bath",
+    "weekly": 1269,
+    "monthly": "5499",
+    "avail": "11月15日",
+    "furnish": "不带家具",
+    "agent": "",
+    "card": "niko-lincoln-square-portugal-street-london-wc2a.jpg",
+    "tags": {
+      "area": "city",
+      "beds": 1,
+      "price": "high",
+      "month": "2026-11"
+    },
+    "saved": true,
+    "supabase_id": "card-1792685992181-cd9",
+    "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1792685991401-dee7.jpg"
+  },
+  {
+    "link": "https://www.rightmove.co.uk/properties/94621032",
+    "rm_id": "94621032",
+    "address": "Gladwin Tower, 50 Wandsworth Road, London, Sw8",
+    "postcode": "SW8",
+    "bed_label": "2 Bed 2 Bath",
+    "weekly": 1015,
+    "monthly": "4398",
+    "avail": "随时",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-gladwin-tower-50-wandsworth-road-london-sw8.jpg",
+    "tags": {
+      "area": "south",
+      "beds": 2,
+      "price": "high",
+      "month": "now"
+    },
+    "saved": true,
+    "supabase_id": "card-1792685993420-a31",
+    "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1792685992591-5fc2.jpg"
+  }
+]
