@@ -31,7 +31,8 @@ header{background:#1a1a1a;padding:14px 20px;display:flex;align-items:center;just
 
 /* Grid */
 .grid-wrap{max-width:1100px;margin:0 auto;padding:18px 16px}
-.count{font-size:12px;color:#aaa;margin-bottom:14px}
+.count{font-size:12px;color:#aaa;margin-bottom:14px;display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap}
+.updated{color:#999}
 .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
 @media(max-width:800px){.grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:480px){.grid{grid-template-columns:1fr}}
@@ -159,7 +160,7 @@ header{background:#1a1a1a;padding:14px 20px;display:flex;align-items:center;just
 
 <div id="pool">
   <div class="grid-wrap">
-    <div class="count" id="count"></div>
+    <div class="count"><span id="count"></span><span class="updated" id="updated"></span></div>
     <div class="grid" id="grid"></div>
   </div>
 </div>
@@ -457,6 +458,7 @@ async function loadAll() {
       fullImg: r.image,
       uploadedAt: r.created_at
     }));
+    renderUpdated(rows);
   } catch(e) {
     toast('房源加载失败，请刷新重试');
   }
@@ -468,6 +470,20 @@ async function loadAll() {
     displayImg: p.images[0]
   }))];
   render();
+}
+
+// 房源池最近更新时间 = 最新一套入池的时间，按伦敦时间显示
+function renderUpdated(rows) {
+  const el = document.getElementById('updated');
+  if (!el) return;
+  const last = rows.reduce((m, r) => (r.created_at || '') > m ? r.created_at : m, '');
+  if (!last) { el.textContent = ''; return; }
+  const d = new Date(last);
+  const parts = Object.fromEntries(new Intl.DateTimeFormat('en-GB', {
+    timeZone: 'Europe/London', year: 'numeric', month: 'numeric', day: 'numeric',
+    hour: '2-digit', minute: '2-digit', hour12: false
+  }).formatToParts(d).map(p => [p.type, p.value]));
+  el.textContent = `最近更新：${parts.year}年${parts.month}月${parts.day}日 ${parts.hour}:${parts.minute}（伦敦时间）`;
 }
 
 function getFiltered() {
@@ -972,6 +988,7 @@ async function saveSingle(id) {
       uploadedAt: new Date().toISOString()
     };
     allProps.unshift(p);
+    renderUpdated([{ created_at: p.uploadedAt }, ...allProps.filter(x => x.isUploaded).map(x => ({ created_at: x.uploadedAt }))]);
     render();
     removeCard(id);
     if (!batchQ.length && !AUTO_RUNNING) closeUpload();
