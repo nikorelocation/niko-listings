@@ -1,7 +1,7 @@
 name: 做卡片 → 房源池
 
 # 手动触发（Actions 页面点 Run workflow），或由 Claude 定时任务用 `gh workflow run` 触发。
-# 输入 Rightmove 链接（每行一个），自动：抓数据和照片 → 出卡片 JPG → 写入房源池 Supabase → 卡片存回仓库 cards/out/<日期>/
+# 输入 Rightmove 链接（每行一个），自动：抓数据和照片 → 出卡片 JPG → 写入房源池（仓库里的 pool/pool.json，GitHub Pages 免费托管）→ 卡片存回仓库 cards/out/<日期>/
 on:
   # 每月 1 号 03:10 UTC 自动清理：删除上传超过 90 天的房源（见下面 schedule 分支）
   schedule:
@@ -28,8 +28,13 @@ on:
         required: false
         type: string
         default: '0'
+      import_supabase:
+        description: '一次性：把旧 Supabase 房源池里仓库没有的房源（手动上传的）搬进 pool/pool.json（11 月 3 日 Supabase 额度恢复后跑一次）'
+        required: false
+        type: boolean
+        default: false
       save:
-        description: '写入房源池（Supabase）'
+        description: '写入房源池（pool/pool.json）'
         required: true
         type: boolean
         default: true
@@ -117,8 +122,6 @@ jobs:
 
       - name: 出卡片 + 写入房源池
         env:
-          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
-          SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
           MONTH_FORMAT: ${{ inputs.month_format || 'ym' }}
         run: |
           OUT="cards/out/$(TZ=Europe/London date +%Y%m%d-%H%M)"
@@ -127,17 +130,36 @@ jobs:
           if [ "${{ inputs.save }}" = "true" ]; then SAVE="--save"; fi
           OLDER="${{ inputs.delete_older_than || '0' }}"
           if [ "${{ github.event_name }}" = "schedule" ]; then OLDER=90; fi
-          python cards/make_cards.py --urls urls.txt --out "$OUT" $SAVE --delete "${{ inputs.delete_ids || '' }}" --delete-oldest "${{ inputs.delete_oldest || '0' }}" --delete-older-than "$OLDER"
+          python cards/make_cards.py --urls urls.txt --out "$OUT" $SAVE --delete "${{ inputs.delete_ids || '' }}" --delete-oldest "${{ inputs.delete_oldest || '0' }}" --delete-older-than "$OLDER" || [ "${{ inputs.import_supabase }}" = "true" ]
           mkdir -p "$OUT"; [ -f "$OUT/cards.json" ] || echo '[]' > "$OUT/cards.json"
 
-      - name: 卡片存回仓库
+      - name: 一次性搬迁旧 Supabase 数据
+        if: ${{ inputs.import_supabase }}
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
+        run: python cards/import_supabase.py --out "$OUT"
+
+      - name: 卡片存回仓库 + 更新房源池
         run: |
           git config user.name "niko-cards-bot"
           git config user.email "cards@nikorelocation.co.uk"
-          git add -f "$OUT"
-          git commit -m "cards: $(basename "$OUT") ($(ls "$OUT"/*.jpg 2>/dev/null | wc -l) 张)" || echo "无新文件"
-          git pull --rebase -q origin main || true
-          git push
+          # 1) 卡片、缩略图、手动搬迁的图片：都是新文件，不会冲突
+          for d in "$OUT" pool/thumbs pool/img; do if [ -e "$d" ]; then git add -f "$d"; fi; done
+          git commit -q -m "cards: $(basename "$OUT") ($(ls "$OUT"/*.jpg 2>/dev/null | wc -l) 张)" || echo "无新文件"
+          git pull --rebase -q origin main
+          git push -q
+          # 2) pool.json：每次都在最新版本上重新应用本次的新增/删除，push 冲突就重来（最多 5 次）
+          if [ -f "$OUT/pool_ops.json" ]; then
+            for i in 1 2 3 4 5; do
+              git pull --rebase -q origin main
+              python cards/pool_store.py apply "$OUT/pool_ops.json"
+              git add -A pool
+              git commit -q -m "pool: $(basename "$OUT")" || { echo "房源池无变化"; break; }
+              if git push -q; then echo "房源池已更新"; break; fi
+              echo "push 冲突，第 $i 次重试"; git reset -q --hard HEAD~1; sleep $((i*3))
+            done
+          fi
 
       - name: 结果摘要
         run: |

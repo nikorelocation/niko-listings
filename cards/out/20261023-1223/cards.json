@@ -17,8 +17,9 @@
       "price": "mid",
       "month": "2026-10"
     },
-    "saved": false,
-    "save_error": "402 Client Error: Payment Required for url: https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/property-images/1792754643925-93c2.jpg"
+    "saved": true,
+    "supabase_id": "card-1792756579506-e92",
+    "image_url": "cards/out/20261023-1223/niko-apartment-southwark-bridge-road-se1.jpg"
   },
   {
     "link": "https://www.rightmove.co.uk/properties/94646769",
@@ -38,8 +39,9 @@
       "price": "mid",
       "month": "now"
     },
-    "saved": false,
-    "save_error": "402 Client Error: Payment Required for url: https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/property-images/1792754644172-7509.jpg"
+    "saved": true,
+    "supabase_id": "card-1792756579579-5be",
+    "image_url": "cards/out/20261023-1223/niko-postmark-jubilee-walk-london-wc1x.jpg"
   },
   {
     "link": "https://www.rightmove.co.uk/properties/94643154",
@@ -59,8 +61,9 @@
       "price": "low",
       "month": "2026-12"
     },
-    "saved": false,
-    "save_error": "402 Client Error: Payment Required for url: https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/property-images/1792754644252-57ad.jpg"
+    "saved": true,
+    "supabase_id": "card-1792756579643-308",
+    "image_url": "cards/out/20261023-1223/niko-sterling-mansions-leman-street-london-e1.jpg"
   },
   {
     "link": "https://www.rightmove.co.uk/properties/94644237",
@@ -80,8 +83,9 @@
       "price": "mid",
       "month": "2026-10"
     },
-    "saved": false,
-    "save_error": "402 Client Error: Payment Required for url: https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/property-images/1792754644332-970e.jpg"
+    "saved": true,
+    "supabase_id": "card-1792756579715-029",
+    "image_url": "cards/out/20261023-1223/niko-exchange-gardens-london-sw8.jpg"
   },
   {
     "link": "https://www.rightmove.co.uk/properties/94644711",
@@ -101,7 +105,8 @@
       "price": "high",
       "month": "2026-11"
     },
-    "saved": false,
-    "save_error": "402 Client Error: Payment Required for url: https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/property-images/1792754644414-3830.jpg"
+    "saved": true,
+    "supabase_id": "card-1792756579805-a95",
+    "image_url": "cards/out/20261023-1223/niko-handyside-street-plimsoll-building-n1c.jpg"
   }
 ]

@@ -196,72 +196,110 @@ header{background:#1a1a1a;padding:14px 20px;display:flex;align-items:center;just
 // ── ADMIN ────────────────────────────────────────────────
 const ADMIN_PASS = 'niko2025';  // ← 在这里修改密码
 
-// ── SUPABASE ──────────────────────────────────────────────
-const SB_URL = 'https://imhlozdlohtjkdvrsylu.supabase.co';
-const SB_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImltaGxvemRsb2h0amtkdnJzeWx1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA1MDA0OTIsImV4cCI6MjA5NjA3NjQ5Mn0.r-lN5wPk5WbmED1uUyq-76c5aX_IDTlNpt4vFmexqCo';
-const BUCKET = 'property-images';
-const TABLE = 'properties';
+// ── 数据存储：GitHub（零成本）──────────────────────────
+// 房源数据在仓库 pool/pool.json，图片在 cards/out/… 和 pool/thumbs、pool/img，都由 GitHub Pages 免费托管。
+// 访客只读这些静态文件，不需要任何密钥。管理员上传/删除时，用自己的 GitHub 令牌直接改仓库（令牌只存在本机浏览器）。
+const GH_REPO = 'nikorelocation/niko-listings';
+const GH_BRANCH = 'main';
+const POOL_PATH = 'pool/pool.json';
+const TOKEN_KEY = 'niko-gh-token';
 
-async function sbFetch(path, opts = {}) {
-  const res = await fetch(SB_URL + path, {
+function ghToken(ask) {
+  let t = '';
+  try { t = localStorage.getItem(TOKEN_KEY) || ''; } catch (e) {}
+  if (!t && ask) {
+    t = (prompt('首次在这台设备上修改房源池，请粘贴 GitHub 令牌（只保存在本机浏览器）：\n\n获取方法：GitHub → Settings → Developer settings → Fine-grained tokens → Generate new token，\nRepository access 选 niko-listings，Permissions → Contents 选 Read and write。') || '').trim();
+    if (t) { try { localStorage.setItem(TOKEN_KEY, t); } catch (e) {} }
+  }
+  return t;
+}
+
+async function gh(path, opts = {}) {
+  const t = ghToken(true);
+  if (!t) throw new Error('没有 GitHub 令牌');
+  const res = await fetch(`https://api.github.com/repos/${GH_REPO}/contents/${path}`, {
     ...opts,
-    headers: {
-      'apikey': SB_KEY,
-      'Authorization': 'Bearer ' + SB_KEY,
-      'Content-Type': 'application/json',
-      ...(opts.headers || {})
-    }
+    headers: { 'Authorization': 'Bearer ' + t, 'Accept': 'application/vnd.github+json', ...(opts.headers || {}) }
   });
+  if (res.status === 401) { try { localStorage.removeItem(TOKEN_KEY); } catch (e) {} throw new Error('GitHub 令牌无效或过期，请重新粘贴'); }
   return res;
 }
 
-// Upload image file to Supabase Storage, return public URL
-async function uploadImage(file) {
-  const ext = file.name.split('.').pop() || 'jpg';
-  const filename = Date.now() + '-' + Math.random().toString(36).slice(2,6) + '.' + ext;
-  const res = await fetch(`${SB_URL}/storage/v1/object/${BUCKET}/${filename}`, {
-    method: 'POST',
-    headers: {
-      'apikey': SB_KEY,
-      'Authorization': 'Bearer ' + SB_KEY,
-      'Content-Type': file.type || 'image/jpeg',
-      'x-upsert': 'false'
-    },
-    body: file
-  });
-  if (!res.ok) throw new Error('图片上传失败');
-  return `${SB_URL}/storage/v1/object/public/${BUCKET}/${filename}`;
+const b64 = str => btoa(unescape(encodeURIComponent(str)));
+const unb64 = s => decodeURIComponent(escape(atob(s.replace(/\n/g, ''))));
+
+async function ghPutFile(path, base64, message) {
+  const res = await gh(path, { method: 'PUT', body: JSON.stringify({ message, content: base64, branch: GH_BRANCH }) });
+  if (!res.ok) throw new Error('上传文件失败 ' + res.status);
 }
 
-// Save property record to Supabase
-async function sbSave(p) {
-  const res = await sbFetch(`/rest/v1/${TABLE}`, {
-    method: 'POST',
-    headers: { 'Prefer': 'return=representation' },
-    body: JSON.stringify({
-      id: p.id,
-      area: p.area,
-      beds: p.beds,
-      price: p.price,
-      month: p.month,
-      image_url: p.image_url,
-      created_at: new Date().toISOString()
-    })
+async function ghDeleteFile(path, message) {
+  const r = await gh(path + '?ref=' + GH_BRANCH);
+  if (!r.ok) return;
+  const { sha } = await r.json();
+  await gh(path, { method: 'DELETE', body: JSON.stringify({ message, sha, branch: GH_BRANCH }) });
+}
+
+// 读最新 pool.json → 修改 → 写回；被别人（自动入池）同时改了就重读重试
+async function poolUpdate(fn, message) {
+  for (let i = 0; i < 5; i++) {
+    const r = await gh(POOL_PATH + '?ref=' + GH_BRANCH);
+    if (!r.ok) throw new Error('读取房源池失败 ' + r.status);
+    const j = await r.json();
+    let rows = JSON.parse(unb64(j.content));
+    rows = fn(rows);
+    rows.sort((x, y) => (y.created_at || '').localeCompare(x.created_at || ''));
+    const body = '[\n' + rows.map(x => JSON.stringify(x)).join(',\n') + (rows.length ? '\n' : '') + ']\n';
+    const w = await gh(POOL_PATH, { method: 'PUT', body: JSON.stringify({ message, content: b64(body), sha: j.sha, branch: GH_BRANCH }) });
+    if (w.ok) return rows;
+    if (w.status !== 409 && w.status !== 422) throw new Error('保存房源池失败 ' + w.status);
+    await new Promise(ok => setTimeout(ok, 800 * (i + 1)));
+  }
+  throw new Error('房源池正忙，请稍后再试');
+}
+
+// dataUrl → 指定宽度的 JPEG base64（缩略图用）
+function resizeDataUrl(dataUrl, maxW, q) {
+  return new Promise(resolve => {
+    const img = new Image();
+    img.onload = () => {
+      const w = Math.min(maxW, img.width), h = Math.round(img.height * w / img.width);
+      const c = document.createElement('canvas'); c.width = w; c.height = h;
+      c.getContext('2d').drawImage(img, 0, 0, w, h);
+      resolve(c.toDataURL('image/jpeg', q).split(',')[1]);
+    };
+    img.onerror = () => resolve(null);
+    img.src = dataUrl;
   });
-  if (!res.ok) throw new Error('数据保存失败');
+}
+
+// 手动上传一张卡片：原图 pool/img/<id>.jpg + 缩略图 pool/thumbs/<id>.jpg + 一行记录
+async function poolSaveUpload(p, dataUrl) {
+  const full = dataUrl.split(',')[1];
+  const thumb = await resizeDataUrl(dataUrl, 720, 0.72) || full;
+  await ghPutFile(`pool/img/${p.id}.jpg`, full, `pool: 上传 ${p.id}`);
+  await ghPutFile(`pool/thumbs/${p.id}.jpg`, thumb, `pool: 缩略图 ${p.id}`);
+  const row = { id: p.id, area: p.area, beds: p.beds, price: p.price, month: p.month,
+    image: `pool/img/${p.id}.jpg`, thumb: `pool/thumbs/${p.id}.jpg`,
+    created_at: new Date().toISOString(), source: 'manual' };
+  await poolUpdate(rows => rows.some(x => x.id === p.id) ? rows : [row, ...rows], `pool: 新增 ${p.id}`);
+  return row;
+}
+
+async function poolLoad() {
+  // 每分钟换一次参数：既能拿到最新数据，又能用上 CDN 缓存
+  const res = await fetch(POOL_PATH + '?t=' + Math.floor(Date.now() / 60000));
+  if (!res.ok) throw new Error('房源池读取失败');
   return res.json();
 }
 
-// Load all uploaded properties from Supabase
-async function sbLoad() {
-  const res = await sbFetch(`/rest/v1/${TABLE}?select=*&order=created_at.desc`);
-  if (!res.ok) return [];
-  return res.json();
-}
-
-// Delete property from Supabase
-async function sbDelete(id) {
-  await sbFetch(`/rest/v1/${TABLE}?id=eq.${encodeURIComponent(id)}`, { method: 'DELETE' });
+async function poolDelete(id) {
+  let row = null;
+  await poolUpdate(rows => { row = rows.find(x => x.id === id); return rows.filter(x => x.id !== id); }, `pool: 删除 ${id}`);
+  for (const k of ['thumb', 'image']) {           // cards/out 里的卡片原件保留，只删房源池自己的文件
+    const path = row && row[k];
+    if (path && path.startsWith('pool/')) { try { await ghDeleteFile(path, `pool: 删除 ${id}`); } catch (e) {} }
+  }
 }
 
 function isAdmin() {
@@ -405,10 +443,9 @@ function pc2area(pc) {
 const AREA_LABEL = {city:'市中心', north:'北伦敦', east:'东伦敦', west:'西伦敦', south:'南伦敦'};
 
 async function loadAll() {
-  // Load uploaded cards from Supabase (all devices) + fallback to localStorage
   let uploaded = [];
   try {
-    const rows = await sbLoad();
+    const rows = await poolLoad();
     uploaded = rows.map(r => ({
       id: r.id,
       isUploaded: true,
@@ -416,12 +453,12 @@ async function loadAll() {
       beds: r.beds,
       price: r.price,
       month: r.month,
-      displayImg: r.image_url,
+      displayImg: r.thumb || r.image,
+      fullImg: r.image,
       uploadedAt: r.created_at
     }));
   } catch(e) {
-    // Supabase unavailable, fall back to localStorage
-    uploaded = JSON.parse(localStorage.getItem('niko-cards') || '[]');
+    toast('房源加载失败，请刷新重试');
   }
   allProps = [...uploaded, ...BUILT_IN.map(p => ({
     ...p, isBuiltIn: true,
@@ -489,7 +526,7 @@ function filt(type, val, el) {
 function showDetail(id) {
   const p = allProps.find(x => x.id === id);
   if (!p) return;
-  const img = p.displayImg || (p.images && p.images[0]);
+  const img = p.fullImg || p.displayImg || (p.images && p.images[0]);
   const bedsLabel = p.beds === 0 ? 'Studio' : (p.beds || 2) + '室';
   document.getElementById('d-wrap').innerHTML = `
     ${img ? `<img class="d-img" src="${img}">` : ''}
@@ -519,16 +556,16 @@ function showPool() {
 async function deleteCard(id) {
   if (!confirm('确定删除这条房源吗？')) return;
   try {
-    await sbDelete(id);
+    await poolDelete(id);
   } catch(e) {
-    // Also remove from localStorage fallback
-    const saved = JSON.parse(localStorage.getItem('niko-cards') || '[]');
-    localStorage.setItem('niko-cards', JSON.stringify(saved.filter(x => x.id !== id)));
+    toast('删除失败：' + e.message);
+    return;
   }
-  await loadAll();
+  allProps = allProps.filter(p => p.id !== id);
+  render();
   applyAdminUI();
   showPool();
-  toast('已删除');
+  toast('已删除（约 1 分钟后所有人可见）');
 }
 
 function share(id) {
@@ -893,7 +930,7 @@ async function undoAuto() {
   btn.disabled = true; btn.textContent = '撤销中…';
   let n = 0;
   for (const id of AUTO_SAVED.slice()) {
-    try { await sbDelete(id); allProps = allProps.filter(p => p.id !== id); n++; } catch (e) {}
+    try { await poolDelete(id); allProps = allProps.filter(p => p.id !== id); n++; } catch (e) {}
   }
   AUTO_SAVED = [];
   btn.disabled = false; btn.classList.remove('on'); btn.textContent = '撤销本次自动上传';
@@ -918,20 +955,11 @@ async function saveSingle(id) {
   if (btn) { btn.disabled = true; btn.textContent = '上传中…'; }
 
   try {
-    // 1. Upload image to Supabase Storage
-    const imageUrl = await uploadImage(entry.file);
-
-    // 2. Save record to Supabase database
+    // 1. 原图 + 缩略图 + 记录写进 GitHub 仓库
+    if (!entry.dataUrl) { toast('图片处理中，请稍候再试'); if (btn) { btn.disabled = false; btn.textContent = '保存到房源池'; } return; }
     const recId = 'card-' + Date.now() + '-' + Math.random().toString(36).slice(2,5);
-    await sbSave({
-      id: recId,
-      area: entry.area,
-      beds: entry.beds,
-      price: entry.price,
-      month: entry.month,
-      image_url: imageUrl
-    });
-
+    await poolSaveUpload({ id: recId, area: entry.area, beds: entry.beds, price: entry.price, month: entry.month }, entry.dataUrl);
+    const imageUrl = entry.dataUrl;   // 页面上先用本地图显示，GitHub Pages 约 1 分钟后更新
     // 3. Update local display
     const p = {
       id: recId,
@@ -950,7 +978,7 @@ async function saveSingle(id) {
     if (!AUTO_RUNNING) toast('已保存 ✓');
     else AUTO_SAVED.push(recId);        // 只有自动上传的才进撤销名单
   } catch(e) {
-    toast('保存失败，请重试');
+    toast('保存失败：' + e.message);
     if (btn) { btn.disabled = false; btn.textContent = '保存到房源池'; }
   }
 }

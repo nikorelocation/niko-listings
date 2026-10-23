@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Niko Relocation — Rightmove 链接 → 房源卡片 JPG → （可选）写入房源池 Supabase
+Niko Relocation — Rightmove 链接 → 房源卡片 JPG → （可选）写入房源池（GitHub：pool/pool.json）
 云端版本，不需要 Mac。数据来源两条路：
   1）Niko 的 Heroku 爬虫（和手动流程完全一样：链接 → PDF → generate_cards 解析）——默认
   2）直接打开 Rightmove 页面读 PAGE_MODEL——备用（GitHub 机器常被 Rightmove 拦）
@@ -9,7 +9,8 @@ Niko Relocation — Rightmove 链接 → 房源卡片 JPG → （可选）写入
   python3 make_cards.py --urls urls.txt --out out/ [--save]
   python3 make_cards.py --url https://www.rightmove.co.uk/properties/94020657 --out out/
 
-  --save      同时写入 Supabase（需要环境变量 SUPABASE_URL / SUPABASE_KEY）
+  --save      同时写入房源池：生成缩略图 pool/thumbs/<id>.jpg，并把新增/删除记到 <out>/pool_ops.json，
+              由 workflow 用 `python cards/pool_store.py apply` 合进 pool/pool.json（不再用 Supabase，零成本）
   --month-format legacy|ym   房源池 month 字段格式：legacy = now/7/8/9/10+（当前线上 pool.html）
                                                     ym = now/YYYY-MM（新版 pool.html，带月份筛选）
 输出：out/niko-<slug>-<postcode>.jpg + out/cards.json（每套的数据和写库结果）
@@ -287,90 +288,14 @@ def avail_month(avail, fmt, text=''):
     return '10+'
 
 
-# ── 4. 写 Supabase（照 pool.html 的 uploadImage + sbSave） ──
-def supabase_save(jpg_path, tags):
-    import requests
-    url = os.environ.get('SUPABASE_URL', 'https://imhlozdlohtjkdvrsylu.supabase.co').rstrip('/')
-    key = os.environ.get('SUPABASE_KEY', '')
-    if not key:
-        raise RuntimeError('没有 SUPABASE_KEY，跳过写库')
-    h = {'apikey': key, 'Authorization': 'Bearer ' + key}
-    fn = f'{int(time.time()*1000)}-{random.randbytes(2).hex()}.jpg'
-    r = requests.post(f'{url}/storage/v1/object/property-images/{fn}',
-                      headers={**h, 'Content-Type': 'image/jpeg', 'x-upsert': 'false'},
-                      data=open(jpg_path, 'rb').read(), timeout=60)
-    r.raise_for_status()
-    image_url = f'{url}/storage/v1/object/public/property-images/{fn}'
-    rec_id = f'card-{int(time.time()*1000)}-{random.randbytes(2).hex()[:3]}'
-    body = {'id': rec_id, 'area': tags['area'], 'beds': tags['beds'], 'price': tags['price'],
-            'month': tags['month'], 'image_url': image_url,
-            'created_at': dt.datetime.now(dt.timezone.utc).isoformat()}
-    r = requests.post(f'{url}/rest/v1/properties',
-                      headers={**h, 'Content-Type': 'application/json', 'Prefer': 'return=representation'},
-                      json=body, timeout=60)
-    r.raise_for_status()
-    return rec_id, image_url
+# ── 4. 写房源池（GitHub：pool/pool.json + pool/thumbs，见 cards/pool_store.py；不再用 Supabase） ──
+import pool_store
 
 
-def supabase_delete(rec_id):
-    """按 properties.id 删除一条记录及其图片（用于清理重复）"""
-    import requests
-    url = os.environ.get('SUPABASE_URL', 'https://imhlozdlohtjkdvrsylu.supabase.co').rstrip('/')
-    key = os.environ.get('SUPABASE_KEY', '')
-    if not key:
-        raise RuntimeError('没有 SUPABASE_KEY')
-    h = {'apikey': key, 'Authorization': 'Bearer ' + key}
-    r = requests.get(f'{url}/rest/v1/properties?id=eq.{rec_id}&select=id,image_url', headers=h, timeout=30)
-    r.raise_for_status()
-    rows = r.json()
-    if not rows:
-        return False
-    r = requests.delete(f'{url}/rest/v1/properties?id=eq.{rec_id}', headers=h, timeout=30)
-    r.raise_for_status()
-    img = rows[0].get('image_url') or ''
-    m = re.search(r'/property-images/([^/?]+)$', img)
-    if m:
-        requests.delete(f'{url}/storage/v1/object/property-images/{m.group(1)}', headers=h, timeout=30)
-    return True
-
-
-def supabase_delete_oldest(n, out_dir, older_than_days=0):
-    """删除房源池里最早上传的 n 条（按 created_at 升序）；或 older_than_days>0 时删除上传超过该天数的全部记录。先把被删的记录存成 JSON 备份"""
-    import requests
-    url = os.environ.get('SUPABASE_URL', 'https://imhlozdlohtjkdvrsylu.supabase.co').rstrip('/')
-    key = os.environ.get('SUPABASE_KEY', '')
-    if not key:
-        raise RuntimeError('没有 SUPABASE_KEY')
-    h = {'apikey': key, 'Authorization': 'Bearer ' + key}
-    if older_than_days > 0:
-        cutoff = (dt.datetime.now(dt.timezone.utc) - dt.timedelta(days=older_than_days)).isoformat()
-        q = f'{url}/rest/v1/properties?select=*&created_at=lt.{cutoff}&order=created_at.asc&limit=1000'
-        tag = f'older-than-{older_than_days}d'
-    else:
-        q = f'{url}/rest/v1/properties?select=*&order=created_at.asc.nullsfirst&limit={int(n)}'
-        tag = 'oldest'
-    r = requests.get(q, headers=h, timeout=60)
-    r.raise_for_status()
-    rows = r.json()
-    if not rows:
-        print('  没有需要清理的旧房源'); return 0
+def write_ops(out_dir, ops):
+    """本次对房源池的操作写到 <out>/pool_ops.json；workflow 在提交前用 pool_store.py apply 应用到最新的 pool.json"""
     os.makedirs(out_dir, exist_ok=True)
-    json.dump(rows, open(os.path.join(out_dir, f'deleted-{tag}-{len(rows)}.json'), 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
-    done = 0
-    for row in rows:
-        rid = row['id']
-        rr = requests.delete(f'{url}/rest/v1/properties?id=eq.{rid}', headers=h, timeout=30)
-        if rr.status_code >= 300:
-            print(f'  ✗ 删 {rid} 失败 {rr.status_code}'); continue
-        img = row.get('image_url') or ''
-        m = re.search(r'/property-images/([^/?]+)$', img)
-        if m:
-            requests.delete(f'{url}/storage/v1/object/property-images/{m.group(1)}', headers=h, timeout=30)
-        done += 1
-    r = requests.get(f'{url}/rest/v1/properties?select=id', headers={**h, 'Prefer': 'count=exact', 'Range': '0-0'}, timeout=30)
-    total = r.headers.get('content-range', '?').split('/')[-1]
-    print(f'  🗑 已删除最早的 {done} 条（备份在 {out_dir}），房源池现剩 {total} 条')
-    return done
+    json.dump(ops, open(os.path.join(out_dir, 'pool_ops.json'), 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
 
 
 def already_in_pool(repo_root):
@@ -392,24 +317,32 @@ async def main():
     ap.add_argument('--urls', help='文件，每行一个 Rightmove 链接')
     ap.add_argument('--url', action='append', default=[])
     ap.add_argument('--out', default='out')
-    ap.add_argument('--save', action='store_true', help='写入 Supabase 房源池')
+    ap.add_argument('--save', action='store_true', help='写入房源池（pool/pool.json）')
     ap.add_argument('--month-format', default=os.environ.get('MONTH_FORMAT', 'ym'))
     ap.add_argument('--delete', default='', help='要从房源池删除的 properties.id（空格分隔），用于清理重复')
     ap.add_argument('--force', action='store_true', help='已入池的也重新上传（默认跳过重复）')
     ap.add_argument('--delete-oldest', type=int, default=0, help='删除房源池里最早上传的 N 条（清理旧房源）')
     ap.add_argument('--delete-older-than', type=int, default=0, help='删除上传超过 N 天的全部记录（定期清理）')
     a = ap.parse_args()
+    ops = {'add': [], 'remove': []}
     if a.delete_oldest > 0 or a.delete_older_than > 0:
-        try:
-            supabase_delete_oldest(a.delete_oldest, a.out, a.delete_older_than)
-        except Exception as e:
-            print(f'  ✗ 清理旧房源失败: {e}')
+        old = pool_store.select_old(a.delete_oldest, a.delete_older_than)
+        if old:
+            os.makedirs(a.out, exist_ok=True)
+            tag = f'older-than-{a.delete_older_than}d' if a.delete_older_than > 0 else 'oldest'
+            json.dump(old, open(os.path.join(a.out, f'deleted-{tag}-{len(old)}.json'), 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+            ops['remove'] += [r['id'] for r in old]
+            print(f'  🗑 将清理 {len(old)} 套旧房源（备份在 {a.out}）')
+        else:
+            print('  没有需要清理的旧房源')
     if a.delete.strip():
+        have = {r['id'] for r in pool_store.load()}
         for rid in a.delete.split():
-            try:
-                print(f'  🗑 {rid}: ' + ('已删除' if supabase_delete(rid) else '不存在'))
-            except Exception as e:
-                print(f'  ✗ 删除 {rid} 失败: {e}')
+            print(f'  🗑 {rid}: ' + ('将删除' if rid in have else '不在房源池'))
+            if rid in have:
+                ops['remove'].append(rid)
+    if ops['remove']:
+        write_ops(a.out, ops)
     urls = list(a.url)
     if a.urls:
         urls += [l.strip() for l in open(a.urls) if l.strip()]
@@ -427,6 +360,8 @@ async def main():
     urls = list(dict.fromkeys(clean))
     if not urls:
         if a.delete.strip() or a.delete_oldest > 0 or a.delete_older_than > 0:
+            os.makedirs(a.out, exist_ok=True)
+            json.dump([], open(os.path.join(a.out, 'cards.json'), 'w', encoding='utf-8'))
             sys.exit(0)
         print('没有有效的 Rightmove 链接'); sys.exit(1)
     os.makedirs(a.out, exist_ok=True)
@@ -518,15 +453,20 @@ async def main():
             print('  ⊘ OpenRent 房源，不上传房源池')
         elif a.save:
             try:
-                rec_id, image_url = supabase_save(p, tags)
-                row.update(saved=True, supabase_id=rec_id, image_url=image_url)
-                print(f'  ↑ 已写入房源池 {rec_id}')
+                prow = pool_store.build_row(p, tags, rm_id=row['rm_id'], address=row['address'],
+                                            weekly=row['weekly'], folder=os.path.basename(os.path.normpath(a.out)))
+                ops['add'].append(prow)
+                # 字段名 supabase_id 保留（回复邮件的定时任务按它拼单套链接），现在就是房源池 id
+                row.update(saved=True, supabase_id=prow['id'], image_url=prow['image'])
+                print(f'  ↑ 已写入房源池 {prow["id"]}')
             except Exception as e:
                 row.update(saved=False, save_error=str(e))
                 print(f'  ✗ 写库失败: {e}')
         results.append(row)
     json.dump(results, open(os.path.join(a.out, 'cards.json'), 'w', encoding='utf-8'),
               ensure_ascii=False, indent=2)
+    if ops['add'] or ops['remove']:
+        write_ops(a.out, ops)
     print(f'\n完成：{len(paths)} 张卡片 → {a.out}/')
 
 if __name__ == '__main__':
