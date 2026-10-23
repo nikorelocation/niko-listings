@@ -1,0 +1,75 @@
+{
+ "add": [
+  {
+   "id": "card-1792761742001-280",
+   "area": "east",
+   "beds": 0,
+   "price": "low",
+   "month": "2026-10",
+   "image": "cards/out/20261023-1421/niko-landmark-pinnacle-marsh-wall-e14.jpg",
+   "thumb": "pool/thumbs/card-1792761742001-280.jpg",
+   "created_at": "2026-10-23T13:22:22+00:00",
+   "rm_id": "94653273",
+   "address": "Canary Wharf Jubilee 0.5 mile",
+   "weekly": 580,
+   "folder": "20261023-1421"
+  },
+  {
+   "id": "card-1792761742068-093",
+   "area": "east",
+   "beds": 0,
+   "price": "low",
+   "month": "2026-12",
+   "image": "cards/out/20261023-1421/niko-landmark-pinnacle-marsh-wall-e14.jpg",
+   "thumb": "pool/thumbs/card-1792761742068-093.jpg",
+   "created_at": "2026-10-23T13:22:22+00:00",
+   "rm_id": "94652346",
+   "address": "Canary Wharf Jubilee 0.5 mile",
+   "weekly": 650,
+   "folder": "20261023-1421"
+  },
+  {
+   "id": "card-1792761742125-e40",
+   "area": "east",
+   "beds": 3,
+   "price": "high",
+   "month": "now",
+   "image": "cards/out/20261023-1421/niko-georgette-apartments-10-cendal-crescent-e1.jpg",
+   "thumb": "pool/thumbs/card-1792761742125-e40.jpg",
+   "created_at": "2026-10-23T13:22:22+00:00",
+   "rm_id": "94654251",
+   "address": "Georgette Apartments, 10 Cendal Crescent, E1",
+   "weekly": 1731,
+   "folder": "20261023-1421"
+  },
+  {
+   "id": "card-1792761742180-f7c",
+   "area": "south",
+   "beds": 1,
+   "price": "low",
+   "month": "2026-12",
+   "image": "cards/out/20261023-1421/niko-no-2-upper-riverside-cutter-lane-greenwich-peninsula-se10.jpg",
+   "thumb": "pool/thumbs/card-1792761742180-f7c.jpg",
+   "created_at": "2026-10-23T13:22:22+00:00",
+   "rm_id": "94650750",
+   "address": "Upper Riverside, Cutter Lane, Greenwich Peninsula, SE10",
+   "weekly": 588,
+   "folder": "20261023-1421"
+  },
+  {
+   "id": "card-1792761742240-7f2",
+   "area": "west",
+   "beds": 2,
+   "price": "high",
+   "month": "now",
+   "image": "cards/out/20261023-1421/niko-westmark-tower-w2.jpg",
+   "thumb": "pool/thumbs/card-1792761742240-7f2.jpg",
+   "created_at": "2026-10-23T13:22:22+00:00",
+   "rm_id": "94653954",
+   "address": "Westmark Tower, W2",
+   "weekly": 1154,
+   "folder": "20261023-1421"
+  }
+ ],
+ "remove": []
+}
