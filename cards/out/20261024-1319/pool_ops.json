@@ -1,0 +1,19 @@
+{
+ "add": [
+  {
+   "id": "card-1792844390328-708",
+   "area": "city",
+   "beds": 2,
+   "price": "mid",
+   "month": "2026-12",
+   "image": "cards/out/20261024-1319/niko-chatsworth-house-one-tower-bridge-duchess-walk-london-se1.jpg",
+   "thumb": "pool/thumbs/card-1792844390328-708.jpg",
+   "created_at": "2026-10-24T12:19:50+00:00",
+   "rm_id": "94691619",
+   "address": "Chatsworth House, One Tower Bridge, Duchess Walk, London, SE1.",
+   "weekly": 992,
+   "folder": "20261024-1319"
+  }
+ ],
+ "remove": []
+}
