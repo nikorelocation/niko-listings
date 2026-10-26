@@ -1,0 +1,19 @@
+{
+ "add": [
+  {
+   "id": "card-1793010322239-7b1",
+   "area": "east",
+   "beds": 3,
+   "price": "high",
+   "month": "2026-10",
+   "image": "cards/out/20261026-1025/niko-one-park-drive-london-e14.jpg",
+   "thumb": "pool/thumbs/card-1793010322239-7b1.jpg",
+   "created_at": "2026-10-26T10:25:22+00:00",
+   "rm_id": "94715856",
+   "address": "One Park Drive, London, E14",
+   "weekly": 1615,
+   "folder": "20261026-1025"
+  }
+ ],
+ "remove": []
+}
