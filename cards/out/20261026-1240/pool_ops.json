@@ -1,0 +1,61 @@
+{
+ "add": [
+  {
+   "id": "card-1793018463629-ca6",
+   "area": "south",
+   "beds": 1,
+   "price": "low",
+   "month": "2026-12",
+   "image": "cards/out/20261026-1240/niko-westwood-building-lockgate-road-london-sw6.jpg",
+   "thumb": "pool/thumbs/card-1793018463629-ca6.jpg",
+   "created_at": "2026-10-26T12:41:03+00:00",
+   "rm_id": "94726143",
+   "address": "Westwood Building, Lockgate Road, London, Sw6",
+   "weekly": 681,
+   "folder": "20261026-1240"
+  },
+  {
+   "id": "card-1793018463690-5a6",
+   "area": "city",
+   "beds": 2,
+   "price": "high",
+   "month": "now",
+   "image": "cards/out/20261026-1240/niko-merano-residences-30-albert-embankment-se1.jpg",
+   "thumb": "pool/thumbs/card-1793018463690-5a6.jpg",
+   "created_at": "2026-10-26T12:41:03+00:00",
+   "rm_id": "94721499",
+   "address": "Merano Residences 30 Albert Embankment",
+   "weekly": 1269,
+   "folder": "20261026-1240"
+  },
+  {
+   "id": "card-1793018463742-b92",
+   "area": "south",
+   "beds": 2,
+   "price": "mid",
+   "month": "2026-12",
+   "image": "cards/out/20261026-1240/niko-weymouth-building-deacon-street-se17.jpg",
+   "thumb": "pool/thumbs/card-1793018463742-b92.jpg",
+   "created_at": "2026-10-26T12:41:03+00:00",
+   "rm_id": "94725468",
+   "address": "Weymouth Building, Deacon Street, SE17",
+   "weekly": 785,
+   "folder": "20261026-1240"
+  },
+  {
+   "id": "card-1793018463807-984",
+   "area": "east",
+   "beds": 1,
+   "price": "mid",
+   "month": "2027-01",
+   "image": "cards/out/20261026-1240/niko-one-thames-quay-marsh-wall-london-e14.jpg",
+   "thumb": "pool/thumbs/card-1793018463807-984.jpg",
+   "created_at": "2026-10-26T12:41:03+00:00",
+   "rm_id": "94723230",
+   "address": "One Thames Quay Marsh Wall",
+   "weekly": 704,
+   "folder": "20261026-1240"
+  }
+ ],
+ "remove": []
+}
