@@ -1,0 +1,103 @@
+{
+ "add": [
+  {
+   "id": "card-1793128875271-3cc",
+   "area": "east",
+   "beds": 0,
+   "price": "low",
+   "month": "now",
+   "image": "cards/out/20261027-1920/niko-marsh-wall-south-quay-plaza-e14.jpg",
+   "thumb": "pool/thumbs/card-1793128875271-3cc.jpg",
+   "created_at": "2026-10-27T19:21:15+00:00",
+   "rm_id": "94807044",
+   "address": "Marsh Wall South Quay Plaza",
+   "weekly": 635,
+   "folder": "20261027-1920"
+  },
+  {
+   "id": "card-1793128875322-2c4",
+   "area": "south",
+   "beds": 2,
+   "price": "mid",
+   "month": "now",
+   "image": "cards/out/20261027-1920/niko-keybridge-tower-exchange-gardens-london-sw8.jpg",
+   "thumb": "pool/thumbs/card-1793128875322-2c4.jpg",
+   "created_at": "2026-10-27T19:21:15+00:00",
+   "rm_id": "142020893",
+   "address": "Keybridge Tower, Exchange Gardens, London, Sw8",
+   "weekly": 981,
+   "folder": "20261027-1920"
+  },
+  {
+   "id": "card-1793128875360-34e",
+   "area": "south",
+   "beds": 1,
+   "price": "low",
+   "month": "2026-12",
+   "image": "cards/out/20261027-1920/niko-exchange-gardens-vauxhall-london-sw8.jpg",
+   "thumb": "pool/thumbs/card-1793128875360-34e.jpg",
+   "created_at": "2026-10-27T19:21:15+00:00",
+   "rm_id": "94805565",
+   "address": "Exchange Gardens, Vauxhall, London, Sw8",
+   "weekly": 692,
+   "folder": "20261027-1920"
+  },
+  {
+   "id": "card-1793128875401-72e",
+   "area": "south",
+   "beds": 2,
+   "price": "high",
+   "month": "2026-11",
+   "image": "cards/out/20261027-1920/niko-thames-city-carnation-way-london-sw8.jpg",
+   "thumb": "pool/thumbs/card-1793128875401-72e.jpg",
+   "created_at": "2026-10-27T19:21:15+00:00",
+   "rm_id": "161932562",
+   "address": "Thames City, Carnation Way, London, Sw8",
+   "weekly": 1177,
+   "folder": "20261027-1920"
+  },
+  {
+   "id": "card-1793128875440-238",
+   "area": "south",
+   "beds": 2,
+   "price": "high",
+   "month": "now",
+   "image": "cards/out/20261027-1920/niko-thames-city-carnation-way-london-sw8.jpg",
+   "thumb": "pool/thumbs/card-1793128875440-238.jpg",
+   "created_at": "2026-10-27T19:21:15+00:00",
+   "rm_id": "130076864",
+   "address": "Thames City, Carnation Way, London, Sw8",
+   "weekly": 1200,
+   "folder": "20261027-1920"
+  },
+  {
+   "id": "card-1793128875483-acb",
+   "area": "south",
+   "beds": 3,
+   "price": "high",
+   "month": "now",
+   "image": "cards/out/20261027-1920/niko-one-thames-city-nine-elms-london-sw8.jpg",
+   "thumb": "pool/thumbs/card-1793128875483-acb.jpg",
+   "created_at": "2026-10-27T19:21:15+00:00",
+   "rm_id": "146141897",
+   "address": "One Thames City Nine Elms",
+   "weekly": 3115,
+   "folder": "20261027-1920"
+  },
+  {
+   "id": "card-1793128875527-d0d",
+   "area": "south",
+   "beds": 1,
+   "price": "mid",
+   "month": "now",
+   "image": "cards/out/20261027-1920/niko-gasholder-oval-village-london-se11.jpg",
+   "thumb": "pool/thumbs/card-1793128875527-d0d.jpg",
+   "created_at": "2026-10-27T19:21:15+00:00",
+   "rm_id": "94807263",
+   "address": "Gasholder Oval Village",
+   "weekly": 750,
+   "folder": "20261027-1920"
+  }
+ ],
+ "remove": []
+}
