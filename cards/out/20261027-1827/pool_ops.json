@@ -1,0 +1,33 @@
+{
+ "add": [
+  {
+   "id": "card-1793125680955-8ec",
+   "area": "city",
+   "beds": 0,
+   "price": "mid",
+   "month": "2027-01",
+   "image": "cards/out/20261027-1827/niko-casson-square-waterloo-southbank-place-london-se1.jpg",
+   "thumb": "pool/thumbs/card-1793125680955-8ec.jpg",
+   "created_at": "2026-10-27T18:28:01+00:00",
+   "rm_id": "94794030",
+   "address": "Casson Square, Waterloo, Southbank Place, London, SE1",
+   "weekly": 725,
+   "folder": "20261027-1827"
+  },
+  {
+   "id": "card-1793125681020-3aa",
+   "area": "city",
+   "beds": 1,
+   "price": "mid",
+   "month": "2026-12",
+   "image": "cards/out/20261027-1827/niko-casson-square-waterloo-southbank-place-london-se1(2)-se1.jpg",
+   "thumb": "pool/thumbs/card-1793125681020-3aa.jpg",
+   "created_at": "2026-10-27T18:28:01+00:00",
+   "rm_id": "94793664",
+   "address": "Casson Square, Waterloo, Southbank Place, London, SE1",
+   "weekly": 950,
+   "folder": "20261027-1827"
+  }
+ ],
+ "remove": []
+}
