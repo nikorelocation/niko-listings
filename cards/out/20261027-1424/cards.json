@@ -1,0 +1,90 @@
+[
+  {
+    "link": "https://www.rightmove.co.uk/properties/94776222",
+    "rm_id": "94776222",
+    "address": "Keybridge Tower, Exchange Gardens, London, Sw8",
+    "postcode": "SW8",
+    "bed_label": "3 Bed 3 Bath",
+    "weekly": 1750,
+    "monthly": "7583",
+    "avail": "12月3日",
+    "furnish": "不带家具",
+    "agent": "",
+    "card": "niko-keybridge-tower-exchange-gardens-london-sw8.jpg",
+    "tags": {
+      "area": "south",
+      "beds": 3,
+      "price": "high",
+      "month": "2026-12"
+    },
+    "saved": true,
+    "supabase_id": "card-1793111073908-931",
+    "image_url": "cards/out/20261027-1424/niko-keybridge-tower-exchange-gardens-london-sw8.jpg"
+  },
+  {
+    "link": "https://www.rightmove.co.uk/properties/94778283",
+    "rm_id": "94778283",
+    "address": "Exchange Gardens, London",
+    "postcode": "SW8",
+    "bed_label": "2 Bed 2 Bath",
+    "weekly": 992,
+    "monthly": "4299",
+    "avail": "待问",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-exchange-gardens-london-sw8.jpg",
+    "tags": {
+      "area": "south",
+      "beds": 2,
+      "price": "mid",
+      "month": "now"
+    },
+    "saved": true,
+    "supabase_id": "card-1793111073980-f01",
+    "image_url": "cards/out/20261027-1424/niko-exchange-gardens-london-sw8.jpg"
+  },
+  {
+    "link": "https://www.rightmove.co.uk/properties/150889412",
+    "rm_id": "150889412",
+    "address": "Wiverton Tower, Aldgate Place, London, E1",
+    "postcode": "E1",
+    "bed_label": "2 Bed 2 Bath",
+    "weekly": 785,
+    "monthly": "3402",
+    "avail": "1月4日",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-wiverton-tower-aldgate-place-london-e1.jpg",
+    "tags": {
+      "area": "east",
+      "beds": 2,
+      "price": "mid",
+      "month": "2027-01"
+    },
+    "saved": true,
+    "supabase_id": "card-1793111074039-661",
+    "image_url": "cards/out/20261027-1424/niko-wiverton-tower-aldgate-place-london-e1.jpg"
+  },
+  {
+    "link": "https://www.rightmove.co.uk/properties/94777275",
+    "rm_id": "94777275",
+    "address": "Valencia Tower, 250 City Road, Ec1V",
+    "postcode": "EC1V",
+    "bed_label": "2 Bed 1 Bath",
+    "weekly": 969,
+    "monthly": "4199",
+    "avail": "1月21日",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-valencia-tower-250-city-road-ec1v.jpg",
+    "tags": {
+      "area": "city",
+      "beds": 2,
+      "price": "mid",
+      "month": "2027-01"
+    },
+    "saved": true,
+    "supabase_id": "card-1793111074097-06e",
+    "image_url": "cards/out/20261027-1424/niko-valencia-tower-250-city-road-ec1v.jpg"
+  }
+]
