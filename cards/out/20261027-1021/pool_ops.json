@@ -1,0 +1,33 @@
+{
+ "add": [
+  {
+   "id": "card-1793096504822-75f",
+   "area": "south",
+   "beds": 1,
+   "price": "low",
+   "month": "2026-12",
+   "image": "cards/out/20261027-1021/niko-belfield-mansions-park-sayer-35-heygate-street-elephant-and-castle-london-se17.jpg",
+   "thumb": "pool/thumbs/card-1793096504822-75f.jpg",
+   "created_at": "2026-10-27T10:21:44+00:00",
+   "rm_id": "94754304",
+   "address": "Belfield Mansions, Park & Sayer, 35 Heygate Street, Elephant And Castle, London",
+   "weekly": 600,
+   "folder": "20261027-1021"
+  },
+  {
+   "id": "card-1793096504886-efa",
+   "area": "city",
+   "beds": 1,
+   "price": "low",
+   "month": "2026-12",
+   "image": "cards/out/20261027-1021/niko-two-fifty-one-251-southwark-bridge-road-elephant-castle-london-se1.jpg",
+   "thumb": "pool/thumbs/card-1793096504886-efa.jpg",
+   "created_at": "2026-10-27T10:21:44+00:00",
+   "rm_id": "94754442",
+   "address": "251 Southwark Bridge Road, Elephant & Castle, London, SE1",
+   "weekly": 625,
+   "folder": "20261027-1021"
+  }
+ ],
+ "remove": []
+}
