@@ -1,0 +1,19 @@
+{
+ "add": [
+  {
+   "id": "card-1793215264217-91b",
+   "area": "east",
+   "beds": 1,
+   "price": "mid",
+   "month": "2026-11",
+   "image": "cards/out/20261028-1920/niko-marsh-wall-london-e14.jpg",
+   "thumb": "pool/thumbs/card-1793215264217-91b.jpg",
+   "created_at": "2026-10-28T19:21:04+00:00",
+   "rm_id": "94862868",
+   "address": "Canary Wharf Jubilee 0.5 mile",
+   "weekly": 710,
+   "folder": "20261028-1920"
+  }
+ ],
+ "remove": []
+}
