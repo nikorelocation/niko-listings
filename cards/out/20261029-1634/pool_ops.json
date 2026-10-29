@@ -1,0 +1,19 @@
+{
+ "add": [
+  {
+   "id": "card-1793291691860-c66",
+   "area": "city",
+   "beds": 1,
+   "price": "low",
+   "month": "2027-01",
+   "image": "cards/out/20261029-1634/niko-one-the-elephant-st-gabriel-wharf-se1.jpg",
+   "thumb": "pool/thumbs/card-1793291691860-c66.jpg",
+   "created_at": "2026-10-29T16:34:51+00:00",
+   "rm_id": "94901403",
+   "address": "One The Elephant, St Gabriel Wharf, SE1",
+   "weekly": 600,
+   "folder": "20261029-1634"
+  }
+ ],
+ "remove": []
+}
