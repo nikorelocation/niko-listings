@@ -1,0 +1,178 @@
+[
+  {
+    "link": "https://www.rightmove.co.uk/properties/94886316",
+    "rm_id": "94886316",
+    "address": "Sun Street, London, Ec2A",
+    "postcode": "EC2A",
+    "bed_label": "2 Bed 2 Bath",
+    "weekly": 1131,
+    "monthly": "4901",
+    "avail": "待问",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-sun-street-london-ec2a.jpg",
+    "tags": {
+      "area": "city",
+      "beds": 2,
+      "price": "high",
+      "month": "now"
+    },
+    "saved": true,
+    "supabase_id": "card-1793280181085-779",
+    "image_url": "cards/out/20261029-1322/niko-sun-street-london-ec2a.jpg"
+  },
+  {
+    "link": "https://www.rightmove.co.uk/properties/139255142",
+    "rm_id": "139255142",
+    "address": "Modena House, London City Island, London, E14",
+    "postcode": "E14",
+    "bed_label": "1 Bed 1 Bath",
+    "weekly": 554,
+    "monthly": "2401",
+    "avail": "12月22日",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-modena-house-london-city-island-london-e14.jpg",
+    "tags": {
+      "area": "east",
+      "beds": 1,
+      "price": "low",
+      "month": "2026-12"
+    },
+    "saved": true,
+    "supabase_id": "card-1793280181160-8e8",
+    "image_url": "cards/out/20261029-1322/niko-modena-house-london-city-island-london-e14.jpg"
+  },
+  {
+    "link": "https://www.rightmove.co.uk/properties/94885314",
+    "rm_id": "94885314",
+    "address": "Park Drive",
+    "postcode": "E14",
+    "bed_label": "2 Bed 2 Bath",
+    "weekly": 1073,
+    "monthly": "4650",
+    "avail": "11月7日",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-park-drive-london-e14.jpg",
+    "tags": {
+      "area": "east",
+      "beds": 2,
+      "price": "high",
+      "month": "2026-11"
+    },
+    "saved": true,
+    "supabase_id": "card-1793280181226-306",
+    "image_url": "cards/out/20261029-1322/niko-park-drive-london-e14.jpg"
+  },
+  {
+    "link": "https://www.rightmove.co.uk/properties/93877143",
+    "rm_id": "93877143",
+    "address": "Carnation Way, Wandsworth, London",
+    "postcode": "SW8",
+    "bed_label": "5 Bed 5 Bath",
+    "weekly": 5298,
+    "monthly": "22958",
+    "avail": "随时",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-carnation-way-wandsworth-london-sw8.jpg",
+    "tags": {
+      "area": "south",
+      "beds": 5,
+      "price": "high",
+      "month": "now"
+    },
+    "saved": true,
+    "supabase_id": "card-1793280181285-7e3",
+    "image_url": "cards/out/20261029-1322/niko-carnation-way-wandsworth-london-sw8.jpg"
+  },
+  {
+    "link": "https://www.rightmove.co.uk/properties/94887648",
+    "rm_id": "94887648",
+    "address": "Darter House, Anax Street, N4",
+    "postcode": "N4",
+    "bed_label": "2 Bed 2 Bath",
+    "weekly": 715,
+    "monthly": "3098",
+    "avail": "12月2日",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-darter-house-anax-street-n4.jpg",
+    "tags": {
+      "area": "north",
+      "beds": 2,
+      "price": "mid",
+      "month": "2026-12"
+    },
+    "saved": true,
+    "supabase_id": "card-1793280181362-445",
+    "image_url": "cards/out/20261029-1322/niko-darter-house-anax-street-n4.jpg"
+  },
+  {
+    "link": "https://www.rightmove.co.uk/properties/94882488",
+    "rm_id": "94882488",
+    "address": "Satin House, Piazza Walk, E1",
+    "postcode": "E1",
+    "bed_label": "2 Bed 3 Bath",
+    "weekly": 969,
+    "monthly": "4199",
+    "avail": "11月6日",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-satin-house-piazza-walk-e1.jpg",
+    "tags": {
+      "area": "east",
+      "beds": 2,
+      "price": "mid",
+      "month": "2026-11"
+    },
+    "saved": true,
+    "supabase_id": "card-1793280181423-31b",
+    "image_url": "cards/out/20261029-1322/niko-satin-house-piazza-walk-e1.jpg"
+  },
+  {
+    "link": "https://www.rightmove.co.uk/properties/94884492",
+    "rm_id": "94884492",
+    "address": "Plimsoll Building, 1 Handyside Street, Kings Cross N1C",
+    "postcode": "N1C",
+    "bed_label": "2 Bed 2 Bath",
+    "weekly": 1062,
+    "monthly": "4602",
+    "avail": "12月22日",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-plimsoll-building-1-handyside-street-kings-cross-n1c.jpg",
+    "tags": {
+      "area": "north",
+      "beds": 2,
+      "price": "high",
+      "month": "2026-12"
+    },
+    "saved": true,
+    "supabase_id": "card-1793280181492-1bd",
+    "image_url": "cards/out/20261029-1322/niko-plimsoll-building-1-handyside-street-kings-cross-n1c.jpg"
+  },
+  {
+    "link": "https://www.rightmove.co.uk/properties/94887102",
+    "rm_id": "94887102",
+    "address": "One Park Drive, Canary Wharf, London",
+    "postcode": "E14",
+    "bed_label": "1 Bed 1 Bath",
+    "weekly": 888,
+    "monthly": "3848",
+    "avail": "待问",
+    "furnish": "不带家具",
+    "agent": "",
+    "card": "niko-one-park-drive-canary-wharf-london-e14.jpg",
+    "tags": {
+      "area": "east",
+      "beds": 1,
+      "price": "mid",
+      "month": "now"
+    },
+    "saved": true,
+    "supabase_id": "card-1793280181556-dad",
+    "image_url": "cards/out/20261029-1322/niko-one-park-drive-canary-wharf-london-e14.jpg"
+  }
+]
