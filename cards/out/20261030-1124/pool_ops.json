@@ -1,0 +1,19 @@
+{
+ "add": [
+  {
+   "id": "card-1793359486791-36d",
+   "area": "city",
+   "beds": 1,
+   "price": "high",
+   "month": "2026-12",
+   "image": "cards/out/20261030-1124/niko-one-bishopsgate-plaza-houndsditch-london-ec3a.jpg",
+   "thumb": "pool/thumbs/card-1793359486791-36d.jpg",
+   "created_at": "2026-10-30T11:24:46+00:00",
+   "rm_id": "94926519",
+   "address": "One Bishopsgate Plaza Houndsditch",
+   "weekly": 1154,
+   "folder": "20261030-1124"
+  }
+ ],
+ "remove": []
+}
