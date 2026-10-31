@@ -1,0 +1,19 @@
+{
+ "add": [
+  {
+   "id": "card-1793481555022-d5a",
+   "area": "city",
+   "beds": 3,
+   "price": "high",
+   "month": "2027-01",
+   "image": "cards/out/20261031-2119/niko-principal-tower-worship-street-london-ec2a.jpg",
+   "thumb": "pool/thumbs/card-1793481555022-d5a.jpg",
+   "created_at": "2026-10-31T21:19:15+00:00",
+   "rm_id": "166282694",
+   "address": "Principal Tower, Worship Street, London Ec2A",
+   "weekly": 1731,
+   "folder": "20261031-2119"
+  }
+ ],
+ "remove": []
+}
