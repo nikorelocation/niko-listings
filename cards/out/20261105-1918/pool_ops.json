@@ -1,0 +1,75 @@
+{
+ "add": [
+  {
+   "id": "card-1793906351094-139",
+   "area": "south",
+   "beds": 3,
+   "price": "high",
+   "month": "2026-11",
+   "image": "cards/out/20261105-1918/niko-carnation-way-london-sw8.jpg",
+   "thumb": "pool/thumbs/card-1793906351094-139.jpg",
+   "created_at": "2026-11-05T19:19:11+00:00",
+   "rm_id": "92632734",
+   "address": "Carnation Way London Sw8",
+   "weekly": 2884,
+   "folder": "20261105-1918"
+  },
+  {
+   "id": "card-1793906351157-fab",
+   "area": "city",
+   "beds": 2,
+   "price": "high",
+   "month": "2027-01",
+   "image": "cards/out/20261105-1918/niko-one-crown-place-19-sun-street-ec2a.jpg",
+   "thumb": "pool/thumbs/card-1793906351157-fab.jpg",
+   "created_at": "2026-11-05T19:19:11+00:00",
+   "rm_id": "95165862",
+   "address": "One Crown Place, 19 Sun Street, Ec2A",
+   "weekly": 1015,
+   "folder": "20261105-1918"
+  },
+  {
+   "id": "card-1793906351207-fc0",
+   "area": "east",
+   "beds": 1,
+   "price": "low",
+   "month": "2026-11",
+   "image": "cards/out/20261105-1918/niko-stratosphere-tower-great-eastern-road-london-e15.jpg",
+   "thumb": "pool/thumbs/card-1793906351207-fc0.jpg",
+   "created_at": "2026-11-05T19:19:11+00:00",
+   "rm_id": "95168700",
+   "address": "Stratosphere Tower, Great Eastern Road, London, E15",
+   "weekly": 519,
+   "folder": "20261105-1918"
+  },
+  {
+   "id": "card-1793906351263-d47",
+   "area": "east",
+   "beds": 2,
+   "price": "high",
+   "month": "now",
+   "image": "cards/out/20261105-1918/niko-10-park-drive-canary-wharf-london-e14.jpg",
+   "thumb": "pool/thumbs/card-1793906351263-d47.jpg",
+   "created_at": "2026-11-05T19:19:11+00:00",
+   "rm_id": "95169117",
+   "address": "10 Park Drive, Canary Wharf, London, E14",
+   "weekly": 1015,
+   "folder": "20261105-1918"
+  },
+  {
+   "id": "card-1793906351318-d4b",
+   "area": "city",
+   "beds": 2,
+   "price": "high",
+   "month": "now",
+   "image": "cards/out/20261105-1918/niko-principal-tower-shoreditch-ec2a.jpg",
+   "thumb": "pool/thumbs/card-1793906351318-d4b.jpg",
+   "created_at": "2026-11-05T19:19:11+00:00",
+   "rm_id": "95090904",
+   "address": "Principal Tower, Shoreditch",
+   "weekly": 1269,
+   "folder": "20261105-1918"
+  }
+ ],
+ "remove": []
+}
