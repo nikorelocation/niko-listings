@@ -1,0 +1,270 @@
+[
+  {
+    "link": "https://www.rightmove.co.uk/properties/95273175",
+    "error": "页面里没有 PAGE_MODEL（可能被反爬拦了）"
+  },
+  {
+    "link": "https://www.rightmove.co.uk/properties/95282250",
+    "rm_id": "95282250",
+    "address": "One Blackfriars Road, London, SE1",
+    "postcode": "SE1",
+    "bed_label": "1 Bed 1 Bath",
+    "weekly": 969,
+    "monthly": "4199",
+    "avail": "1月11日",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-one-blackfriars-road-london-se1.jpg",
+    "tags": {
+      "area": "city",
+      "beds": 1,
+      "price": "mid",
+      "month": "2027-01"
+    },
+    "saved": true,
+    "supabase_id": "card-1794241192237-f4c",
+    "image_url": "cards/out/20261109-1619/niko-one-blackfriars-road-london-se1.jpg"
+  },
+  {
+    "link": "https://www.rightmove.co.uk/properties/95280024",
+    "rm_id": "95280024",
+    "address": "Hampton Tower, 75 Marsh Wall E14",
+    "postcode": "E14",
+    "bed_label": "1 Bed 1 Bath",
+    "weekly": 750,
+    "monthly": "3250",
+    "avail": "1月15日",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-hampton-tower-75-marsh-wall-e14.jpg",
+    "tags": {
+      "area": "east",
+      "beds": 1,
+      "price": "mid",
+      "month": "2027-01"
+    },
+    "saved": true,
+    "supabase_id": "card-1794241192281-fb1",
+    "image_url": "cards/out/20261109-1619/niko-hampton-tower-75-marsh-wall-e14.jpg"
+  },
+  {
+    "link": "https://www.rightmove.co.uk/properties/95277834",
+    "rm_id": "95277834",
+    "address": "Wiverton Tower, 4 New Drum Street, London, E1",
+    "postcode": "E1",
+    "bed_label": "3 Bed 3 Bath",
+    "weekly": 1212,
+    "monthly": "5252",
+    "avail": "11月14日",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-wiverton-tower-4-new-drum-street-london-e1.jpg",
+    "tags": {
+      "area": "east",
+      "beds": 3,
+      "price": "high",
+      "month": "2026-11"
+    },
+    "saved": true,
+    "supabase_id": "card-1794241192333-768",
+    "image_url": "cards/out/20261109-1619/niko-wiverton-tower-4-new-drum-street-london-e1.jpg"
+  },
+  {
+    "link": "https://www.rightmove.co.uk/properties/95281248",
+    "rm_id": "95281248",
+    "address": "River Park Tower, 1 Nine Elms Lane, Sw8",
+    "postcode": "SW8",
+    "bed_label": "2 Bed 2 Bath",
+    "weekly": 1385,
+    "monthly": "6002",
+    "avail": "待问",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-river-park-tower-1-nine-elms-lane-sw8.jpg",
+    "tags": {
+      "area": "south",
+      "beds": 2,
+      "price": "high",
+      "month": "now"
+    },
+    "saved": true,
+    "supabase_id": "card-1794241192373-ecd",
+    "image_url": "cards/out/20261109-1619/niko-river-park-tower-1-nine-elms-lane-sw8.jpg"
+  },
+  {
+    "link": "https://www.rightmove.co.uk/properties/95279409",
+    "rm_id": "95279409",
+    "address": "River Park Tower, 1 Nine Elms Lane, London",
+    "postcode": "SW8",
+    "bed_label": "2 Bed 2 Bath",
+    "weekly": 1662,
+    "monthly": "7202",
+    "avail": "11月20日",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-river-park-tower-1-nine-elms-lane-london-sw8.jpg",
+    "tags": {
+      "area": "south",
+      "beds": 2,
+      "price": "high",
+      "month": "2026-11"
+    },
+    "saved": true,
+    "supabase_id": "card-1794241192410-152",
+    "image_url": "cards/out/20261109-1619/niko-river-park-tower-1-nine-elms-lane-london-sw8.jpg"
+  },
+  {
+    "link": "https://www.rightmove.co.uk/properties/88751613",
+    "rm_id": "88751613",
+    "address": "Damac Tower, Vauxhall, London, Sw8",
+    "postcode": "SW8",
+    "bed_label": "1 Bed 1 Bath",
+    "weekly": 773,
+    "monthly": "3350",
+    "avail": "1月19日",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-damac-tower-vauxhall-london-sw8.jpg",
+    "tags": {
+      "area": "south",
+      "beds": 1,
+      "price": "mid",
+      "month": "2027-01"
+    },
+    "saved": true,
+    "supabase_id": "card-1794241192447-2c2",
+    "image_url": "cards/out/20261109-1619/niko-damac-tower-vauxhall-london-sw8.jpg"
+  },
+  {
+    "link": "https://www.rightmove.co.uk/properties/95276166",
+    "rm_id": "95276166",
+    "address": "River Park Tower, 1 Nine Elms Lane, London, Sw8 5Hd",
+    "postcode": "SW8",
+    "bed_label": "1 Bed 1 Bath",
+    "weekly": 1038,
+    "monthly": "4498",
+    "avail": "11月20日",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-river-park-tower-1-nine-elms-lane-london-sw8-5hd-sw8.jpg",
+    "tags": {
+      "area": "south",
+      "beds": 1,
+      "price": "high",
+      "month": "2026-11"
+    },
+    "saved": true,
+    "supabase_id": "card-1794241192486-031",
+    "image_url": "cards/out/20261109-1619/niko-river-park-tower-1-nine-elms-lane-london-sw8-5hd-sw8.jpg"
+  },
+  {
+    "link": "https://www.rightmove.co.uk/properties/150685211",
+    "rm_id": "150685211",
+    "address": "Amelia House, London City Island, London, E14",
+    "postcode": "E14",
+    "bed_label": "2 Bed 2 Bath",
+    "weekly": 785,
+    "monthly": "3402",
+    "avail": "1月18日",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-amelia-house-london-city-island-london-e14.jpg",
+    "tags": {
+      "area": "east",
+      "beds": 2,
+      "price": "mid",
+      "month": "2027-01"
+    },
+    "saved": true,
+    "supabase_id": "card-1794241192522-819",
+    "image_url": "cards/out/20261109-1619/niko-amelia-house-london-city-island-london-e14.jpg"
+  },
+  {
+    "link": "https://www.rightmove.co.uk/properties/95273304",
+    "rm_id": "95273304",
+    "address": "75 Leman Street, London E1",
+    "postcode": "E1",
+    "bed_label": "2 Bed 2 Bath",
+    "weekly": 1038,
+    "monthly": "4498",
+    "avail": "随时",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-sterling-mansions-75-leman-street-london-e1.jpg",
+    "tags": {
+      "area": "east",
+      "beds": 2,
+      "price": "high",
+      "month": "now"
+    },
+    "saved": true,
+    "supabase_id": "card-1794241192562-283",
+    "image_url": "cards/out/20261109-1619/niko-sterling-mansions-75-leman-street-london-e1.jpg"
+  },
+  {
+    "link": "https://www.rightmove.co.uk/properties/95273115",
+    "rm_id": "95273115",
+    "address": "Chatsworth House, Duchess Walk, London, SE1",
+    "postcode": "SE1",
+    "bed_label": "2 Bed 2 Bath",
+    "weekly": 1154,
+    "monthly": "5001",
+    "avail": "随时",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-chatsworth-house-duchess-walk-london-se1.jpg",
+    "tags": {
+      "area": "city",
+      "beds": 2,
+      "price": "high",
+      "month": "now"
+    },
+    "saved": true,
+    "supabase_id": "card-1794241192594-9c1",
+    "image_url": "cards/out/20261109-1619/niko-chatsworth-house-duchess-walk-london-se1.jpg"
+  },
+  {
+    "link": "https://www.rightmove.co.uk/properties/95270877",
+    "rm_id": "95270877",
+    "address": "Elephant Quarter",
+    "postcode": "SE1",
+    "bed_label": "2 Bed 2 Bath",
+    "weekly": 842,
+    "monthly": "3649",
+    "avail": "随时",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-elephant-quarter-se1.jpg",
+    "tags": {
+      "area": "city",
+      "beds": 2,
+      "price": "mid",
+      "month": "now"
+    },
+    "saved": true,
+    "supabase_id": "card-1794241192630-173",
+    "image_url": "cards/out/20261109-1619/niko-elephant-quarter-se1.jpg"
+  },
+  {
+    "link": "https://www.rightmove.co.uk/properties/95270751",
+    "rm_id": "95270751",
+    "address": "Elephant Central",
+    "postcode": "SE1",
+    "bed_label": "2 Bed 1 Bath",
+    "weekly": 715,
+    "monthly": "3098",
+    "avail": "11月23日",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-elephant-central-se1.jpg",
+    "tags": {
+      "area": "city",
+      "beds": 2,
+      "price": "mid",
+      "month": "2026-11"
+    },
+    "saved": true,
+    "supabase_id": "card-1794241192675-6ed",
+    "image_url": "cards/out/20261109-1619/niko-elephant-central-se1.jpg"
+  }
+]
