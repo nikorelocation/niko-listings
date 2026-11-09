@@ -1,0 +1,61 @@
+{
+ "add": [
+  {
+   "id": "card-1794230372224-08e",
+   "area": "east",
+   "beds": 1,
+   "price": "low",
+   "month": "2027-01",
+   "image": "cards/out/20261109-1319/niko-corson-house-london-city-island-london-e14.jpg",
+   "thumb": "pool/thumbs/card-1794230372224-08e.jpg",
+   "created_at": "2026-11-09T13:19:32+00:00",
+   "rm_id": "149293406",
+   "address": "Corson House, London City Island, London, E14",
+   "weekly": 600,
+   "folder": "20261109-1319"
+  },
+  {
+   "id": "card-1794230372295-006",
+   "area": "west",
+   "beds": 1,
+   "price": "low",
+   "month": "2027-01",
+   "image": "cards/out/20261109-1319/niko-cascade-way-london-w12.jpg",
+   "thumb": "pool/thumbs/card-1794230372295-006.jpg",
+   "created_at": "2026-11-09T13:19:32+00:00",
+   "rm_id": "95141112",
+   "address": "Cascade Way, London, W12",
+   "weekly": 692,
+   "folder": "20261109-1319"
+  },
+  {
+   "id": "card-1794230372355-280",
+   "area": "east",
+   "beds": 1,
+   "price": "low",
+   "month": "now",
+   "image": "cards/out/20261109-1319/niko-park-drive-canary-wharf-london-e14.jpg",
+   "thumb": "pool/thumbs/card-1794230372355-280.jpg",
+   "created_at": "2026-11-09T13:19:32+00:00",
+   "rm_id": "95265690",
+   "address": "Park Drive, Canary Wharf, London E14",
+   "weekly": 692,
+   "folder": "20261109-1319"
+  },
+  {
+   "id": "card-1794230372412-617",
+   "area": "south",
+   "beds": 2,
+   "price": "mid",
+   "month": "2027-01",
+   "image": "cards/out/20261109-1319/niko-2-riverlight-quay-nine-elms-london-sw11.jpg",
+   "thumb": "pool/thumbs/card-1794230372412-617.jpg",
+   "created_at": "2026-11-09T13:19:32+00:00",
+   "rm_id": "95264238",
+   "address": "Off Street Parking",
+   "weekly": 1000,
+   "folder": "20261109-1319"
+  }
+ ],
+ "remove": []
+}
