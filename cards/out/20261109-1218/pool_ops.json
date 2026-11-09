@@ -1,0 +1,33 @@
+{
+ "add": [
+  {
+   "id": "card-1794226748505-189",
+   "area": "east",
+   "beds": 2,
+   "price": "mid",
+   "month": "2026-12",
+   "image": "cards/out/20261109-1218/niko-wiverton-tower-4-new-drum-street-aldgate-london-e1.jpg",
+   "thumb": "pool/thumbs/card-1794226748505-189.jpg",
+   "created_at": "2026-11-09T12:19:08+00:00",
+   "rm_id": "95244138",
+   "address": "Wiverton Tower, 4 New Drum Street, Aldgate, London, E1",
+   "weekly": 875,
+   "folder": "20261109-1218"
+  },
+  {
+   "id": "card-1794226748565-b7f",
+   "area": "north",
+   "beds": 2,
+   "price": "mid",
+   "month": "2026-11",
+   "image": "cards/out/20261109-1218/niko-eyre-court-kings-cross-quarter-pentonville-road-kings-cross-angel-n1.jpg",
+   "thumb": "pool/thumbs/card-1794226748565-b7f.jpg",
+   "created_at": "2026-11-09T12:19:08+00:00",
+   "rm_id": "95244840",
+   "address": "Eyre Court, Kings Cross Quarter, Pentonville Road, Kings Cross, Angel, N1",
+   "weekly": 923,
+   "folder": "20261109-1218"
+  }
+ ],
+ "remove": []
+}
