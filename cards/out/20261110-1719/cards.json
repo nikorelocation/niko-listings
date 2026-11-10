@@ -1,0 +1,178 @@
+[
+  {
+    "link": "https://www.rightmove.co.uk/properties/95318868",
+    "rm_id": "95318868",
+    "address": "Marsh Wall",
+    "postcode": "E14",
+    "bed_label": "3 Bed 2 Bath",
+    "weekly": 1500,
+    "monthly": "6500",
+    "avail": "1月2日",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-marsh-wall-london-e14.jpg",
+    "tags": {
+      "area": "east",
+      "beds": 3,
+      "price": "high",
+      "month": "2027-01"
+    },
+    "saved": true,
+    "supabase_id": "card-1794331160125-560",
+    "image_url": "cards/out/20261110-1719/niko-marsh-wall-london-e14.jpg"
+  },
+  {
+    "link": "https://www.rightmove.co.uk/properties/92983206",
+    "rm_id": "92983206",
+    "address": "Carnation Way, Thames City, Sw8",
+    "postcode": "SW8",
+    "bed_label": "3 Bed 3 Bath",
+    "weekly": 2884,
+    "monthly": "12497",
+    "avail": "待问",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-carnation-way-thames-city-sw8.jpg",
+    "tags": {
+      "area": "south",
+      "beds": 3,
+      "price": "high",
+      "month": "now"
+    },
+    "saved": true,
+    "supabase_id": "card-1794331160199-c08",
+    "image_url": "cards/out/20261110-1719/niko-carnation-way-thames-city-sw8.jpg"
+  },
+  {
+    "link": "https://www.rightmove.co.uk/properties/95312916",
+    "rm_id": "95312916",
+    "address": "Chelsea Creek",
+    "postcode": "SW6",
+    "bed_label": "1 Bed 1 Bath",
+    "weekly": 785,
+    "monthly": "3402",
+    "avail": "12月18日",
+    "furnish": "不带家具",
+    "agent": "",
+    "card": "niko-chelsea-creek-london-sw6.jpg",
+    "tags": {
+      "area": "south",
+      "beds": 1,
+      "price": "mid",
+      "month": "2026-12"
+    },
+    "saved": true,
+    "supabase_id": "card-1794331160257-c26",
+    "image_url": "cards/out/20261110-1719/niko-chelsea-creek-london-sw6.jpg"
+  },
+  {
+    "link": "https://www.rightmove.co.uk/properties/154099250",
+    "rm_id": "154099250",
+    "address": "Corson House, London City Island, London, E14",
+    "postcode": "E14",
+    "bed_label": "Studio",
+    "weekly": 485,
+    "monthly": "2102",
+    "avail": "1月29日",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-corson-house-london-city-island-london-e14.jpg",
+    "tags": {
+      "area": "east",
+      "beds": 0,
+      "price": "low",
+      "month": "2027-01"
+    },
+    "saved": true,
+    "supabase_id": "card-1794331160325-36f",
+    "image_url": "cards/out/20261110-1719/niko-corson-house-london-city-island-london-e14.jpg"
+  },
+  {
+    "link": "https://www.rightmove.co.uk/properties/95315442",
+    "rm_id": "95315442",
+    "address": "Casson Square, London SE1",
+    "postcode": "SE1",
+    "bed_label": "2 Bed 2 Bath",
+    "weekly": 1300,
+    "monthly": "5633",
+    "avail": "1月8日",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-casson-square-london-se1.jpg",
+    "tags": {
+      "area": "city",
+      "beds": 2,
+      "price": "high",
+      "month": "2027-01"
+    },
+    "saved": true,
+    "supabase_id": "card-1794331160394-ac1",
+    "image_url": "cards/out/20261110-1719/niko-casson-square-london-se1.jpg"
+  },
+  {
+    "link": "https://www.rightmove.co.uk/properties/95323845",
+    "rm_id": "95323845",
+    "address": "Gasholder Place, Lambeth, London, SE11",
+    "postcode": "SE11",
+    "bed_label": "1 Bed 1 Bath",
+    "weekly": 600,
+    "monthly": "2600",
+    "avail": "1月1日",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-gasholder-place-lambeth-london-se11.jpg",
+    "tags": {
+      "area": "south",
+      "beds": 1,
+      "price": "low",
+      "month": "2027-01"
+    },
+    "saved": true,
+    "supabase_id": "card-1794331160462-2cd",
+    "image_url": "cards/out/20261110-1719/niko-gasholder-place-lambeth-london-se11.jpg"
+  },
+  {
+    "link": "https://www.rightmove.co.uk/properties/93159486",
+    "rm_id": "93159486",
+    "address": "Carrara Tower, Ec1V 2Ad",
+    "postcode": "EC1V",
+    "bed_label": "2 Bed 2 Bath",
+    "weekly": 1096,
+    "monthly": "4749",
+    "avail": "待问",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-carrara-tower-ec1v-2ad-ec1v.jpg",
+    "tags": {
+      "area": "city",
+      "beds": 2,
+      "price": "high",
+      "month": "now"
+    },
+    "saved": true,
+    "supabase_id": "card-1794331160534-2f9",
+    "image_url": "cards/out/20261110-1719/niko-carrara-tower-ec1v-2ad-ec1v.jpg"
+  },
+  {
+    "link": "https://www.rightmove.co.uk/properties/92983110",
+    "rm_id": "92983110",
+    "address": "Carnation Way, Thames City, Sw8",
+    "postcode": "SW8",
+    "bed_label": "3 Bed 2 Bath",
+    "weekly": 3500,
+    "monthly": "15167",
+    "avail": "待问",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-carnation-way-thames-city-sw8(2)-sw8.jpg",
+    "tags": {
+      "area": "south",
+      "beds": 3,
+      "price": "high",
+      "month": "now"
+    },
+    "saved": true,
+    "supabase_id": "card-1794331160598-d05",
+    "image_url": "cards/out/20261110-1719/niko-carnation-way-thames-city-sw8(2)-sw8.jpg"
+  }
+]
