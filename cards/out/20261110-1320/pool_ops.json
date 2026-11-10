@@ -1,0 +1,47 @@
+{
+ "add": [
+  {
+   "id": "card-1794316854187-752",
+   "area": "south",
+   "beds": 3,
+   "price": "high",
+   "month": "now",
+   "image": "cards/out/20261110-1320/niko-keybridge-tower-1-exchange-gardens-nine-elms-sw8.jpg",
+   "thumb": "pool/thumbs/card-1794316854187-752.jpg",
+   "created_at": "2026-11-10T13:20:54+00:00",
+   "rm_id": "95306724",
+   "address": "Keybridge Tower, 1 Exchange Gardens, Nine Elms",
+   "weekly": 1750,
+   "folder": "20261110-1320"
+  },
+  {
+   "id": "card-1794316854255-4fa",
+   "area": "east",
+   "beds": 1,
+   "price": "low",
+   "month": "now",
+   "image": "cards/out/20261110-1320/niko-skyline-apartments-11-makers-yard-london-e3.jpg",
+   "thumb": "pool/thumbs/card-1794316854255-4fa.jpg",
+   "created_at": "2026-11-10T13:20:54+00:00",
+   "rm_id": "95309028",
+   "address": "Skyline Apartments, 11 Makers Yard, London, E3",
+   "weekly": 438,
+   "folder": "20261110-1320"
+  },
+  {
+   "id": "card-1794316854309-af6",
+   "area": "south",
+   "beds": 2,
+   "price": "mid",
+   "month": "2027-01",
+   "image": "cards/out/20261110-1320/niko-riverlight-four-riverlight-quay-london-sw11.jpg",
+   "thumb": "pool/thumbs/card-1794316854309-af6.jpg",
+   "created_at": "2026-11-10T13:20:54+00:00",
+   "rm_id": "119136302",
+   "address": "Riverlight Four Riverlight Quay",
+   "weekly": 900,
+   "folder": "20261110-1320"
+  }
+ ],
+ "remove": []
+}
