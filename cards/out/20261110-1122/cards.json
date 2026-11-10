@@ -1,0 +1,112 @@
+[
+  {
+    "link": "https://www.rightmove.co.uk/properties/95291235",
+    "rm_id": "95291235",
+    "address": "Legacy Building, Embassy Gardens, London, Sw11",
+    "postcode": "SW11",
+    "bed_label": "1 Bed 2 Bath",
+    "weekly": 1038,
+    "monthly": "4498",
+    "avail": "随时",
+    "furnish": "不带家具",
+    "agent": "",
+    "card": "niko-legacy-building-embassy-gardens-london-sw11.jpg",
+    "tags": {
+      "area": "south",
+      "beds": 1,
+      "price": "high",
+      "month": "now"
+    },
+    "saved": true,
+    "supabase_id": "card-1794309763337-9a7",
+    "image_url": "cards/out/20261110-1122/niko-legacy-building-embassy-gardens-london-sw11.jpg"
+  },
+  {
+    "link": "https://www.rightmove.co.uk/properties/95301042",
+    "rm_id": "95301042",
+    "address": "Eagle Point, City Road, London, Ec1V",
+    "postcode": "EC1V",
+    "bed_label": "2 Bed 2 Bath",
+    "weekly": 819,
+    "monthly": "3549",
+    "avail": "待问",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-eagle-point-city-road-london-ec1v.jpg",
+    "tags": {
+      "area": "city",
+      "beds": 2,
+      "price": "mid",
+      "month": "now"
+    },
+    "saved": true,
+    "supabase_id": "card-1794309763408-f2f",
+    "image_url": "cards/out/20261110-1122/niko-eagle-point-city-road-london-ec1v.jpg"
+  },
+  {
+    "link": "https://www.rightmove.co.uk/properties/95301078",
+    "rm_id": "95301078",
+    "address": "The Wardian, Canary Wharf",
+    "postcode": "E14",
+    "bed_label": "2 Bed 2 Bath",
+    "weekly": 1038,
+    "monthly": "4498",
+    "avail": "待问",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-the-wardian-canary-wharf-e14.jpg",
+    "tags": {
+      "area": "east",
+      "beds": 2,
+      "price": "high",
+      "month": "now"
+    },
+    "saved": true,
+    "supabase_id": "card-1794309763471-e1b",
+    "image_url": "cards/out/20261110-1122/niko-the-wardian-canary-wharf-e14.jpg"
+  },
+  {
+    "link": "https://www.rightmove.co.uk/properties/95294403",
+    "rm_id": "95294403",
+    "address": "Tower One The Corniche 24 Albert Embankment Vauxhall",
+    "postcode": "SE1",
+    "bed_label": "1 Bed 1 Bath",
+    "weekly": 750,
+    "monthly": "3250",
+    "avail": "2月4日",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-tower-one-the-corniche-24-albert-embankment-vauxhall-london-se1.jpg",
+    "tags": {
+      "area": "city",
+      "beds": 1,
+      "price": "mid",
+      "month": "2027-02"
+    },
+    "saved": true,
+    "supabase_id": "card-1794309763526-54d",
+    "image_url": "cards/out/20261110-1122/niko-tower-one-the-corniche-24-albert-embankment-vauxhall-london-se1.jpg"
+  },
+  {
+    "link": "https://www.rightmove.co.uk/properties/93601524",
+    "rm_id": "93601524",
+    "address": "Gasholder Place, Oval Village, London, SE11",
+    "postcode": "SE11",
+    "bed_label": "3 Bed 2 Bath",
+    "weekly": 923,
+    "monthly": "4000",
+    "avail": "随时",
+    "furnish": "不带家具",
+    "agent": "",
+    "card": "niko-gasholder-place-oval-village-london-se11.jpg",
+    "tags": {
+      "area": "south",
+      "beds": 3,
+      "price": "mid",
+      "month": "now"
+    },
+    "saved": true,
+    "supabase_id": "card-1794309763595-d34",
+    "image_url": "cards/out/20261110-1122/niko-gasholder-place-oval-village-london-se11.jpg"
+  }
+]
