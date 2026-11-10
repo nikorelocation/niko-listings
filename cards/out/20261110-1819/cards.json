@@ -1,0 +1,134 @@
+[
+  {
+    "link": "https://www.rightmove.co.uk/properties/95336286",
+    "rm_id": "95336286",
+    "address": "River Park Tower, Nine Elms Lane, London, Sw8",
+    "postcode": "SW8",
+    "bed_label": "3 Bed 3 Bath",
+    "weekly": 2538,
+    "monthly": "10998",
+    "avail": "11月20日",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-river-park-tower-nine-elms-lane-london-sw8.jpg",
+    "tags": {
+      "area": "south",
+      "beds": 3,
+      "price": "high",
+      "month": "2026-11"
+    },
+    "saved": true,
+    "supabase_id": "card-1794334773100-23f",
+    "image_url": "cards/out/20261110-1819/niko-river-park-tower-nine-elms-lane-london-sw8.jpg"
+  },
+  {
+    "link": "https://www.rightmove.co.uk/properties/94408431",
+    "rm_id": "94408431",
+    "address": "Lincoln Square, Portugal Street, London",
+    "postcode": "WC2A",
+    "bed_label": "2 Bed 2 Bath",
+    "weekly": 1915,
+    "monthly": "8298",
+    "avail": "随时",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-lincoln-square-portugal-street-london-wc2a.jpg",
+    "tags": {
+      "area": "city",
+      "beds": 2,
+      "price": "high",
+      "month": "now"
+    },
+    "saved": true,
+    "supabase_id": "card-1794334773183-15c",
+    "image_url": "cards/out/20261110-1819/niko-lincoln-square-portugal-street-london-wc2a.jpg"
+  },
+  {
+    "link": "https://www.rightmove.co.uk/properties/95334366",
+    "rm_id": "95334366",
+    "address": "River Park Tower, Nine Elms Lane, London, Sw8",
+    "postcode": "SW8",
+    "bed_label": "1 Bed 1 Bath",
+    "weekly": 1038,
+    "monthly": "4498",
+    "avail": "11月20日",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-river-park-tower-nine-elms-lane-london-sw8(2)-sw8.jpg",
+    "tags": {
+      "area": "south",
+      "beds": 1,
+      "price": "high",
+      "month": "2026-11"
+    },
+    "saved": true,
+    "supabase_id": "card-1794334773244-5e5",
+    "image_url": "cards/out/20261110-1819/niko-river-park-tower-nine-elms-lane-london-sw8(2)-sw8.jpg"
+  },
+  {
+    "link": "https://www.rightmove.co.uk/properties/95334687",
+    "rm_id": "95334687",
+    "address": "1 York Way, London N1C",
+    "postcode": "N1C",
+    "bed_label": "2 Bed 2 Bath",
+    "weekly": 923,
+    "monthly": "4000",
+    "avail": "11月20日",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-arthouse-1-york-way-london-n1c.jpg",
+    "tags": {
+      "area": "north",
+      "beds": 2,
+      "price": "mid",
+      "month": "2026-11"
+    },
+    "saved": true,
+    "supabase_id": "card-1794334773318-d6a",
+    "image_url": "cards/out/20261110-1819/niko-arthouse-1-york-way-london-n1c.jpg"
+  },
+  {
+    "link": "https://www.rightmove.co.uk/properties/95329749",
+    "rm_id": "95329749",
+    "address": "Unex Tower, 7 Station Street, E15",
+    "postcode": "E15",
+    "bed_label": "1 Bed 1 Bath",
+    "weekly": 531,
+    "monthly": "2301",
+    "avail": "1月15日",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-unex-tower-7-station-street-e15.jpg",
+    "tags": {
+      "area": "east",
+      "beds": 1,
+      "price": "low",
+      "month": "2027-01"
+    },
+    "saved": true,
+    "supabase_id": "card-1794334773388-4db",
+    "image_url": "cards/out/20261110-1819/niko-unex-tower-7-station-street-e15.jpg"
+  },
+  {
+    "link": "https://www.rightmove.co.uk/properties/95329824",
+    "rm_id": "95329824",
+    "address": "Edgware Road, London, W2",
+    "postcode": "W2",
+    "bed_label": "1 Bed 1 Bath",
+    "weekly": 1099,
+    "monthly": "4762",
+    "avail": "11月11日",
+    "furnish": "不带家具",
+    "agent": "",
+    "card": "niko-edgware-road-london-w2.jpg",
+    "tags": {
+      "area": "west",
+      "beds": 1,
+      "price": "high",
+      "month": "2026-11"
+    },
+    "saved": true,
+    "supabase_id": "card-1794334773458-e56",
+    "image_url": "cards/out/20261110-1819/niko-edgware-road-london-w2.jpg"
+  }
+]

@@ -1,0 +1,89 @@
+{
+ "add": [
+  {
+   "id": "card-1794334773100-23f",
+   "area": "south",
+   "beds": 3,
+   "price": "high",
+   "month": "2026-11",
+   "image": "cards/out/20261110-1819/niko-river-park-tower-nine-elms-lane-london-sw8.jpg",
+   "thumb": "pool/thumbs/card-1794334773100-23f.jpg",
+   "created_at": "2026-11-10T18:19:33+00:00",
+   "rm_id": "95336286",
+   "address": "River Park Tower, Nine Elms Lane, London, Sw8",
+   "weekly": 2538,
+   "folder": "20261110-1819"
+  },
+  {
+   "id": "card-1794334773183-15c",
+   "area": "city",
+   "beds": 2,
+   "price": "high",
+   "month": "now",
+   "image": "cards/out/20261110-1819/niko-lincoln-square-portugal-street-london-wc2a.jpg",
+   "thumb": "pool/thumbs/card-1794334773183-15c.jpg",
+   "created_at": "2026-11-10T18:19:33+00:00",
+   "rm_id": "94408431",
+   "address": "Lincoln Square, Portugal Street, London",
+   "weekly": 1915,
+   "folder": "20261110-1819"
+  },
+  {
+   "id": "card-1794334773244-5e5",
+   "area": "south",
+   "beds": 1,
+   "price": "high",
+   "month": "2026-11",
+   "image": "cards/out/20261110-1819/niko-river-park-tower-nine-elms-lane-london-sw8(2)-sw8.jpg",
+   "thumb": "pool/thumbs/card-1794334773244-5e5.jpg",
+   "created_at": "2026-11-10T18:19:33+00:00",
+   "rm_id": "95334366",
+   "address": "River Park Tower, Nine Elms Lane, London, Sw8",
+   "weekly": 1038,
+   "folder": "20261110-1819"
+  },
+  {
+   "id": "card-1794334773318-d6a",
+   "area": "north",
+   "beds": 2,
+   "price": "mid",
+   "month": "2026-11",
+   "image": "cards/out/20261110-1819/niko-arthouse-1-york-way-london-n1c.jpg",
+   "thumb": "pool/thumbs/card-1794334773318-d6a.jpg",
+   "created_at": "2026-11-10T18:19:33+00:00",
+   "rm_id": "95334687",
+   "address": "1 York Way, London N1C",
+   "weekly": 923,
+   "folder": "20261110-1819"
+  },
+  {
+   "id": "card-1794334773388-4db",
+   "area": "east",
+   "beds": 1,
+   "price": "low",
+   "month": "2027-01",
+   "image": "cards/out/20261110-1819/niko-unex-tower-7-station-street-e15.jpg",
+   "thumb": "pool/thumbs/card-1794334773388-4db.jpg",
+   "created_at": "2026-11-10T18:19:33+00:00",
+   "rm_id": "95329749",
+   "address": "Unex Tower, 7 Station Street, E15",
+   "weekly": 531,
+   "folder": "20261110-1819"
+  },
+  {
+   "id": "card-1794334773458-e56",
+   "area": "west",
+   "beds": 1,
+   "price": "high",
+   "month": "2026-11",
+   "image": "cards/out/20261110-1819/niko-edgware-road-london-w2.jpg",
+   "thumb": "pool/thumbs/card-1794334773458-e56.jpg",
+   "created_at": "2026-11-10T18:19:33+00:00",
+   "rm_id": "95329824",
+   "address": "Edgware Road, London, W2",
+   "weekly": 1099,
+   "folder": "20261110-1819"
+  }
+ ],
+ "remove": []
+}
