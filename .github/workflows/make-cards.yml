@@ -112,7 +112,18 @@ jobs:
           fi
 
           pip install -q playwright requests pillow
-          timeout 600 python -m playwright install --with-deps chromium
+          # 只下载浏览器本体（走 Playwright 自己的 CDN，不连 Ubuntu 软件源）。
+          # 以前用 --with-deps 会去 apt 装一堆可选字体，Ubuntu 源挂了就卡满 10 分钟超时。
+          # GitHub 的 ubuntu-latest 已自带 Chromium 运行所需的系统库；只有真启动不了才去 apt 补，且限时 3 分钟。
+          timeout 300 python -m playwright install chromium
+          if ! python -c "import asyncio;from playwright.async_api import async_playwright
+          async def m():
+              async with async_playwright() as p:
+                  b=await p.chromium.launch(); await b.close()
+          asyncio.run(m())"; then
+            echo "Chromium 启动失败，尝试补装系统库"
+            timeout 180 sudo -E env "PATH=$PATH" python -m playwright install-deps chromium || echo "补装系统库失败"
+          fi
           which pdftotext pdfimages && fc-list | grep -c "CJK" 
 
       - name: 写入链接文件
