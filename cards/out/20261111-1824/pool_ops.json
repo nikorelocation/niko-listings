@@ -1,0 +1,103 @@
+{
+ "add": [
+  {
+   "id": "card-1794421483012-bce",
+   "area": "east",
+   "beds": 0,
+   "price": "low",
+   "month": "2026-12",
+   "image": "cards/out/20261111-1824/niko-tapestry-way-jacquard-point-e1.jpg",
+   "thumb": "pool/thumbs/card-1794421483012-bce.jpg",
+   "created_at": "2026-11-11T18:24:43+00:00",
+   "rm_id": "95376879",
+   "address": "Tapestry Way, Jacquard Point, E1",
+   "weekly": 508,
+   "folder": "20261111-1824"
+  },
+  {
+   "id": "card-1794421483065-04a",
+   "area": "north",
+   "beds": 1,
+   "price": "low",
+   "month": "2026-12",
+   "image": "cards/out/20261111-1824/niko-devan-grove-london-n4.jpg",
+   "thumb": "pool/thumbs/card-1794421483065-04a.jpg",
+   "created_at": "2026-11-11T18:24:43+00:00",
+   "rm_id": "95327961",
+   "address": "Devan Grove",
+   "weekly": 485,
+   "folder": "20261111-1824"
+  },
+  {
+   "id": "card-1794421483114-15a",
+   "area": "city",
+   "beds": 2,
+   "price": "mid",
+   "month": "2026-12",
+   "image": "cards/out/20261111-1824/niko-the-tower-one-the-elephant-1-st-gabriel-walk-elephant-castle-london-se1.jpg",
+   "thumb": "pool/thumbs/card-1794421483114-15a.jpg",
+   "created_at": "2026-11-11T18:24:43+00:00",
+   "rm_id": "95363775",
+   "address": "The Tower One The Elephant, 1 St Gabriel Walk, Elephant & Castle, Lon",
+   "weekly": 795,
+   "folder": "20261111-1824"
+  },
+  {
+   "id": "card-1794421483165-52e",
+   "area": "north",
+   "beds": 1,
+   "price": "low",
+   "month": "2026-12",
+   "image": "cards/out/20261111-1824/niko-camley-street-n1c.jpg",
+   "thumb": "pool/thumbs/card-1794421483165-52e.jpg",
+   "created_at": "2026-11-11T18:24:43+00:00",
+   "rm_id": "95377017",
+   "address": "Camley Street, N1C",
+   "weekly": 669,
+   "folder": "20261111-1824"
+  },
+  {
+   "id": "card-1794421483217-792",
+   "area": "city",
+   "beds": 2,
+   "price": "high",
+   "month": "2026-11",
+   "image": "cards/out/20261111-1824/niko-the-atlas-building-145-city-road-hoxton-london-ec1v.jpg",
+   "thumb": "pool/thumbs/card-1794421483217-792.jpg",
+   "created_at": "2026-11-11T18:24:43+00:00",
+   "rm_id": "93893394",
+   "address": "The Atlas Building, 145 City Road, Hoxton, London, Ec1V",
+   "weekly": 1200,
+   "folder": "20261111-1824"
+  },
+  {
+   "id": "card-1794421483266-702",
+   "area": "west",
+   "beds": 1,
+   "price": "mid",
+   "month": "2027-01",
+   "image": "cards/out/20261111-1824/niko-westmark-tower-west-end-gate-london-w2.jpg",
+   "thumb": "pool/thumbs/card-1794421483266-702.jpg",
+   "created_at": "2026-11-11T18:24:43+00:00",
+   "rm_id": "95375841",
+   "address": "Westmark Tower, West End Gate, London, W2",
+   "weekly": 831,
+   "folder": "20261111-1824"
+  },
+  {
+   "id": "card-1794421483315-43c",
+   "area": "east",
+   "beds": 2,
+   "price": "mid",
+   "month": "now",
+   "image": "cards/out/20261111-1824/niko-london-docks-merino-gardens-london-e1w.jpg",
+   "thumb": "pool/thumbs/card-1794421483315-43c.jpg",
+   "created_at": "2026-11-11T18:24:43+00:00",
+   "rm_id": "95374287",
+   "address": "London Docks, Merino Gardens, London, E1W",
+   "weekly": 923,
+   "folder": "20261111-1824"
+  }
+ ],
+ "remove": []
+}
