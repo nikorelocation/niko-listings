@@ -1,0 +1,89 @@
+{
+ "add": [
+  {
+   "id": "card-1794485940560-e08",
+   "area": "south",
+   "beds": 2,
+   "price": "mid",
+   "month": "2027-01",
+   "image": "cards/out/20261112-1218/niko-no-4-upper-riverside-cutter-lane-greenwich-peninsula-se10.jpg",
+   "thumb": "pool/thumbs/card-1794485940560-e08.jpg",
+   "created_at": "2026-11-12T12:19:00+00:00",
+   "rm_id": "95398275",
+   "address": "Upper Riverside, Cutter Lane, Greenwich Peninsula, SE10",
+   "weekly": 756,
+   "folder": "20261112-1218"
+  },
+  {
+   "id": "card-1794485940605-cab",
+   "area": "east",
+   "beds": 0,
+   "price": "low",
+   "month": "2027-01",
+   "image": "cards/out/20261112-1218/niko-maine-tower-harbour-central-canary-wharf-e14.jpg",
+   "thumb": "pool/thumbs/card-1794485940605-cab.jpg",
+   "created_at": "2026-11-12T12:19:00+00:00",
+   "rm_id": "95394111",
+   "address": "Maine Tower, Harbour Central, Canary Wharf, E14",
+   "weekly": 554,
+   "folder": "20261112-1218"
+  },
+  {
+   "id": "card-1794485940639-9c4",
+   "area": "city",
+   "beds": 2,
+   "price": "high",
+   "month": "now",
+   "image": "cards/out/20261112-1218/niko-bollinder-place-carrara-tower-ec1v.jpg",
+   "thumb": "pool/thumbs/card-1794485940639-9c4.jpg",
+   "created_at": "2026-11-12T12:19:00+00:00",
+   "rm_id": "95398980",
+   "address": "Bollinder Place, Carrara Tower, Ec1V",
+   "weekly": 1062,
+   "folder": "20261112-1218"
+  },
+  {
+   "id": "card-1794485940673-62c",
+   "area": "west",
+   "beds": 1,
+   "price": "mid",
+   "month": "2026-11",
+   "image": "cards/out/20261112-1218/niko-asquith-house-segrave-walk-city-of-westminster-london-w2.jpg",
+   "thumb": "pool/thumbs/card-1794485940673-62c.jpg",
+   "created_at": "2026-11-12T12:19:00+00:00",
+   "rm_id": "95399841",
+   "address": "Asquith House, Segrave Walk, City Of Westminster, London",
+   "weekly": 790,
+   "folder": "20261112-1218"
+  },
+  {
+   "id": "card-1794485940714-fef",
+   "area": "south",
+   "beds": 1,
+   "price": "low",
+   "month": "2027-01",
+   "image": "cards/out/20261112-1218/niko-no-4-upper-riverside-cutter-lane-greenwich-peninsula-se10(2)-se10.jpg",
+   "thumb": "pool/thumbs/card-1794485940714-fef.jpg",
+   "created_at": "2026-11-12T12:19:00+00:00",
+   "rm_id": "95401251",
+   "address": "Upper Riverside, Cutter Lane, Greenwich Peninsula, SE10",
+   "weekly": 537,
+   "folder": "20261112-1218"
+  },
+  {
+   "id": "card-1794485940750-dfe",
+   "area": "east",
+   "beds": 1,
+   "price": "low",
+   "month": "2026-12",
+   "image": "cards/out/20261112-1218/niko-river-heights-high-street-e15.jpg",
+   "thumb": "pool/thumbs/card-1794485940750-dfe.jpg",
+   "created_at": "2026-11-12T12:19:00+00:00",
+   "rm_id": "95371359",
+   "address": "River Heights, High Street, E15",
+   "weekly": 438,
+   "folder": "20261112-1218"
+  }
+ ],
+ "remove": []
+}
