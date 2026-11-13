@@ -1,0 +1,47 @@
+{
+ "add": [
+  {
+   "id": "card-1794581828406-717",
+   "area": "east",
+   "beds": 1,
+   "price": "mid",
+   "month": "2027-01",
+   "image": "cards/out/20261113-1457/niko-kingwood-house-1-chaucer-gardens-aldgate-london-e1.jpg",
+   "thumb": "pool/thumbs/card-1794581828406-717.jpg",
+   "created_at": "2026-11-13T14:57:08+00:00",
+   "rm_id": "95440131",
+   "address": "Kingwood House, 1 Chaucer Gardens, Aldgate, London, E1",
+   "weekly": 775,
+   "folder": "20261113-1457"
+  },
+  {
+   "id": "card-1794581828471-0a9",
+   "area": "south",
+   "beds": 1,
+   "price": "low",
+   "month": "2026-11",
+   "image": "cards/out/20261113-1457/niko-damac-tower-nine-elms-london-sw8.jpg",
+   "thumb": "pool/thumbs/card-1794581828471-0a9.jpg",
+   "created_at": "2026-11-13T14:57:08+00:00",
+   "rm_id": "95443014",
+   "address": "Damac Tower, Nine Elms, London, Sw8",
+   "weekly": 692,
+   "folder": "20261113-1457"
+  },
+  {
+   "id": "card-1794581828524-6c6",
+   "area": "west",
+   "beds": 1,
+   "price": "mid",
+   "month": "2027-01",
+   "image": "cards/out/20261113-1457/niko-cassini-apartments-cascade-way-w12.jpg",
+   "thumb": "pool/thumbs/card-1794581828524-6c6.jpg",
+   "created_at": "2026-11-13T14:57:08+00:00",
+   "rm_id": "95442750",
+   "address": "Cassini Apartments, Cascade Way, W12",
+   "weekly": 738,
+   "folder": "20261113-1457"
+  }
+ ],
+ "remove": []
+}

@@ -1,0 +1,68 @@
+[
+  {
+    "link": "https://www.rightmove.co.uk/properties/95440131",
+    "rm_id": "95440131",
+    "address": "Kingwood House, 1 Chaucer Gardens, Aldgate, London, E1",
+    "postcode": "E1",
+    "bed_label": "1 Bed 1 Bath",
+    "weekly": 775,
+    "monthly": "3358",
+    "avail": "1月13日",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-kingwood-house-1-chaucer-gardens-aldgate-london-e1.jpg",
+    "tags": {
+      "area": "east",
+      "beds": 1,
+      "price": "mid",
+      "month": "2027-01"
+    },
+    "saved": true,
+    "supabase_id": "card-1794581828406-717",
+    "image_url": "cards/out/20261113-1457/niko-kingwood-house-1-chaucer-gardens-aldgate-london-e1.jpg"
+  },
+  {
+    "link": "https://www.rightmove.co.uk/properties/95443014",
+    "rm_id": "95443014",
+    "address": "Damac Tower, Nine Elms, London, Sw8",
+    "postcode": "SW8",
+    "bed_label": "1 Bed 1 Bath",
+    "weekly": 692,
+    "monthly": "2999",
+    "avail": "11月20日",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-damac-tower-nine-elms-london-sw8.jpg",
+    "tags": {
+      "area": "south",
+      "beds": 1,
+      "price": "low",
+      "month": "2026-11"
+    },
+    "saved": true,
+    "supabase_id": "card-1794581828471-0a9",
+    "image_url": "cards/out/20261113-1457/niko-damac-tower-nine-elms-london-sw8.jpg"
+  },
+  {
+    "link": "https://www.rightmove.co.uk/properties/95442750",
+    "rm_id": "95442750",
+    "address": "Cassini Apartments, Cascade Way, W12",
+    "postcode": "W12",
+    "bed_label": "1 Bed 1 Bath",
+    "weekly": 738,
+    "monthly": "3198",
+    "avail": "1月14日",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-cassini-apartments-cascade-way-w12.jpg",
+    "tags": {
+      "area": "west",
+      "beds": 1,
+      "price": "mid",
+      "month": "2027-01"
+    },
+    "saved": true,
+    "supabase_id": "card-1794581828524-6c6",
+    "image_url": "cards/out/20261113-1457/niko-cassini-apartments-cascade-way-w12.jpg"
+  }
+]
