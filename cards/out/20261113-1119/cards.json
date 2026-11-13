@@ -1,0 +1,156 @@
+[
+  {
+    "link": "https://www.rightmove.co.uk/properties/95425260",
+    "rm_id": "95425260",
+    "address": "White City Living, Westmont Apartments, Fountain Park Way, White City, W12",
+    "postcode": "W12",
+    "bed_label": "1 Bed 1 Bath",
+    "weekly": 658,
+    "monthly": "2851",
+    "avail": "12月2日",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-white-city-living-westmont-apartments-fountain-park-way-white-city-w12.jpg",
+    "tags": {
+      "area": "west",
+      "beds": 1,
+      "price": "low",
+      "month": "2026-12"
+    },
+    "saved": true,
+    "supabase_id": "card-1794568772465-b2d",
+    "image_url": "cards/out/20261113-1119/niko-white-city-living-westmont-apartments-fountain-park-way-white-city-w12.jpg"
+  },
+  {
+    "link": "https://www.rightmove.co.uk/properties/95425374",
+    "rm_id": "95425374",
+    "address": "Wentworth Street, E1",
+    "postcode": "E1",
+    "bed_label": "2 Bed 2 Bath",
+    "weekly": 831,
+    "monthly": "3601",
+    "avail": "1月7日",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-wentworth-street-e1.jpg",
+    "tags": {
+      "area": "east",
+      "beds": 2,
+      "price": "mid",
+      "month": "2027-01"
+    },
+    "saved": true,
+    "supabase_id": "card-1794568772527-907",
+    "image_url": "cards/out/20261113-1119/niko-wentworth-street-e1.jpg"
+  },
+  {
+    "link": "https://www.rightmove.co.uk/properties/137597858",
+    "rm_id": "137597858",
+    "address": "The Modern, Embassy Gardens, London, Sw11",
+    "postcode": "SW11",
+    "bed_label": "2 Bed 2 Bath",
+    "weekly": 1004,
+    "monthly": "4351",
+    "avail": "11月27日",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-the-modern-embassy-gardens-london-sw11.jpg",
+    "tags": {
+      "area": "south",
+      "beds": 2,
+      "price": "high",
+      "month": "2026-11"
+    },
+    "saved": true,
+    "supabase_id": "card-1794568772574-8f8",
+    "image_url": "cards/out/20261113-1119/niko-the-modern-embassy-gardens-london-sw11.jpg"
+  },
+  {
+    "link": "https://www.rightmove.co.uk/properties/93109416",
+    "rm_id": "93109416",
+    "address": "Jacquard Point, London, E1",
+    "postcode": "E1",
+    "bed_label": "2 Bed 2 Bath",
+    "weekly": 645,
+    "monthly": "2795",
+    "avail": "11月14日",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-jacquard-point-london-e1.jpg",
+    "tags": {
+      "area": "east",
+      "beds": 2,
+      "price": "low",
+      "month": "2026-11"
+    },
+    "saved": true,
+    "supabase_id": "card-1794568772619-fcf",
+    "image_url": "cards/out/20261113-1119/niko-jacquard-point-london-e1.jpg"
+  },
+  {
+    "link": "https://www.rightmove.co.uk/properties/95343735",
+    "rm_id": "95343735",
+    "address": "Maine Tower, 9 Harbour Way, London E14",
+    "postcode": "E14",
+    "bed_label": "Studio",
+    "weekly": 531,
+    "monthly": "2301",
+    "avail": "1月12日",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-maine-tower-9-harbour-way-london-e14.jpg",
+    "tags": {
+      "area": "east",
+      "beds": 0,
+      "price": "low",
+      "month": "2027-01"
+    },
+    "saved": true,
+    "supabase_id": "card-1794568772664-ea4",
+    "image_url": "cards/out/20261113-1119/niko-maine-tower-9-harbour-way-london-e14.jpg"
+  },
+  {
+    "link": "https://www.rightmove.co.uk/properties/92833818",
+    "rm_id": "92833818",
+    "address": "Fairwater House, 3 Bonnet Street, London, E16",
+    "postcode": "E16",
+    "bed_label": "2 Bed 2 Bath",
+    "weekly": 635,
+    "monthly": "2752",
+    "avail": "随时",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-fairwater-house-3-bonnet-street-london-e16.jpg",
+    "tags": {
+      "area": "east",
+      "beds": 2,
+      "price": "low",
+      "month": "now"
+    },
+    "saved": true,
+    "supabase_id": "card-1794568772709-4dc",
+    "image_url": "cards/out/20261113-1119/niko-fairwater-house-3-bonnet-street-london-e16.jpg"
+  },
+  {
+    "link": "https://www.rightmove.co.uk/properties/95425728",
+    "rm_id": "95425728",
+    "address": "One Tower Bridge, SE1",
+    "postcode": "SE1",
+    "bed_label": "2 Bed 2 Bath",
+    "weekly": 1096,
+    "monthly": "4749",
+    "avail": "随时",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-one-tower-bridge-se1.jpg",
+    "tags": {
+      "area": "city",
+      "beds": 2,
+      "price": "high",
+      "month": "now"
+    },
+    "saved": true,
+    "supabase_id": "card-1794568772756-e99",
+    "image_url": "cards/out/20261113-1119/niko-one-tower-bridge-se1.jpg"
+  }
+]

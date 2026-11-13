@@ -1,0 +1,103 @@
+{
+ "add": [
+  {
+   "id": "card-1794568772465-b2d",
+   "area": "west",
+   "beds": 1,
+   "price": "low",
+   "month": "2026-12",
+   "image": "cards/out/20261113-1119/niko-white-city-living-westmont-apartments-fountain-park-way-white-city-w12.jpg",
+   "thumb": "pool/thumbs/card-1794568772465-b2d.jpg",
+   "created_at": "2026-11-13T11:19:32+00:00",
+   "rm_id": "95425260",
+   "address": "White City Living, Westmont Apartments, Fountain Park Way, White City, W12",
+   "weekly": 658,
+   "folder": "20261113-1119"
+  },
+  {
+   "id": "card-1794568772527-907",
+   "area": "east",
+   "beds": 2,
+   "price": "mid",
+   "month": "2027-01",
+   "image": "cards/out/20261113-1119/niko-wentworth-street-e1.jpg",
+   "thumb": "pool/thumbs/card-1794568772527-907.jpg",
+   "created_at": "2026-11-13T11:19:32+00:00",
+   "rm_id": "95425374",
+   "address": "Wentworth Street, E1",
+   "weekly": 831,
+   "folder": "20261113-1119"
+  },
+  {
+   "id": "card-1794568772574-8f8",
+   "area": "south",
+   "beds": 2,
+   "price": "high",
+   "month": "2026-11",
+   "image": "cards/out/20261113-1119/niko-the-modern-embassy-gardens-london-sw11.jpg",
+   "thumb": "pool/thumbs/card-1794568772574-8f8.jpg",
+   "created_at": "2026-11-13T11:19:32+00:00",
+   "rm_id": "137597858",
+   "address": "The Modern, Embassy Gardens, London, Sw11",
+   "weekly": 1004,
+   "folder": "20261113-1119"
+  },
+  {
+   "id": "card-1794568772619-fcf",
+   "area": "east",
+   "beds": 2,
+   "price": "low",
+   "month": "2026-11",
+   "image": "cards/out/20261113-1119/niko-jacquard-point-london-e1.jpg",
+   "thumb": "pool/thumbs/card-1794568772619-fcf.jpg",
+   "created_at": "2026-11-13T11:19:32+00:00",
+   "rm_id": "93109416",
+   "address": "Jacquard Point, London, E1",
+   "weekly": 645,
+   "folder": "20261113-1119"
+  },
+  {
+   "id": "card-1794568772664-ea4",
+   "area": "east",
+   "beds": 0,
+   "price": "low",
+   "month": "2027-01",
+   "image": "cards/out/20261113-1119/niko-maine-tower-9-harbour-way-london-e14.jpg",
+   "thumb": "pool/thumbs/card-1794568772664-ea4.jpg",
+   "created_at": "2026-11-13T11:19:32+00:00",
+   "rm_id": "95343735",
+   "address": "Maine Tower, 9 Harbour Way, London E14",
+   "weekly": 531,
+   "folder": "20261113-1119"
+  },
+  {
+   "id": "card-1794568772709-4dc",
+   "area": "east",
+   "beds": 2,
+   "price": "low",
+   "month": "now",
+   "image": "cards/out/20261113-1119/niko-fairwater-house-3-bonnet-street-london-e16.jpg",
+   "thumb": "pool/thumbs/card-1794568772709-4dc.jpg",
+   "created_at": "2026-11-13T11:19:32+00:00",
+   "rm_id": "92833818",
+   "address": "Fairwater House, 3 Bonnet Street, London, E16",
+   "weekly": 635,
+   "folder": "20261113-1119"
+  },
+  {
+   "id": "card-1794568772756-e99",
+   "area": "city",
+   "beds": 2,
+   "price": "high",
+   "month": "now",
+   "image": "cards/out/20261113-1119/niko-one-tower-bridge-se1.jpg",
+   "thumb": "pool/thumbs/card-1794568772756-e99.jpg",
+   "created_at": "2026-11-13T11:19:32+00:00",
+   "rm_id": "95425728",
+   "address": "One Tower Bridge, SE1",
+   "weekly": 1096,
+   "folder": "20261113-1119"
+  }
+ ],
+ "remove": []
+}
