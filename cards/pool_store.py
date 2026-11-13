@@ -87,6 +87,24 @@ def apply_ops(ops):
             if p.startswith('pool/') and os.path.exists(os.path.join(ROOT, p)):
                 os.remove(os.path.join(ROOT, p))
     save(rows)
+    # 被删除的卡片：把 cards/out/*/cards.json 里对应记录标成 saved=false/removed=true，
+    # 这样「已在房源池」的去重不会再把它当成还在池里（房源重新上架时还能重新做卡片）
+    gone = {r['id'] for r in removed}
+    if gone:
+        import glob
+        for cj in glob.glob(os.path.join(ROOT, 'cards', 'out', '*', 'cards.json')):
+            try:
+                with open(cj, encoding='utf-8') as f:
+                    data = json.load(f)
+                hit = False
+                for r in data:
+                    if r.get('supabase_id') in gone and r.get('saved'):
+                        r['saved'] = False; r['removed'] = True; hit = True
+                if hit:
+                    with open(cj, 'w', encoding='utf-8') as f:
+                        json.dump(data, f, ensure_ascii=False, indent=2)
+            except Exception:
+                pass
     return added, len(removed)
 
 

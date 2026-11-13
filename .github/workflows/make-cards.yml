@@ -166,6 +166,7 @@ jobs:
               git pull --rebase -q origin main
               python cards/pool_store.py apply "$OUT/pool_ops.json"
               git add -A pool
+              git add -u cards/out
               git commit -q -m "pool: $(basename "$OUT")" || { echo "房源池无变化"; break; }
               if git push -q; then echo "房源池已更新"; break; fi
               echo "push 冲突，第 $i 次重试"; git reset -q --hard HEAD~1; sleep $((i*3))
