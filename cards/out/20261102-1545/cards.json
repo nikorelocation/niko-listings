@@ -39,9 +39,10 @@
       "price": "mid",
       "month": "2026-12"
     },
-    "saved": true,
+    "saved": false,
     "supabase_id": "card-1793634349780-d7f",
-    "image_url": "cards/out/20261102-1545/niko-cadence-court-lewis-cubitt-walk-london-n1c.jpg"
+    "image_url": "cards/out/20261102-1545/niko-cadence-court-lewis-cubitt-walk-london-n1c.jpg",
+    "removed": true
   },
   {
     "link": "https://www.rightmove.co.uk/properties/94988631",

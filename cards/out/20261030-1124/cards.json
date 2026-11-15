@@ -17,8 +17,9 @@
       "price": "high",
       "month": "2026-12"
     },
-    "saved": true,
+    "saved": false,
     "supabase_id": "card-1793359486791-36d",
-    "image_url": "cards/out/20261030-1124/niko-one-bishopsgate-plaza-houndsditch-london-ec3a.jpg"
+    "image_url": "cards/out/20261030-1124/niko-one-bishopsgate-plaza-houndsditch-london-ec3a.jpg",
+    "removed": true
   }
 ]
