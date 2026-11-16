@@ -39,8 +39,9 @@
       "price": "low",
       "month": "2026-12"
     },
-    "saved": true,
+    "saved": false,
     "supabase_id": "card-1792487993926-46a",
-    "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1792487993185-6db0.jpg"
+    "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1792487993185-6db0.jpg",
+    "removed": true
   }
 ]
