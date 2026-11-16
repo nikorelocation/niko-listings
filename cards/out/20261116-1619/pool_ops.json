@@ -1,0 +1,75 @@
+{
+ "add": [
+  {
+   "id": "card-1794845985529-0b6",
+   "area": "city",
+   "beds": 1,
+   "price": "mid",
+   "month": "2027-01",
+   "image": "cards/out/20261116-1619/niko-casson-square-london-se1.jpg",
+   "thumb": "pool/thumbs/card-1794845985529-0b6.jpg",
+   "created_at": "2026-11-16T16:19:45+00:00",
+   "rm_id": "95517609",
+   "address": "Casson Square, London SE1",
+   "weekly": 865,
+   "folder": "20261116-1619"
+  },
+  {
+   "id": "card-1794845985605-d41",
+   "area": "west",
+   "beds": 1,
+   "price": "low",
+   "month": "2027-01",
+   "image": "cards/out/20261116-1619/niko-belvedere-row-apts-fountain-park-way-w12-7ld-w12.jpg",
+   "thumb": "pool/thumbs/card-1794845985605-d41.jpg",
+   "created_at": "2026-11-16T16:19:45+00:00",
+   "rm_id": "95518218",
+   "address": "Belvedere Row Apts, Fountain Park Way, W12 7Ld",
+   "weekly": 692,
+   "folder": "20261116-1619"
+  },
+  {
+   "id": "card-1794845985664-3a1",
+   "area": "city",
+   "beds": 2,
+   "price": "mid",
+   "month": "2026-11",
+   "image": "cards/out/20261116-1619/niko-southwark-bridge-road-southwark-london-se1.jpg",
+   "thumb": "pool/thumbs/card-1794845985664-3a1.jpg",
+   "created_at": "2026-11-16T16:19:45+00:00",
+   "rm_id": "95511630",
+   "address": "Southwark Bridge Road, Southwark, London",
+   "weekly": 762,
+   "folder": "20261116-1619"
+  },
+  {
+   "id": "card-1794845985730-2c7",
+   "area": "east",
+   "beds": 1,
+   "price": "low",
+   "month": "now",
+   "image": "cards/out/20261116-1619/niko-jacquard-point-tapestry-way-tower-hamlets-london-e1.jpg",
+   "thumb": "pool/thumbs/card-1794845985730-2c7.jpg",
+   "created_at": "2026-11-16T16:19:45+00:00",
+   "rm_id": "95519445",
+   "address": "Jacquard Point, Tapestry Way, Tower Hamlets, London",
+   "weekly": 577,
+   "folder": "20261116-1619"
+  },
+  {
+   "id": "card-1794845985794-f61",
+   "area": "city",
+   "beds": 1,
+   "price": "mid",
+   "month": "2027-01",
+   "image": "cards/out/20261116-1619/niko-the-dumont-vauxhall-se1.jpg",
+   "thumb": "pool/thumbs/card-1794845985794-f61.jpg",
+   "created_at": "2026-11-16T16:19:45+00:00",
+   "rm_id": "95526237",
+   "address": "The Dumont Vauxhall",
+   "weekly": 888,
+   "folder": "20261116-1619"
+  }
+ ],
+ "remove": []
+}
