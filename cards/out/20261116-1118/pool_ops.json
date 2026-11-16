@@ -1,0 +1,47 @@
+{
+ "add": [
+  {
+   "id": "card-1794827947692-2b0",
+   "area": "east",
+   "beds": 1,
+   "price": "low",
+   "month": "2027-01",
+   "image": "cards/out/20261116-1118/niko-landmark-pinnacle-marsh-wall-e14.jpg",
+   "thumb": "pool/thumbs/card-1794827947692-2b0.jpg",
+   "created_at": "2026-11-16T11:19:07+00:00",
+   "rm_id": "95496693",
+   "address": "Direct views over Canary Wharf dock",
+   "weekly": 690,
+   "folder": "20261116-1118"
+  },
+  {
+   "id": "card-1794827947766-19f",
+   "area": "city",
+   "beds": 2,
+   "price": "high",
+   "month": "2027-01",
+   "image": "cards/out/20261116-1118/niko-casson-square-waterloo-london-se1.jpg",
+   "thumb": "pool/thumbs/card-1794827947766-19f.jpg",
+   "created_at": "2026-11-16T11:19:07+00:00",
+   "rm_id": "95495748",
+   "address": "Casson Square, Waterloo, London, SE1",
+   "weekly": 1408,
+   "folder": "20261116-1118"
+  },
+  {
+   "id": "card-1794827947827-e7f",
+   "area": "city",
+   "beds": 2,
+   "price": "high",
+   "month": "now",
+   "image": "cards/out/20261116-1118/niko-london-bridge-street-london-se1.jpg",
+   "thumb": "pool/thumbs/card-1794827947827-e7f.jpg",
+   "created_at": "2026-11-16T11:19:07+00:00",
+   "rm_id": "95496075",
+   "address": "London Bridge Street, London, SE1",
+   "weekly": 1275,
+   "folder": "20261116-1118"
+  }
+ ],
+ "remove": []
+}
