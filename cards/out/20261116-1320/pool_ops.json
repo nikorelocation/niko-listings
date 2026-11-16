@@ -1,0 +1,75 @@
+{
+ "add": [
+  {
+   "id": "card-1794835217869-a54",
+   "area": "east",
+   "beds": 0,
+   "price": "low",
+   "month": "2027-01",
+   "image": "cards/out/20261116-1320/niko-landmark-pinnacle-landmark-square-london-e14.jpg",
+   "thumb": "pool/thumbs/card-1794835217869-a54.jpg",
+   "created_at": "2026-11-16T13:20:17+00:00",
+   "rm_id": "95503314",
+   "address": "Landmark Pinnacle, Landmark Square, London",
+   "weekly": 565,
+   "folder": "20261116-1320"
+  },
+  {
+   "id": "card-1794835217918-145",
+   "area": "city",
+   "beds": 2,
+   "price": "high",
+   "month": "now",
+   "image": "cards/out/20261116-1320/niko-one-blackfriars-southwark-se1.jpg",
+   "thumb": "pool/thumbs/card-1794835217918-145.jpg",
+   "created_at": "2026-11-16T13:20:17+00:00",
+   "rm_id": "95504175",
+   "address": "Winter Garden",
+   "weekly": 1615,
+   "folder": "20261116-1320"
+  },
+  {
+   "id": "card-1794835217958-3ea",
+   "area": "east",
+   "beds": 1,
+   "price": "low",
+   "month": "2027-01",
+   "image": "cards/out/20261116-1320/niko-charrington-tower-new-providence-wharf-london-e14.jpg",
+   "thumb": "pool/thumbs/card-1794835217958-3ea.jpg",
+   "created_at": "2026-11-16T13:20:17+00:00",
+   "rm_id": "163553897",
+   "address": "Charrington Tower, New Providence Wharf, London, E14",
+   "weekly": 554,
+   "folder": "20261116-1320"
+  },
+  {
+   "id": "card-1794835217999-8a5",
+   "area": "north",
+   "beds": 1,
+   "price": "low",
+   "month": "2026-12",
+   "image": "cards/out/20261116-1320/niko-the-makers-one-jasper-walk-shoreditch-n1.jpg",
+   "thumb": "pool/thumbs/card-1794835217999-8a5.jpg",
+   "created_at": "2026-11-16T13:20:18+00:00",
+   "rm_id": "129560348",
+   "address": "Roof Gardens",
+   "weekly": 646,
+   "folder": "20261116-1320"
+  },
+  {
+   "id": "card-1794835218041-27a",
+   "area": "south",
+   "beds": 2,
+   "price": "high",
+   "month": "now",
+   "image": "cards/out/20261116-1320/niko-ambrose-house-19-circus-road-west-london-sw11.jpg",
+   "thumb": "pool/thumbs/card-1794835218041-27a.jpg",
+   "created_at": "2026-11-16T13:20:18+00:00",
+   "rm_id": "95497752",
+   "address": "Ambrose House, 19 Circus Road West, London, Sw11",
+   "weekly": 1269,
+   "folder": "20261116-1320"
+  }
+ ],
+ "remove": []
+}
