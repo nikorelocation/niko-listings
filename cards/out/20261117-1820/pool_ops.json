@@ -1,0 +1,33 @@
+{
+ "add": [
+  {
+   "id": "card-1794939627414-e73",
+   "area": "city",
+   "beds": 1,
+   "price": "mid",
+   "month": "now",
+   "image": "cards/out/20261117-1820/niko-sun-street-london-ec2a.jpg",
+   "thumb": "pool/thumbs/card-1794939627414-e73.jpg",
+   "created_at": "2026-11-17T18:20:27+00:00",
+   "rm_id": "95576901",
+   "address": "Sun Street, London, Ec2A",
+   "weekly": 877,
+   "folder": "20261117-1820"
+  },
+  {
+   "id": "card-1794939627479-dfd",
+   "area": "south",
+   "beds": 1,
+   "price": "low",
+   "month": "2027-01",
+   "image": "cards/out/20261117-1820/niko-exchange-gardens-london-sw8.jpg",
+   "thumb": "pool/thumbs/card-1794939627479-dfd.jpg",
+   "created_at": "2026-11-17T18:20:27+00:00",
+   "rm_id": "95577210",
+   "address": "Exchange Gardens, London, Sw8",
+   "weekly": 635,
+   "folder": "20261117-1820"
+  }
+ ],
+ "remove": []
+}

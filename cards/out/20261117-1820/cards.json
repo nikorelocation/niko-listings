@@ -1,0 +1,46 @@
+[
+  {
+    "link": "https://www.rightmove.co.uk/properties/95576901",
+    "rm_id": "95576901",
+    "address": "Sun Street, London, Ec2A",
+    "postcode": "EC2A",
+    "bed_label": "1 Bed 1 Bath",
+    "weekly": 877,
+    "monthly": "3800",
+    "avail": "待问",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-sun-street-london-ec2a.jpg",
+    "tags": {
+      "area": "city",
+      "beds": 1,
+      "price": "mid",
+      "month": "now"
+    },
+    "saved": true,
+    "supabase_id": "card-1794939627414-e73",
+    "image_url": "cards/out/20261117-1820/niko-sun-street-london-ec2a.jpg"
+  },
+  {
+    "link": "https://www.rightmove.co.uk/properties/95577210",
+    "rm_id": "95577210",
+    "address": "Exchange Gardens, London, Sw8",
+    "postcode": "SW8",
+    "bed_label": "1 Bed 1 Bath",
+    "weekly": 635,
+    "monthly": "2752",
+    "avail": "1月14日",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-exchange-gardens-london-sw8.jpg",
+    "tags": {
+      "area": "south",
+      "beds": 1,
+      "price": "low",
+      "month": "2027-01"
+    },
+    "saved": true,
+    "supabase_id": "card-1794939627479-dfd",
+    "image_url": "cards/out/20261117-1820/niko-exchange-gardens-london-sw8.jpg"
+  }
+]
