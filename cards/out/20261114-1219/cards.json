@@ -61,8 +61,9 @@
       "price": "mid",
       "month": "now"
     },
-    "saved": true,
+    "saved": false,
     "supabase_id": "card-1794658747421-56f",
-    "image_url": "cards/out/20261114-1219/niko-one-thames-city-london-sw8.jpg"
+    "image_url": "cards/out/20261114-1219/niko-one-thames-city-london-sw8.jpg",
+    "removed": true
   }
 ]
