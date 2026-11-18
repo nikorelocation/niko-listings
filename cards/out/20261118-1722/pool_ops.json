@@ -1,0 +1,33 @@
+{
+ "add": [
+  {
+   "id": "card-1795022562159-0d5",
+   "area": "north",
+   "beds": 2,
+   "price": "high",
+   "month": "2026-11",
+   "image": "cards/out/20261118-1722/niko-capella-court-lewis-cubitt-park-london-n1c.jpg",
+   "thumb": "pool/thumbs/card-1795022562159-0d5.jpg",
+   "created_at": "2026-11-18T17:22:42+00:00",
+   "rm_id": "95619801",
+   "address": "Capella Court, Lewis Cubitt Park, London N1C",
+   "weekly": 1154,
+   "folder": "20261118-1722"
+  },
+  {
+   "id": "card-1795022562226-5f2",
+   "area": "city",
+   "beds": 2,
+   "price": "high",
+   "month": "2026-12",
+   "image": "cards/out/20261118-1722/niko-millbank-london-sw1p.jpg",
+   "thumb": "pool/thumbs/card-1795022562226-5f2.jpg",
+   "created_at": "2026-11-18T17:22:42+00:00",
+   "rm_id": "95623983",
+   "address": "Millbank",
+   "weekly": 1500,
+   "folder": "20261118-1722"
+  }
+ ],
+ "remove": []
+}
