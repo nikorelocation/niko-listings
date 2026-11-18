@@ -1,0 +1,46 @@
+[
+  {
+    "link": "https://www.rightmove.co.uk/properties/95625306",
+    "rm_id": "95625306",
+    "address": "1 Nine Elms Lane, Nine Elms, London, Sw8",
+    "postcode": "SW8",
+    "bed_label": "1 Bed 1 Bath",
+    "weekly": 1300,
+    "monthly": "5633",
+    "avail": "12月30日",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-1-nine-elms-lane-nine-elms-london-sw8.jpg",
+    "tags": {
+      "area": "south",
+      "beds": 1,
+      "price": "high",
+      "month": "2026-12"
+    },
+    "saved": true,
+    "supabase_id": "card-1795029578732-e87",
+    "image_url": "cards/out/20261118-1919/niko-1-nine-elms-lane-nine-elms-london-sw8.jpg"
+  },
+  {
+    "link": "https://www.rightmove.co.uk/properties/95626902",
+    "rm_id": "95626902",
+    "address": "Lewis Cubitt Square, Kings Cross, London, N1C",
+    "postcode": "N1C",
+    "bed_label": "Studio",
+    "weekly": 692,
+    "monthly": "2999",
+    "avail": "1月18日",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-lewis-cubitt-square-kings-cross-london-n1c.jpg",
+    "tags": {
+      "area": "north",
+      "beds": 0,
+      "price": "low",
+      "month": "2027-01"
+    },
+    "saved": true,
+    "supabase_id": "card-1795029578781-8f2",
+    "image_url": "cards/out/20261118-1919/niko-lewis-cubitt-square-kings-cross-london-n1c.jpg"
+  }
+]
