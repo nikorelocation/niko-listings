@@ -1,0 +1,47 @@
+{
+ "add": [
+  {
+   "id": "card-1795019096136-481",
+   "area": "city",
+   "beds": 1,
+   "price": "low",
+   "month": "2027-01",
+   "image": "cards/out/20261118-1624/niko-parliament-house-81-black-prince-road-vauxhall-london-se1.jpg",
+   "thumb": "pool/thumbs/card-1795019096136-481.jpg",
+   "created_at": "2026-11-18T16:24:56+00:00",
+   "rm_id": "95615736",
+   "address": "Parliament House, 81 Black Prince Road, Vauxhall, London, SE1",
+   "weekly": 625,
+   "folder": "20261118-1624"
+  },
+  {
+   "id": "card-1795019096204-193",
+   "area": "west",
+   "beds": 2,
+   "price": "mid",
+   "month": "2026-12",
+   "image": "cards/out/20261118-1624/niko-wood-crescent-london-w12.jpg",
+   "thumb": "pool/thumbs/card-1795019096204-193.jpg",
+   "created_at": "2026-11-18T16:24:56+00:00",
+   "rm_id": "95613795",
+   "address": "Wood Crescent",
+   "weekly": 900,
+   "folder": "20261118-1624"
+  },
+  {
+   "id": "card-1795019096253-f0e",
+   "area": "east",
+   "beds": 1,
+   "price": "low",
+   "month": "now",
+   "image": "cards/out/20261118-1624/niko-landmark-pinnacle-marsh-wall-e14.jpg",
+   "thumb": "pool/thumbs/card-1795019096253-f0e.jpg",
+   "created_at": "2026-11-18T16:24:56+00:00",
+   "rm_id": "95090373",
+   "address": "Canary Wharf Jubilee 0.5 mile",
+   "weekly": 695,
+   "folder": "20261118-1624"
+  }
+ ],
+ "remove": []
+}
