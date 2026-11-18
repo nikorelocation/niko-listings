@@ -39,9 +39,10 @@
       "price": "low",
       "month": "2026-12"
     },
-    "saved": true,
+    "saved": false,
     "supabase_id": "card-1793280181160-8e8",
-    "image_url": "cards/out/20261029-1322/niko-modena-house-london-city-island-london-e14.jpg"
+    "image_url": "cards/out/20261029-1322/niko-modena-house-london-city-island-london-e14.jpg",
+    "removed": true
   },
   {
     "link": "https://www.rightmove.co.uk/properties/94885314",

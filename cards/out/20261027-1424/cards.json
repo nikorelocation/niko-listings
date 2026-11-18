@@ -61,9 +61,10 @@
       "price": "mid",
       "month": "2027-01"
     },
-    "saved": true,
+    "saved": false,
     "supabase_id": "card-1793111074039-661",
-    "image_url": "cards/out/20261027-1424/niko-wiverton-tower-aldgate-place-london-e1.jpg"
+    "image_url": "cards/out/20261027-1424/niko-wiverton-tower-aldgate-place-london-e1.jpg",
+    "removed": true
   },
   {
     "link": "https://www.rightmove.co.uk/properties/94777275",

@@ -83,8 +83,9 @@
       "price": "low",
       "month": "2027-01"
     },
-    "saved": true,
+    "saved": false,
     "supabase_id": "card-1794838772194-d95",
-    "image_url": "cards/out/20261116-1419/niko-echo-court-royal-wharf-london-e16.jpg"
+    "image_url": "cards/out/20261116-1419/niko-echo-court-royal-wharf-london-e16.jpg",
+    "removed": true
   }
 ]

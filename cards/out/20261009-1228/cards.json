@@ -149,9 +149,10 @@
       "price": "high",
       "month": "2026-10"
     },
-    "saved": true,
+    "saved": false,
     "supabase_id": "card-1791545336161-fd4",
-    "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1791545335329-1e09.jpg"
+    "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1791545335329-1e09.jpg",
+    "removed": true
   },
   {
     "link": "https://www.rightmove.co.uk/properties/94120146",
