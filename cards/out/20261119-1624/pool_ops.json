@@ -1,0 +1,33 @@
+{
+ "add": [
+  {
+   "id": "card-1795105498658-f9e",
+   "area": "city",
+   "beds": 1,
+   "price": "mid",
+   "month": "now",
+   "image": "cards/out/20261119-1624/niko-156-carrara-tower-london-ec1v.jpg",
+   "thumb": "pool/thumbs/card-1795105498658-f9e.jpg",
+   "created_at": "2026-11-19T16:24:58+00:00",
+   "rm_id": "95660508",
+   "address": "156 Carrara Tower, London, Ec1V",
+   "weekly": 762,
+   "folder": "20261119-1624"
+  },
+  {
+   "id": "card-1795105498727-28d",
+   "area": "city",
+   "beds": 1,
+   "price": "mid",
+   "month": "now",
+   "image": "cards/out/20261119-1624/niko-the-dumont-albert-embankment-london-se1.jpg",
+   "thumb": "pool/thumbs/card-1795105498727-28d.jpg",
+   "created_at": "2026-11-19T16:24:58+00:00",
+   "rm_id": "95653671",
+   "address": "The Dumont Albert Embankment",
+   "weekly": 785,
+   "folder": "20261119-1624"
+  }
+ ],
+ "remove": []
+}
