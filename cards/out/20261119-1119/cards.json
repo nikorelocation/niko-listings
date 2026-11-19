@@ -1,0 +1,46 @@
+[
+  {
+    "link": "https://www.rightmove.co.uk/properties/159025073",
+    "rm_id": "159025073",
+    "address": "Saffron Wharf, London Dock, London, E1W",
+    "postcode": "E1W",
+    "bed_label": "2 Bed 2 Bath",
+    "weekly": 946,
+    "monthly": "4099",
+    "avail": "1月26日",
+    "furnish": "不带家具",
+    "agent": "",
+    "card": "niko-saffron-wharf-london-dock-london-e1w.jpg",
+    "tags": {
+      "area": "east",
+      "beds": 2,
+      "price": "mid",
+      "month": "2027-01"
+    },
+    "saved": true,
+    "supabase_id": "card-1795087196019-945",
+    "image_url": "cards/out/20261119-1119/niko-saffron-wharf-london-dock-london-e1w.jpg"
+  },
+  {
+    "link": "https://www.rightmove.co.uk/properties/95629668",
+    "rm_id": "95629668",
+    "address": "Hawksbury Heights, 11 Hewson Way, Elephant Park",
+    "postcode": "SE17",
+    "bed_label": "2 Bed 2 Bath",
+    "weekly": 912,
+    "monthly": "3952",
+    "avail": "待问",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-hawksbury-heights-11-hewson-way-elephant-park-se17.jpg",
+    "tags": {
+      "area": "south",
+      "beds": 2,
+      "price": "mid",
+      "month": "now"
+    },
+    "saved": true,
+    "supabase_id": "card-1795087196080-b4a",
+    "image_url": "cards/out/20261119-1119/niko-hawksbury-heights-11-hewson-way-elephant-park-se17.jpg"
+  }
+]
