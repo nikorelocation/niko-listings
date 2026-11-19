@@ -17,9 +17,10 @@
       "price": "low",
       "month": "2027-01"
     },
-    "saved": true,
+    "saved": false,
     "supabase_id": "card-1794500444283-b76",
-    "image_url": "cards/out/20261112-1620/niko-merino-gardens-tower-hamlets-london-e1w.jpg"
+    "image_url": "cards/out/20261112-1620/niko-merino-gardens-tower-hamlets-london-e1w.jpg",
+    "removed": true
   },
   {
     "link": "https://www.rightmove.co.uk/properties/95407176",
