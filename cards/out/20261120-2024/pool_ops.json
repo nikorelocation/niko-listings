@@ -1,0 +1,33 @@
+{
+ "add": [
+  {
+   "id": "card-1795206275219-64b",
+   "area": "city",
+   "beds": 0,
+   "price": "low",
+   "month": "2027-01",
+   "image": "cards/out/20261120-2024/niko-casson-square-london-se1.jpg",
+   "thumb": "pool/thumbs/card-1795206275219-64b.jpg",
+   "created_at": "2026-11-20T20:24:35+00:00",
+   "rm_id": "95708826",
+   "address": "Casson Square, London, SE1",
+   "weekly": 658,
+   "folder": "20261120-2024"
+  },
+  {
+   "id": "card-1795206275261-117",
+   "area": "city",
+   "beds": 2,
+   "price": "high",
+   "month": "2026-11",
+   "image": "cards/out/20261120-2024/niko-portugal-street-london-wc2a.jpg",
+   "thumb": "pool/thumbs/card-1795206275261-117.jpg",
+   "created_at": "2026-11-20T20:24:35+00:00",
+   "rm_id": "95707689",
+   "address": "Portugal Street, London, Wc2A",
+   "weekly": 1731,
+   "folder": "20261120-2024"
+  }
+ ],
+ "remove": []
+}
