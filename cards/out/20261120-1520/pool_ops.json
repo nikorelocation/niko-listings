@@ -1,0 +1,89 @@
+{
+ "add": [
+  {
+   "id": "card-1795188034755-a17",
+   "area": "east",
+   "beds": 2,
+   "price": "mid",
+   "month": "2026-12",
+   "image": "cards/out/20261120-1520/niko-3-pan-peninsula-square-canary-wharf-london-e14.jpg",
+   "thumb": "pool/thumbs/card-1795188034755-a17.jpg",
+   "created_at": "2026-11-20T15:20:34+00:00",
+   "rm_id": "95691171",
+   "address": "3 Pan Peninsula Square, Canary Wharf, London",
+   "weekly": 785,
+   "folder": "20261120-1520"
+  },
+  {
+   "id": "card-1795188034810-78b",
+   "area": "west",
+   "beds": 1,
+   "price": "low",
+   "month": "2026-12",
+   "image": "cards/out/20261120-1520/niko-wood-lane-white-city-london-w12.jpg",
+   "thumb": "pool/thumbs/card-1795188034810-78b.jpg",
+   "created_at": "2026-11-20T15:20:34+00:00",
+   "rm_id": "95684172",
+   "address": "Wood Lane, White City, London, W12",
+   "weekly": 519,
+   "folder": "20261120-1520"
+  },
+  {
+   "id": "card-1795188034845-2eb",
+   "area": "city",
+   "beds": 2,
+   "price": "high",
+   "month": "now",
+   "image": "cards/out/20261120-1520/niko-city-road-london-ec1v.jpg",
+   "thumb": "pool/thumbs/card-1795188034845-2eb.jpg",
+   "created_at": "2026-11-20T15:20:34+00:00",
+   "rm_id": "95682108",
+   "address": "City Road, London, Ec1V",
+   "weekly": 1038,
+   "folder": "20261120-1520"
+  },
+  {
+   "id": "card-1795188034880-05a",
+   "area": "east",
+   "beds": 1,
+   "price": "low",
+   "month": "2027-01",
+   "image": "cards/out/20261120-1520/niko-alie-street-london-e1.jpg",
+   "thumb": "pool/thumbs/card-1795188034880-05a.jpg",
+   "created_at": "2026-11-20T15:20:34+00:00",
+   "rm_id": "95693163",
+   "address": "Alie Street, London, E1",
+   "weekly": 600,
+   "folder": "20261120-1520"
+  },
+  {
+   "id": "card-1795188034918-99f",
+   "area": "city",
+   "beds": 2,
+   "price": "mid",
+   "month": "2027-01",
+   "image": "cards/out/20261120-1520/niko-city-road-london-ec1v.jpg",
+   "thumb": "pool/thumbs/card-1795188034918-99f.jpg",
+   "created_at": "2026-11-20T15:20:34+00:00",
+   "rm_id": "95694249",
+   "address": "City Road London Ec1V",
+   "weekly": 925,
+   "folder": "20261120-1520"
+  },
+  {
+   "id": "card-1795188034953-34d",
+   "area": "city",
+   "beds": 1,
+   "price": "mid",
+   "month": "2027-01",
+   "image": "cards/out/20261120-1520/niko-one-bishopsgate-plaza-houndsditch-ec3a.jpg",
+   "thumb": "pool/thumbs/card-1795188034953-34d.jpg",
+   "created_at": "2026-11-20T15:20:34+00:00",
+   "rm_id": "95693904",
+   "address": "Liverpool Street Station",
+   "weekly": 985,
+   "folder": "20261120-1520"
+  }
+ ],
+ "remove": []
+}
