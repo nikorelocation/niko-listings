@@ -1,0 +1,33 @@
+{
+ "add": [
+  {
+   "id": "card-1795360806846-d95",
+   "area": "city",
+   "beds": 1,
+   "price": "mid",
+   "month": "2026-12",
+   "image": "cards/out/20261122-1520/niko-one-crown-place-19-sun-street-the-city-london-ec2a.jpg",
+   "thumb": "pool/thumbs/card-1795360806846-d95.jpg",
+   "created_at": "2026-11-22T15:20:06+00:00",
+   "rm_id": "95728887",
+   "address": "One Crown Place, 19 Sun Street, The City, London, Ec2A",
+   "weekly": 810,
+   "folder": "20261122-1520"
+  },
+  {
+   "id": "card-1795360806909-3e0",
+   "area": "north",
+   "beds": 2,
+   "price": "high",
+   "month": "now",
+   "image": "cards/out/20261122-1520/niko-plimsoll-building-handyside-street-kings-cross-n1c.jpg",
+   "thumb": "pool/thumbs/card-1795360806909-3e0.jpg",
+   "created_at": "2026-11-22T15:20:06+00:00",
+   "rm_id": "95155158",
+   "address": "Plimsoll Building, Handyside Street, Kings Cross",
+   "weekly": 1062,
+   "folder": "20261122-1520"
+  }
+ ],
+ "remove": []
+}
