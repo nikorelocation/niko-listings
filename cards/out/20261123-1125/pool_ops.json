@@ -1,0 +1,47 @@
+{
+ "add": [
+  {
+   "id": "card-1795433122615-abd",
+   "area": "south",
+   "beds": 1,
+   "price": "low",
+   "month": "2026-12",
+   "image": "cards/out/20261123-1125/niko-sky-gardens-wandsworth-road-nine-elms-london-sw8.jpg",
+   "thumb": "pool/thumbs/card-1795433122615-abd.jpg",
+   "created_at": "2026-11-23T11:25:22+00:00",
+   "rm_id": "95738925",
+   "address": "Sky Gardens, Wandsworth Road, Nine Elms, London, Sw8",
+   "weekly": 646,
+   "folder": "20261123-1125"
+  },
+  {
+   "id": "card-1795433122687-239",
+   "area": "east",
+   "beds": 1,
+   "price": "low",
+   "month": "2027-01",
+   "image": "cards/out/20261123-1125/niko-emery-wharf-london-dock-wapping-london-e1w.jpg",
+   "thumb": "pool/thumbs/card-1795433122687-239.jpg",
+   "created_at": "2026-11-23T11:25:22+00:00",
+   "rm_id": "95739894",
+   "address": "Emery Wharf, London Dock, Wapping, London",
+   "weekly": 623,
+   "folder": "20261123-1125"
+  },
+  {
+   "id": "card-1795433122749-159",
+   "area": "city",
+   "beds": 1,
+   "price": "mid",
+   "month": "2027-01",
+   "image": "cards/out/20261123-1125/niko-bollinder-place-london-ec1v.jpg",
+   "thumb": "pool/thumbs/card-1795433122749-159.jpg",
+   "created_at": "2026-11-23T11:25:22+00:00",
+   "rm_id": "95739981",
+   "address": "Bollinder Place, London",
+   "weekly": 790,
+   "folder": "20261123-1125"
+  }
+ ],
+ "remove": []
+}
