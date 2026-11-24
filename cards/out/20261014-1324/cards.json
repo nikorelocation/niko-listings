@@ -17,9 +17,10 @@
       "price": "mid",
       "month": "2026-11"
     },
-    "saved": true,
+    "saved": false,
     "supabase_id": "card-1791980680586-083",
-    "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1791980679155-425a.jpg"
+    "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1791980679155-425a.jpg",
+    "removed": true
   },
   {
     "link": "https://www.rightmove.co.uk/properties/94252467",
@@ -39,9 +40,10 @@
       "price": "mid",
       "month": "2026-12"
     },
-    "saved": true,
+    "saved": false,
     "supabase_id": "card-1791980682749-370",
-    "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1791980681582-bc85.jpg"
+    "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1791980681582-bc85.jpg",
+    "removed": true
   },
   {
     "link": "https://www.rightmove.co.uk/properties/94283103",
@@ -61,9 +63,10 @@
       "price": "low",
       "month": "2026-12"
     },
-    "saved": true,
+    "saved": false,
     "supabase_id": "card-1791980684355-137",
-    "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1791980683027-5ed1.jpg"
+    "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1791980683027-5ed1.jpg",
+    "removed": true
   },
   {
     "link": "https://www.rightmove.co.uk/properties/94282293",
@@ -83,9 +86,10 @@
       "price": "high",
       "month": "2026-12"
     },
-    "saved": true,
+    "saved": false,
     "supabase_id": "card-1791980685858-d16",
-    "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1791980684597-fb82.jpg"
+    "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1791980684597-fb82.jpg",
+    "removed": true
   },
   {
     "link": "https://www.rightmove.co.uk/properties/94030143",
@@ -105,9 +109,10 @@
       "price": "mid",
       "month": "now"
     },
-    "saved": true,
+    "saved": false,
     "supabase_id": "card-1791980686764-07a",
-    "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1791980686121-6294.jpg"
+    "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1791980686121-6294.jpg",
+    "removed": true
   },
   {
     "link": "https://www.rightmove.co.uk/properties/94291080",
@@ -127,9 +132,10 @@
       "price": "mid",
       "month": "now"
     },
-    "saved": true,
+    "saved": false,
     "supabase_id": "card-1791980688748-85e",
-    "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1791980687349-48d7.jpg"
+    "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1791980687349-48d7.jpg",
+    "removed": true
   },
   {
     "link": "https://www.rightmove.co.uk/properties/94270149",
@@ -149,9 +155,10 @@
       "price": "low",
       "month": "2026-11"
     },
-    "saved": true,
+    "saved": false,
     "supabase_id": "card-1791980690253-e22",
-    "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1791980689362-5ecc.jpg"
+    "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1791980689362-5ecc.jpg",
+    "removed": true
   },
   {
     "link": "https://www.rightmove.co.uk/properties/91688361",
@@ -171,9 +178,10 @@
       "price": "high",
       "month": "2026-11"
     },
-    "saved": true,
+    "saved": false,
     "supabase_id": "card-1791980691833-fdc",
-    "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1791980690490-d9a5.jpg"
+    "image_url": "https://imhlozdlohtjkdvrsylu.supabase.co/storage/v1/object/public/property-images/1791980690490-d9a5.jpg",
+    "removed": true
   },
   {
     "link": "https://www.rightmove.co.uk/properties/94292418",
