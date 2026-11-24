@@ -1,0 +1,68 @@
+[
+  {
+    "link": "https://www.rightmove.co.uk/properties/95793234",
+    "rm_id": "95793234",
+    "address": "Amory Tower, 203 Marsh Wall, E14",
+    "postcode": "E14",
+    "bed_label": "1 Bed 1 Bath",
+    "weekly": 692,
+    "monthly": "2999",
+    "avail": "12月11日",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-amory-tower-203-marsh-wall-e14.jpg",
+    "tags": {
+      "area": "east",
+      "beds": 1,
+      "price": "low",
+      "month": "2026-12"
+    },
+    "saved": true,
+    "supabase_id": "card-1795530022104-db5",
+    "image_url": "cards/out/20261124-1420/niko-amory-tower-203-marsh-wall-e14.jpg"
+  },
+  {
+    "link": "https://www.rightmove.co.uk/properties/95797509",
+    "rm_id": "95797509",
+    "address": "Hampton Tower, South Quay Plaza, E14",
+    "postcode": "E14",
+    "bed_label": "1 Bed 1 Bath",
+    "weekly": 725,
+    "monthly": "3142",
+    "avail": "1月20日",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-hampton-tower-south-quay-plaza-e14.jpg",
+    "tags": {
+      "area": "east",
+      "beds": 1,
+      "price": "mid",
+      "month": "2027-01"
+    },
+    "saved": true,
+    "supabase_id": "card-1795530022167-4f3",
+    "image_url": "cards/out/20261124-1420/niko-hampton-tower-south-quay-plaza-e14.jpg"
+  },
+  {
+    "link": "https://www.rightmove.co.uk/properties/95795625",
+    "rm_id": "95795625",
+    "address": "4 Merino Gardens, London Dock, Wapping, E1W",
+    "postcode": "E1W",
+    "bed_label": "2 Bed 2 Bath",
+    "weekly": 946,
+    "monthly": "4099",
+    "avail": "随时",
+    "furnish": "不带家具",
+    "agent": "",
+    "card": "niko-4-merino-gardens-london-dock-wapping-e1w.jpg",
+    "tags": {
+      "area": "east",
+      "beds": 2,
+      "price": "mid",
+      "month": "now"
+    },
+    "saved": true,
+    "supabase_id": "card-1795530022223-caf",
+    "image_url": "cards/out/20261124-1420/niko-4-merino-gardens-london-dock-wapping-e1w.jpg"
+  }
+]

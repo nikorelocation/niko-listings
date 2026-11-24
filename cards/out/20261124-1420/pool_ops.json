@@ -1,0 +1,47 @@
+{
+ "add": [
+  {
+   "id": "card-1795530022104-db5",
+   "area": "east",
+   "beds": 1,
+   "price": "low",
+   "month": "2026-12",
+   "image": "cards/out/20261124-1420/niko-amory-tower-203-marsh-wall-e14.jpg",
+   "thumb": "pool/thumbs/card-1795530022104-db5.jpg",
+   "created_at": "2026-11-24T14:20:22+00:00",
+   "rm_id": "95793234",
+   "address": "Amory Tower, 203 Marsh Wall, E14",
+   "weekly": 692,
+   "folder": "20261124-1420"
+  },
+  {
+   "id": "card-1795530022167-4f3",
+   "area": "east",
+   "beds": 1,
+   "price": "mid",
+   "month": "2027-01",
+   "image": "cards/out/20261124-1420/niko-hampton-tower-south-quay-plaza-e14.jpg",
+   "thumb": "pool/thumbs/card-1795530022167-4f3.jpg",
+   "created_at": "2026-11-24T14:20:22+00:00",
+   "rm_id": "95797509",
+   "address": "Hampton Tower, South Quay Plaza, E14",
+   "weekly": 725,
+   "folder": "20261124-1420"
+  },
+  {
+   "id": "card-1795530022223-caf",
+   "area": "east",
+   "beds": 2,
+   "price": "mid",
+   "month": "now",
+   "image": "cards/out/20261124-1420/niko-4-merino-gardens-london-dock-wapping-e1w.jpg",
+   "thumb": "pool/thumbs/card-1795530022223-caf.jpg",
+   "created_at": "2026-11-24T14:20:22+00:00",
+   "rm_id": "95795625",
+   "address": "4 Merino Gardens, London Dock, Wapping, E1W",
+   "weekly": 946,
+   "folder": "20261124-1420"
+  }
+ ],
+ "remove": []
+}
