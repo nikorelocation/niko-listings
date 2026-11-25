@@ -1,0 +1,61 @@
+{
+ "add": [
+  {
+   "id": "card-1795605579703-f86",
+   "area": "city",
+   "beds": 2,
+   "price": "high",
+   "month": "2027-02",
+   "image": "cards/out/20261125-1119/niko-principal-tower-2-principal-place-worship-lane-shoreditch-ec2a.jpg",
+   "thumb": "pool/thumbs/card-1795605579703-f86.jpg",
+   "created_at": "2026-11-25T11:19:39+00:00",
+   "rm_id": "95822268",
+   "address": "Principal Tower, 2 Principal Place, Worship Lane, Shoreditch, Ec2A",
+   "weekly": 1085,
+   "folder": "20261125-1119"
+  },
+  {
+   "id": "card-1795605579784-179",
+   "area": "city",
+   "beds": 2,
+   "price": "high",
+   "month": "now",
+   "image": "cards/out/20261125-1119/niko-albert-embankment-london-se1.jpg",
+   "thumb": "pool/thumbs/card-1795605579784-179.jpg",
+   "created_at": "2026-11-25T11:19:39+00:00",
+   "rm_id": "95764818",
+   "address": "Albert Embankment",
+   "weekly": 1662,
+   "folder": "20261125-1119"
+  },
+  {
+   "id": "card-1795605579841-c36",
+   "area": "city",
+   "beds": 3,
+   "price": "high",
+   "month": "2026-12",
+   "image": "cards/out/20261125-1119/niko-albert-embankment-london-greater-london-se1.jpg",
+   "thumb": "pool/thumbs/card-1795605579841-c36.jpg",
+   "created_at": "2026-11-25T11:19:39+00:00",
+   "rm_id": "95768217",
+   "address": "Underground Parking",
+   "weekly": 2031,
+   "folder": "20261125-1119"
+  },
+  {
+   "id": "card-1795605579903-679",
+   "area": "city",
+   "beds": 1,
+   "price": "mid",
+   "month": "2027-01",
+   "image": "cards/out/20261125-1119/niko-tudor-house-duchess-walk-london-se1.jpg",
+   "thumb": "pool/thumbs/card-1795605579903-679.jpg",
+   "created_at": "2026-11-25T11:19:39+00:00",
+   "rm_id": "95821137",
+   "address": "Tudor House, Duchess Walk, London, SE1",
+   "weekly": 808,
+   "folder": "20261125-1119"
+  }
+ ],
+ "remove": []
+}
