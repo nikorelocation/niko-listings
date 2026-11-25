@@ -1,0 +1,200 @@
+[
+  {
+    "link": "https://www.rightmove.co.uk/properties/95837124",
+    "rm_id": "95837124",
+    "address": "Cashmere House, Goodmans Fields, Leman Street, Aldgate, Aldgate East, London, E1",
+    "postcode": "E1",
+    "bed_label": "1 Bed 1 Bath",
+    "weekly": 663,
+    "monthly": "2873",
+    "avail": "1月6日",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-cashmere-house-goodmans-fields-leman-street-aldgate-aldgate-east-london-e1.jpg",
+    "tags": {
+      "area": "east",
+      "beds": 1,
+      "price": "low",
+      "month": "2027-01"
+    },
+    "saved": true,
+    "supabase_id": "card-1795623739982-3f2",
+    "image_url": "cards/out/20261125-1621/niko-cashmere-house-goodmans-fields-leman-street-aldgate-aldgate-east-london-e1.jpg"
+  },
+  {
+    "link": "https://www.rightmove.co.uk/properties/95836485",
+    "rm_id": "95836485",
+    "address": "Sky Gardens, 155 Wandsworth Road, London, Sw8",
+    "postcode": "SW8",
+    "bed_label": "2 Bed 2 Bath",
+    "weekly": 733,
+    "monthly": "3176",
+    "avail": "12月7日",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-sky-gardens-155-wandsworth-road-london-sw8.jpg",
+    "tags": {
+      "area": "south",
+      "beds": 2,
+      "price": "mid",
+      "month": "2026-12"
+    },
+    "saved": true,
+    "supabase_id": "card-1795623740038-101",
+    "image_url": "cards/out/20261125-1621/niko-sky-gardens-155-wandsworth-road-london-sw8.jpg"
+  },
+  {
+    "link": "https://www.rightmove.co.uk/properties/149429912",
+    "rm_id": "149429912",
+    "address": "Canaletto Tower, City Road, Ec1V",
+    "postcode": "EC1V",
+    "bed_label": "Studio",
+    "weekly": 554,
+    "monthly": "2401",
+    "avail": "1月8日",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-canaletto-tower-city-road-ec1v.jpg",
+    "tags": {
+      "area": "city",
+      "beds": 0,
+      "price": "low",
+      "month": "2027-01"
+    },
+    "saved": true,
+    "supabase_id": "card-1795623740099-100",
+    "image_url": "cards/out/20261125-1621/niko-canaletto-tower-city-road-ec1v.jpg"
+  },
+  {
+    "link": "https://www.rightmove.co.uk/properties/95832990",
+    "rm_id": "95832990",
+    "address": "2 Double Bedroom Apartment",
+    "postcode": "SW11",
+    "bed_label": "2 Bed 2 Bath",
+    "weekly": 1150,
+    "monthly": "4983",
+    "avail": "11月26日",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-1-riverlight-quay-nine-elms-london-sw11.jpg",
+    "tags": {
+      "area": "south",
+      "beds": 2,
+      "price": "high",
+      "month": "2026-11"
+    },
+    "saved": true,
+    "supabase_id": "card-1795623740159-63b",
+    "image_url": "cards/out/20261125-1621/niko-1-riverlight-quay-nine-elms-london-sw11.jpg"
+  },
+  {
+    "link": "https://www.rightmove.co.uk/properties/95836152",
+    "rm_id": "95836152",
+    "address": "1 Double Bedroom Apartment",
+    "postcode": "SW11",
+    "bed_label": "1 Bed 1 Bath",
+    "weekly": 725,
+    "monthly": "3142",
+    "avail": "11月26日",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-2-riverlight-quay-nine-elms-london-sw11.jpg",
+    "tags": {
+      "area": "south",
+      "beds": 1,
+      "price": "mid",
+      "month": "2026-11"
+    },
+    "saved": true,
+    "supabase_id": "card-1795623740229-f9f",
+    "image_url": "cards/out/20261125-1621/niko-2-riverlight-quay-nine-elms-london-sw11.jpg"
+  },
+  {
+    "link": "https://www.rightmove.co.uk/properties/95828811",
+    "rm_id": "95828811",
+    "address": "Iona Tower, 33 Ross Way, Limehouse, London, E14",
+    "postcode": "E14",
+    "bed_label": "2 Bed 1 Bath",
+    "weekly": 542,
+    "monthly": "2349",
+    "avail": "12月5日",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-iona-tower-33-ross-way-limehouse-london-e14.jpg",
+    "tags": {
+      "area": "east",
+      "beds": 2,
+      "price": "low",
+      "month": "2026-12"
+    },
+    "saved": true,
+    "supabase_id": "card-1795623740289-cd4",
+    "image_url": "cards/out/20261125-1621/niko-iona-tower-33-ross-way-limehouse-london-e14.jpg"
+  },
+  {
+    "link": "https://www.rightmove.co.uk/properties/95831640",
+    "rm_id": "95831640",
+    "address": "Elmhurst Building, Fulton Road, Wembley",
+    "postcode": "HA9",
+    "bed_label": "1 Bed 1 Bath",
+    "weekly": 550,
+    "monthly": "2383",
+    "avail": "待问",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-elmhurst-building-fulton-road-wembley-ha9.jpg",
+    "tags": {
+      "area": "west",
+      "beds": 1,
+      "price": "low",
+      "month": "now"
+    },
+    "saved": true,
+    "supabase_id": "card-1795623740351-13e",
+    "image_url": "cards/out/20261125-1621/niko-elmhurst-building-fulton-road-wembley-ha9.jpg"
+  },
+  {
+    "link": "https://www.rightmove.co.uk/properties/95834343",
+    "rm_id": "95834343",
+    "address": "Earls Way, London, SE1.",
+    "postcode": "SE1",
+    "bed_label": "2 Bed 2 Bath",
+    "weekly": 923,
+    "monthly": "4000",
+    "avail": "1月23日",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-earls-way-london-se1.jpg",
+    "tags": {
+      "area": "city",
+      "beds": 2,
+      "price": "mid",
+      "month": "2027-01"
+    },
+    "saved": true,
+    "supabase_id": "card-1795623740421-997",
+    "image_url": "cards/out/20261125-1621/niko-earls-way-london-se1.jpg"
+  },
+  {
+    "link": "https://www.rightmove.co.uk/properties/95828478",
+    "rm_id": "95828478",
+    "address": "Bolander Grove, Earls Court, London, Sw6",
+    "postcode": "SW6",
+    "bed_label": "1 Bed 1 Bath",
+    "weekly": 750,
+    "monthly": "3250",
+    "avail": "1月15日",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-bolander-grove-earls-court-london-sw6.jpg",
+    "tags": {
+      "area": "south",
+      "beds": 1,
+      "price": "mid",
+      "month": "2027-01"
+    },
+    "saved": true,
+    "supabase_id": "card-1795623740478-216",
+    "image_url": "cards/out/20261125-1621/niko-bolander-grove-earls-court-london-sw6.jpg"
+  }
+]
