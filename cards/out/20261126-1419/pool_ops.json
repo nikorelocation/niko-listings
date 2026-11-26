@@ -1,0 +1,75 @@
+{
+ "add": [
+  {
+   "id": "card-1795702823326-573",
+   "area": "city",
+   "beds": 3,
+   "price": "high",
+   "month": "2027-01",
+   "image": "cards/out/20261126-1419/niko-belvedere-road-london-se1.jpg",
+   "thumb": "pool/thumbs/card-1795702823326-573.jpg",
+   "created_at": "2026-11-26T14:20:23+00:00",
+   "rm_id": "95869845",
+   "address": "Belvedere Road, London, SE1",
+   "weekly": 2585,
+   "folder": "20261126-1419"
+  },
+  {
+   "id": "card-1795702823405-047",
+   "area": "south",
+   "beds": 1,
+   "price": "low",
+   "month": "2027-02",
+   "image": "cards/out/20261126-1419/niko-hurlock-heights-4-deacon-street-elephant-park-elephant-castle-se17.jpg",
+   "thumb": "pool/thumbs/card-1795702823405-047.jpg",
+   "created_at": "2026-11-26T14:20:23+00:00",
+   "rm_id": "95870700",
+   "address": "Hurlock Heights, 4 Deacon Street, Elephant Park, Elephant & Castle, SE17",
+   "weekly": 585,
+   "folder": "20261126-1419"
+  },
+  {
+   "id": "card-1795702823467-860",
+   "area": "south",
+   "beds": 1,
+   "price": "mid",
+   "month": "2026-11",
+   "image": "cards/out/20261126-1419/niko-gladwin-tower-wandsworth-road-london-sw8.jpg",
+   "thumb": "pool/thumbs/card-1795702823467-860.jpg",
+   "created_at": "2026-11-26T14:20:23+00:00",
+   "rm_id": "91387013",
+   "address": "Gladwin Tower, Wandsworth Road, London, Sw8",
+   "weekly": 808,
+   "folder": "20261126-1419"
+  },
+  {
+   "id": "card-1795702823529-f63",
+   "area": "west",
+   "beds": 1,
+   "price": "low",
+   "month": "2026-12",
+   "image": "cards/out/20261126-1419/niko-pullman-house-wembley-park-gardens-wembley-ha9.jpg",
+   "thumb": "pool/thumbs/card-1795702823529-f63.jpg",
+   "created_at": "2026-11-26T14:20:23+00:00",
+   "rm_id": "163878527",
+   "address": "Pullman House, Wembley Park Gardens, Wembley, Ha9",
+   "weekly": 438,
+   "folder": "20261126-1419"
+  },
+  {
+   "id": "card-1795702823594-09c",
+   "area": "city",
+   "beds": 1,
+   "price": "low",
+   "month": "2026-12",
+   "image": "cards/out/20261126-1419/niko-holland-street-london-se1.jpg",
+   "thumb": "pool/thumbs/card-1795702823594-09c.jpg",
+   "created_at": "2026-11-26T14:20:23+00:00",
+   "rm_id": "95870655",
+   "address": "Holland Street, London, SE1",
+   "weekly": 695,
+   "folder": "20261126-1419"
+  }
+ ],
+ "remove": []
+}

@@ -1,0 +1,116 @@
+[
+  {
+    "link": "https://www.rightmove.co.uk/properties/95873526",
+    "error": "页面里没有 PAGE_MODEL（可能被反爬拦了）"
+  },
+  {
+    "link": "https://www.rightmove.co.uk/properties/95869845",
+    "rm_id": "95869845",
+    "address": "Belvedere Road, London, SE1",
+    "postcode": "SE1",
+    "bed_label": "3 Bed 3 Bath",
+    "weekly": 2585,
+    "monthly": "11202",
+    "avail": "1月29日",
+    "furnish": "不带家具",
+    "agent": "",
+    "card": "niko-belvedere-road-london-se1.jpg",
+    "tags": {
+      "area": "city",
+      "beds": 3,
+      "price": "high",
+      "month": "2027-01"
+    },
+    "saved": true,
+    "supabase_id": "card-1795702823326-573",
+    "image_url": "cards/out/20261126-1419/niko-belvedere-road-london-se1.jpg"
+  },
+  {
+    "link": "https://www.rightmove.co.uk/properties/95870700",
+    "rm_id": "95870700",
+    "address": "Hurlock Heights, 4 Deacon Street, Elephant Park, Elephant & Castle, SE17",
+    "postcode": "SE17",
+    "bed_label": "1 Bed 1 Bath",
+    "weekly": 585,
+    "monthly": "2535",
+    "avail": "2月2日",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-hurlock-heights-4-deacon-street-elephant-park-elephant-castle-se17.jpg",
+    "tags": {
+      "area": "south",
+      "beds": 1,
+      "price": "low",
+      "month": "2027-02"
+    },
+    "saved": true,
+    "supabase_id": "card-1795702823405-047",
+    "image_url": "cards/out/20261126-1419/niko-hurlock-heights-4-deacon-street-elephant-park-elephant-castle-se17.jpg"
+  },
+  {
+    "link": "https://www.rightmove.co.uk/properties/91387013",
+    "rm_id": "91387013",
+    "address": "Gladwin Tower, Wandsworth Road, London, Sw8",
+    "postcode": "SW8",
+    "bed_label": "1 Bed 1 Bath",
+    "weekly": 808,
+    "monthly": "3501",
+    "avail": "11月28日",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-gladwin-tower-wandsworth-road-london-sw8.jpg",
+    "tags": {
+      "area": "south",
+      "beds": 1,
+      "price": "mid",
+      "month": "2026-11"
+    },
+    "saved": true,
+    "supabase_id": "card-1795702823467-860",
+    "image_url": "cards/out/20261126-1419/niko-gladwin-tower-wandsworth-road-london-sw8.jpg"
+  },
+  {
+    "link": "https://www.rightmove.co.uk/properties/163878527",
+    "rm_id": "163878527",
+    "address": "Pullman House, Wembley Park Gardens, Wembley, Ha9",
+    "postcode": "HA9",
+    "bed_label": "1 Bed 1 Bath",
+    "weekly": 438,
+    "monthly": "1898",
+    "avail": "12月18日",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-pullman-house-wembley-park-gardens-wembley-ha9.jpg",
+    "tags": {
+      "area": "west",
+      "beds": 1,
+      "price": "low",
+      "month": "2026-12"
+    },
+    "saved": true,
+    "supabase_id": "card-1795702823529-f63",
+    "image_url": "cards/out/20261126-1419/niko-pullman-house-wembley-park-gardens-wembley-ha9.jpg"
+  },
+  {
+    "link": "https://www.rightmove.co.uk/properties/95870655",
+    "rm_id": "95870655",
+    "address": "Holland Street, London, SE1",
+    "postcode": "SE1",
+    "bed_label": "1 Bed 1 Bath",
+    "weekly": 695,
+    "monthly": "3012",
+    "avail": "12月10日",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-holland-street-london-se1.jpg",
+    "tags": {
+      "area": "city",
+      "beds": 1,
+      "price": "low",
+      "month": "2026-12"
+    },
+    "saved": true,
+    "supabase_id": "card-1795702823594-09c",
+    "image_url": "cards/out/20261126-1419/niko-holland-street-london-se1.jpg"
+  }
+]
