@@ -1,0 +1,33 @@
+{
+ "add": [
+  {
+   "id": "card-1795706437826-090",
+   "area": "west",
+   "beds": 1,
+   "price": "high",
+   "month": "2026-12",
+   "image": "cards/out/20261126-1520/niko-westmark-tower-1-newcastle-place-london-w2.jpg",
+   "thumb": "pool/thumbs/card-1795706437826-090.jpg",
+   "created_at": "2026-11-26T15:20:37+00:00",
+   "rm_id": "95878533",
+   "address": "Westmark Tower, 1 Newcastle Place, London, W2",
+   "weekly": 1077,
+   "folder": "20261126-1520"
+  },
+  {
+   "id": "card-1795706437901-2ff",
+   "area": "east",
+   "beds": 1,
+   "price": "mid",
+   "month": "2027-02",
+   "image": "cards/out/20261126-1520/niko-one-park-drive-1-park-drive-canary-wharf-london-e14.jpg",
+   "thumb": "pool/thumbs/card-1795706437901-2ff.jpg",
+   "created_at": "2026-11-26T15:20:37+00:00",
+   "rm_id": "95879058",
+   "address": "One Park Drive, 1 Park Drive, Canary Wharf, London E14",
+   "weekly": 888,
+   "folder": "20261126-1520"
+  }
+ ],
+ "remove": []
+}
