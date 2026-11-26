@@ -1,0 +1,46 @@
+[
+  {
+    "link": "https://www.rightmove.co.uk/properties/95888631",
+    "rm_id": "95888631",
+    "address": "Hampton Tower, Canary Wharf, London",
+    "postcode": "E14",
+    "bed_label": "1 Bed 1 Bath",
+    "weekly": 646,
+    "monthly": "2799",
+    "avail": "待问",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-hampton-tower-canary-wharf-london-e14.jpg",
+    "tags": {
+      "area": "east",
+      "beds": 1,
+      "price": "low",
+      "month": "now"
+    },
+    "saved": true,
+    "supabase_id": "card-1795717201919-37c",
+    "image_url": "cards/out/20261126-1819/niko-hampton-tower-canary-wharf-london-e14.jpg"
+  },
+  {
+    "link": "https://www.rightmove.co.uk/properties/88595166",
+    "rm_id": "88595166",
+    "address": "Emblem House, Salutation Gardens, Islington, London",
+    "postcode": "WC1X",
+    "bed_label": "1 Bed 1 Bath",
+    "weekly": 865,
+    "monthly": "3748",
+    "avail": "2月1日",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-emblem-house-salutation-gardens-islington-london-wc1x.jpg",
+    "tags": {
+      "area": "city",
+      "beds": 1,
+      "price": "mid",
+      "month": "2027-02"
+    },
+    "saved": true,
+    "supabase_id": "card-1795717201984-e26",
+    "image_url": "cards/out/20261126-1819/niko-emblem-house-salutation-gardens-islington-london-wc1x.jpg"
+  }
+]

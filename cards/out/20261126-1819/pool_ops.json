@@ -1,0 +1,33 @@
+{
+ "add": [
+  {
+   "id": "card-1795717201919-37c",
+   "area": "east",
+   "beds": 1,
+   "price": "low",
+   "month": "now",
+   "image": "cards/out/20261126-1819/niko-hampton-tower-canary-wharf-london-e14.jpg",
+   "thumb": "pool/thumbs/card-1795717201919-37c.jpg",
+   "created_at": "2026-11-26T18:20:01+00:00",
+   "rm_id": "95888631",
+   "address": "Hampton Tower, Canary Wharf, London",
+   "weekly": 646,
+   "folder": "20261126-1819"
+  },
+  {
+   "id": "card-1795717201984-e26",
+   "area": "city",
+   "beds": 1,
+   "price": "mid",
+   "month": "2027-02",
+   "image": "cards/out/20261126-1819/niko-emblem-house-salutation-gardens-islington-london-wc1x.jpg",
+   "thumb": "pool/thumbs/card-1795717201984-e26.jpg",
+   "created_at": "2026-11-26T18:20:02+00:00",
+   "rm_id": "88595166",
+   "address": "Emblem House, Salutation Gardens, Islington, London",
+   "weekly": 865,
+   "folder": "20261126-1819"
+  }
+ ],
+ "remove": []
+}
