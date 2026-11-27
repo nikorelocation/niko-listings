@@ -1,0 +1,89 @@
+{
+ "add": [
+  {
+   "id": "card-1795782008805-a80",
+   "area": "south",
+   "beds": 1,
+   "price": "mid",
+   "month": "2027-01",
+   "image": "cards/out/20261127-1219/niko-kings-tower-bridgewater-avenue-hammersmith-and-fulham-london-sw6.jpg",
+   "thumb": "pool/thumbs/card-1795782008805-a80.jpg",
+   "created_at": "2026-11-27T12:20:08+00:00",
+   "rm_id": "95902179",
+   "address": "Kings Tower, Bridgewater Avenue, Hammersmith And Fulham, London",
+   "weekly": 715,
+   "folder": "20261127-1219"
+  },
+  {
+   "id": "card-1795782008890-ad7",
+   "area": "city",
+   "beds": 1,
+   "price": "high",
+   "month": "now",
+   "image": "cards/out/20261127-1219/niko-london-bridge-street-london-se1.jpg",
+   "thumb": "pool/thumbs/card-1795782008890-ad7.jpg",
+   "created_at": "2026-11-27T12:20:08+00:00",
+   "rm_id": "95903184",
+   "address": "London Bridge Street, London, SE1",
+   "weekly": 1150,
+   "folder": "20261127-1219"
+  },
+  {
+   "id": "card-1795782008963-f9a",
+   "area": "east",
+   "beds": 2,
+   "price": "high",
+   "month": "now",
+   "image": "cards/out/20261127-1219/niko-westferry-circus-canary-wharf-e14.jpg",
+   "thumb": "pool/thumbs/card-1795782008963-f9a.jpg",
+   "created_at": "2026-11-27T12:20:09+00:00",
+   "rm_id": "95897337",
+   "address": "Westferry Circus, Canary Wharf",
+   "weekly": 1154,
+   "folder": "20261127-1219"
+  },
+  {
+   "id": "card-1795782009029-c87",
+   "area": "east",
+   "beds": 1,
+   "price": "mid",
+   "month": "2027-01",
+   "image": "cards/out/20261127-1219/niko-wiverton-tower-aldgate-east-e1.jpg",
+   "thumb": "pool/thumbs/card-1795782009029-c87.jpg",
+   "created_at": "2026-11-27T12:20:09+00:00",
+   "rm_id": "95902815",
+   "address": "Wiverton Tower, Aldgate East",
+   "weekly": 762,
+   "folder": "20261127-1219"
+  },
+  {
+   "id": "card-1795782009098-ad3",
+   "area": "city",
+   "beds": 2,
+   "price": "high",
+   "month": "now",
+   "image": "cards/out/20261127-1219/niko-london-bridge-street-london-se1(2)-se1.jpg",
+   "thumb": "pool/thumbs/card-1795782009098-ad3.jpg",
+   "created_at": "2026-11-27T12:20:09+00:00",
+   "rm_id": "95903307",
+   "address": "London Bridge Street, London, SE1",
+   "weekly": 1275,
+   "folder": "20261127-1219"
+  },
+  {
+   "id": "card-1795782009175-6b6",
+   "area": "city",
+   "beds": 1,
+   "price": "mid",
+   "month": "now",
+   "image": "cards/out/20261127-1219/niko-london-bridge-street-london-se1(3)-se1.jpg",
+   "thumb": "pool/thumbs/card-1795782009175-6b6.jpg",
+   "created_at": "2026-11-27T12:20:09+00:00",
+   "rm_id": "95903268",
+   "address": "London Bridge Street, London, SE1",
+   "weekly": 945,
+   "folder": "20261127-1219"
+  }
+ ],
+ "remove": []
+}
