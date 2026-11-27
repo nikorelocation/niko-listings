@@ -1,0 +1,156 @@
+[
+  {
+    "link": "https://www.rightmove.co.uk/properties/95932188",
+    "rm_id": "95932188",
+    "address": "Stratosphere Tower, London E15",
+    "postcode": "E15",
+    "bed_label": "2 Bed 2 Bath",
+    "weekly": 646,
+    "monthly": "2799",
+    "avail": "2月2日",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-stratosphere-tower-london-e15.jpg",
+    "tags": {
+      "area": "east",
+      "beds": 2,
+      "price": "low",
+      "month": "2027-02"
+    },
+    "saved": true,
+    "supabase_id": "card-1795807181136-70c",
+    "image_url": "cards/out/20261127-1919/niko-stratosphere-tower-london-e15.jpg"
+  },
+  {
+    "link": "https://www.rightmove.co.uk/properties/95931981",
+    "rm_id": "95931981",
+    "address": "Gasholders Building, 1 Lewis Cubitt Square, London, N1C",
+    "postcode": "N1C",
+    "bed_label": "Studio",
+    "weekly": 700,
+    "monthly": "3033",
+    "avail": "2月16日",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-gasholders-building-1-lewis-cubitt-square-london-n1c.jpg",
+    "tags": {
+      "area": "north",
+      "beds": 0,
+      "price": "low",
+      "month": "2027-02"
+    },
+    "saved": true,
+    "supabase_id": "card-1795807181199-b5e",
+    "image_url": "cards/out/20261127-1919/niko-gasholders-building-1-lewis-cubitt-square-london-n1c.jpg"
+  },
+  {
+    "link": "https://www.rightmove.co.uk/properties/95922510",
+    "rm_id": "95922510",
+    "address": "Pan Peninsula Square, London, E14",
+    "postcode": "E14",
+    "bed_label": "1 Bed 1 Bath",
+    "weekly": 623,
+    "monthly": "2700",
+    "avail": "待问",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-pan-peninsula-square-london-e14.jpg",
+    "tags": {
+      "area": "east",
+      "beds": 1,
+      "price": "low",
+      "month": "now"
+    },
+    "saved": true,
+    "supabase_id": "card-1795807181252-bd5",
+    "image_url": "cards/out/20261127-1919/niko-pan-peninsula-square-london-e14.jpg"
+  },
+  {
+    "link": "https://www.rightmove.co.uk/properties/139454372",
+    "rm_id": "139454372",
+    "address": "Meranti House, Goodmans Field, Aldgate, E1",
+    "postcode": "E1",
+    "bed_label": "1 Bed 1 Bath",
+    "weekly": 750,
+    "monthly": "3250",
+    "avail": "3月31日",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-meranti-house-goodmans-field-aldgate-e1.jpg",
+    "tags": {
+      "area": "east",
+      "beds": 1,
+      "price": "mid",
+      "month": "2027-03"
+    },
+    "saved": true,
+    "supabase_id": "card-1795807181305-123",
+    "image_url": "cards/out/20261127-1919/niko-meranti-house-goodmans-field-aldgate-e1.jpg"
+  },
+  {
+    "link": "https://www.rightmove.co.uk/properties/95923770",
+    "rm_id": "95923770",
+    "address": "1 Bathroom Apartment on the 24th Floor in Landmark Pinnacle",
+    "postcode": "E14",
+    "bed_label": "1 Bed 1 Bath",
+    "weekly": 704,
+    "monthly": "3051",
+    "avail": "1月4日",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-10-marsh-wall-london-e14.jpg",
+    "tags": {
+      "area": "east",
+      "beds": 1,
+      "price": "mid",
+      "month": "2027-01"
+    },
+    "saved": true,
+    "supabase_id": "card-1795807181359-827",
+    "image_url": "cards/out/20261127-1919/niko-10-marsh-wall-london-e14.jpg"
+  },
+  {
+    "link": "https://www.rightmove.co.uk/properties/95924907",
+    "rm_id": "95924907",
+    "address": "Principal Place, 2 Worship Street, Shoreditch, London, Ec2A",
+    "postcode": "EC2A",
+    "bed_label": "1 Bed 1 Bath",
+    "weekly": 825,
+    "monthly": "3575",
+    "avail": "2月4日",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-principal-place-2-worship-street-shoreditch-london-ec2a.jpg",
+    "tags": {
+      "area": "city",
+      "beds": 1,
+      "price": "mid",
+      "month": "2027-02"
+    },
+    "saved": true,
+    "supabase_id": "card-1795807181420-87f",
+    "image_url": "cards/out/20261127-1919/niko-principal-place-2-worship-street-shoreditch-london-ec2a.jpg"
+  },
+  {
+    "link": "https://www.rightmove.co.uk/properties/95931318",
+    "rm_id": "95931318",
+    "address": "Harcourt Tower, South Quay Plaza, E14",
+    "postcode": "E14",
+    "bed_label": "1 Bed 1 Bath",
+    "weekly": 738,
+    "monthly": "3198",
+    "avail": "待问",
+    "furnish": "带家具",
+    "agent": "",
+    "card": "niko-harcourt-tower-south-quay-plaza-e14.jpg",
+    "tags": {
+      "area": "east",
+      "beds": 1,
+      "price": "mid",
+      "month": "2026-12"
+    },
+    "saved": true,
+    "supabase_id": "card-1795807181472-99f",
+    "image_url": "cards/out/20261127-1919/niko-harcourt-tower-south-quay-plaza-e14.jpg"
+  }
+]
