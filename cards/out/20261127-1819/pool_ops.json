@@ -1,0 +1,33 @@
+{
+ "add": [
+  {
+   "id": "card-1795803596740-803",
+   "area": "city",
+   "beds": 3,
+   "price": "high",
+   "month": "2027-02",
+   "image": "cards/out/20261127-1819/niko-one-crown-place-19-sun-street-ec2a.jpg",
+   "thumb": "pool/thumbs/card-1795803596740-803.jpg",
+   "created_at": "2026-11-27T18:19:56+00:00",
+   "rm_id": "95917881",
+   "address": "One Crown Place, 19 Sun Street, Ec2A",
+   "weekly": 1731,
+   "folder": "20261127-1819"
+  },
+  {
+   "id": "card-1795803596810-e8a",
+   "area": "city",
+   "beds": 3,
+   "price": "high",
+   "month": "2027-02",
+   "image": "cards/out/20261127-1819/niko-millbank-residence-westminster-sw1p.jpg",
+   "thumb": "pool/thumbs/card-1795803596810-e8a.jpg",
+   "created_at": "2026-11-27T18:19:56+00:00",
+   "rm_id": "95920494",
+   "address": "Millbank Residence",
+   "weekly": 1846,
+   "folder": "20261127-1819"
+  }
+ ],
+ "remove": []
+}
